@@ -1,0 +1,29 @@
+.gallery{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width:100%;
+    height: 500px;
+    background-color: #000;
+    border-top: 1px solid black;
+    &__passion{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    &__text{
+       color:white;
+       font-size: 3.5rem;
+       letter-spacing: 3px;
+       align-self: center;
+       font-family: $default-font;
+       font-weight: 500;
+    }
+    .fas, .fab{
+        font-size: 90px;
+        color: #ddd;
+    }
+}
+
+.heart{
+flex-direction: row-reverse;
+}

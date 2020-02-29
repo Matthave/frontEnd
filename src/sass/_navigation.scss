@@ -14,18 +14,19 @@
     }
     &__li{
         list-style: none;
-        font-size: 1.4rem;
-        color:#ccc;
-        font-family: 'IM Fell DW Pica';
         align-self: center;
-        letter-spacing: 1px;
-        cursor: pointer;
-        transition: 0.1s linear;
-        &:last-child{
-        }
-        &:hover{
-            color:#fff
-        }
+    }
+    &__link{
+      font-size: 1.4rem;
+      color:#ccc;
+      font-family: 'IM Fell DW Pica';
+      letter-spacing: 1px;
+      cursor: pointer;
+      transition: 0.1s linear;
+      text-decoration: none;
+      &:hover{
+        color: #fff;
+      }
     }
     &__smallLogo{
         margin-right: 10px;

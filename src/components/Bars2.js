@@ -1,15 +1,16 @@
-import React from 'react'
+import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 function Bars2() {
   return (
     <section className="bars">
       <div className='bars__item'>
         <div className='bars__text bars__text--reverse'>
-          WebSite Maker - WebSite Maker -
-          WebSite Maker - WebSite Maker -
-          WebSite Maker - WebSite Maker -
+          Portfolio - Portfolio - Portfolio -
+          Portfolio - Portfolio - Portfolio -
+          Portfolio - Portfolio - Portfolio -
           </div>
-        <div className="bars__textUnder">Portfolio</div>
+        <NavLink className="bars__textUnder" to='Portfolio'>Portfolio</NavLink>
       </div>
       <div className='bars__item'>
         <div className='bars__text'>
@@ -17,7 +18,7 @@ function Bars2() {
           Contact With Me - Contact With Me -
           Contact With Me - Contact With Me -
           </div>
-        <div className="bars__textUnder">Contact With Me</div>
+        <NavLink className="bars__textUnder" to='Contact'>Contact With Me</NavLink>
       </div>
     </section>
   )

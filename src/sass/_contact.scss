@@ -1,0 +1,13 @@
+.contact{
+    margin-top: 75px;
+}
+
+.bars__itemContact{
+  @include barsContainer;
+  background-color: #000;
+}
+
+.bars__textContact{
+@include barsText;
+color: #fff;
+}

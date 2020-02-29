@@ -1,34 +1,9 @@
 .introLogo{
     position: relative;
     background-image: url('../IMG/Logo\ contentSize.png');
-    // background-size: unset;
     background-position: center;
     background-repeat: no-repeat;
     width:100%;
     height:100vh;
     overflow: hidden;
-}
-
-.shine{
-    position: fixed;
-    top:10%;
-    left:50%;
-    transform:rotate(45deg) translate(-50%,-50%) ;
-    width:700px;
-    height:150px;
-    background-color: rgba(255,255,255,0.6);
-    transition: 0.7s ease;
-    z-index: 1000;
-    animation: shine 0.7s ease-out;
-}
-
-@keyframes shine {
-    0%{
-        top:10%;
-        left:50%;
-    }
-    100%{
-        top:150%;
-        left:-60%;
-    }
 }

@@ -1,0 +1,13 @@
+.portfolio{
+    margin-top: 75px;
+}
+
+.bars__itemPortfolio{
+  @include barsContainer;
+  background-color: #000;
+}
+
+.bars__textPortfolio{
+@include barsText;
+color: #fff;
+}

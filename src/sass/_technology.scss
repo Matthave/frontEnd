@@ -1,0 +1,13 @@
+.technology{
+    margin-top: 75px;
+}
+
+.bars__itemTechnology{
+  @include barsContainer;
+  background-color: #000;
+}
+
+.bars__textTechnology{
+@include barsText;
+color: #fff;
+}

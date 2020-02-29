@@ -1,0 +1,13 @@
+.about{
+    margin-top: 75px;
+}
+
+.bars__itemAbout{
+  @include barsContainer;
+  background-color: #000;
+}
+
+.bars__textAbout{
+@include barsText;
+color: #fff;
+}

@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
 function Bars() {
   return (
@@ -25,7 +26,7 @@ function Bars() {
           JavaScript - React - SASS - CSS -
           JavaScript - React - SASS - CSS -
         </div>
-        <div className="bars__textUnder">Technology I Use</div>
+        <NavLink className="bars__textUnder" to='Technology'>Technology I Use</NavLink>
       </div>
     </section>
   )

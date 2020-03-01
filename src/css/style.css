@@ -68,10 +68,15 @@ body {
   -webkit-transition: 0.1s linear;
   transition: 0.1s linear;
   text-decoration: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
-.nav__link:hover {
-  color: #fff;
+@media (min-width: 1024px) {
+  .nav__link:hover {
+    color: #fff;
+    text-shadow: -35px -15px #444;
+  }
 }
 
 @media (min-width: 460px) {
@@ -100,14 +105,31 @@ body {
   width: 30px;
 }
 
+@media (min-width: 1024px) {
+  .nav__smallLogo {
+    width: 40px;
+  }
+}
+
 .introLogo {
   position: relative;
+  top: 300px;
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
   background-image: url("../IMG/Logo contentSize.png");
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
   height: 100vh;
   overflow: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.introLogo--onTop {
+  top: 0;
+  -webkit-transform: rotateY(360deg);
+          transform: rotateY(360deg);
 }
 
 @media (min-width: 800px) {
@@ -119,7 +141,7 @@ body {
 
 @media (min-width: 1024px) {
   .introLogo {
-    background-size: 35%;
+    background-size: 30%;
   }
 }
 
@@ -343,6 +365,7 @@ body {
   height: 500px;
   background-color: #000;
   border-top: 1px solid white;
+  border-bottom: 1px solid white;
   overflow-x: hidden;
 }
 
@@ -731,6 +754,13 @@ body {
 
 .contact {
   margin-top: 75px;
+  opacity: 0;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.contact--showIt {
+  opacity: 1;
 }
 
 .bars__itemContact {
@@ -920,6 +950,13 @@ body {
 
 .portfolio {
   margin-top: 75px;
+  opacity: 0;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.portfolio--showIt {
+  opacity: 1;
 }
 
 .bars__itemPortfolio {

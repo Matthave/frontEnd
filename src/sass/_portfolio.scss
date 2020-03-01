@@ -1,5 +1,10 @@
 .portfolio{
     margin-top: 75px;
+    opacity: 0;
+    transition: 1s;
+    &--showIt{
+      opacity: 1;
+    }
 }
 
 .bars__itemPortfolio{

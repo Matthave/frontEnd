@@ -1,9 +1,12 @@
 import React from 'react'
 
-function Header() {
+function Header(props) {
+  const classes = ['introLogo'];
+  if (props.introLogoMoveUp) classes.push('introLogo--onTop')
+
   return (
     <section className="header">
-      <div className="introLogo">
+      <div className={classes.join(' ')}>
       </div>
     </section>
   )

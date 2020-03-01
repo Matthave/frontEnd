@@ -1,16 +1,23 @@
 .introLogo{
     position: relative;
+    top:300px;
+    transform: rotateY(0deg);
     background-image: url('../IMG/Logo\ contentSize.png');
     background-position: center;
     background-repeat: no-repeat;
     width:100%;
     height:100vh;
     overflow: hidden;
+    transition: 0.5s;
+    &--onTop{
+      top:0;
+      transform: rotateY(360deg);
+    }
     @include mq(medium){
         background-size: 40%;
         background-image: url('../IMG/LogoLargeSize.png');
       }
     @include mq(large){
-      background-size: 35%;
+      background-size: 30%;
     }
 }

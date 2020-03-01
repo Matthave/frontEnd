@@ -9,6 +9,15 @@
     line-height: 100px;
     cursor: pointer;
     transition: 0.1s linear;
+    overflow: hidden;
+    @include mq(medium){
+      height: 150px;
+      padding:30px 0px;
+    }
+    @include mq(xlarge){
+      height: 200px;
+      padding: 50px 0px;
+    }
 }
 
 @mixin barsText {
@@ -21,4 +30,28 @@
   animation: text 25s linear infinite;
   white-space: pre;
   z-index: 1;
+  @include mq(medium){
+    font-size: 10rem;
+  }
+  @include mq(xlarge){
+    font-size: 13rem;
+  }
 }
+
+$breakpoints: (
+xsmall: (min-width: 460px),
+small: (min-width: 640px),
+medium: (min-width: 800px),
+large: (min-width: 1024px),
+xlarge: (min-width: 1200px),
+xxlarge: (min-width: 1440px),
+);
+
+@mixin mq($breakpoint) {
+  $size: map-get($breakpoints, $breakpoint );
+  @if($size){
+    @media #{$size}{
+    @content
+    }
+  }
+} 

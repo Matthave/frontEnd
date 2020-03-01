@@ -14,11 +14,11 @@ function Bars2() {
       </div>
       <div className='bars__item'>
         <div className='bars__text'>
-          Contact With Me - Contact With Me -
-          Contact With Me - Contact With Me -
-          Contact With Me - Contact With Me -
+          Contact Me - Contact Me - Contact Me -
+          Contact Me - Contact Me - Contact Me -
+          Contact Me - Contact Me - Contact Me -
           </div>
-        <NavLink className="bars__textUnder" to='Contact'>Contact With Me</NavLink>
+        <NavLink className="bars__textUnder" to='Contact'>Contact Me</NavLink>
       </div>
     </section>
   )

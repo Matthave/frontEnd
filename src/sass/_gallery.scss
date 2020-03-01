@@ -5,18 +5,19 @@
     width:100%;
     height: 500px;
     background-color: #000;
-    border-top: 1px solid black;
+    border-top: 1px solid white;
+    overflow-x: hidden;
     &__passion{
         display: flex;
         justify-content: space-evenly;
     }
     &__text{
        color:white;
-       font-size: 3.5rem;
-       letter-spacing: 3px;
+       transform: translateX(0);
        align-self: center;
        font-family: $default-font;
        font-weight: 500;
+       height: 100px;
     }
     .fas, .fab{
         font-size: 90px;
@@ -24,6 +25,143 @@
     }
 }
 
-.heart{
-flex-direction: row-reverse;
+.gallery__passion{
+animation: textGallery 1.5s step-start infinite both;
+}
+
+.gallery__heart{
+animation: textGallery 1.5s 1s step-start infinite both;
+}
+
+.gallery__obstinancy{
+animation: textGallery 1.5s 1.5s step-start infinite both;
+}
+
+
+@keyframes textGallery{
+    0%{
+        letter-spacing: 0px;
+        text-shadow: 30px 10px #222;
+        font-size: 3rem;
+        transform:translateX(13px);
+    }
+    10%{
+        letter-spacing: 0px;
+        text-shadow: 35px 35px #222;
+        transform:translateX(0px);
+    }
+    20%{
+        letter-spacing: 2px;
+        text-shadow: 45px -55px #222;
+        transform:translateX(8px);
+    }
+    30%{
+        letter-spacing: 5px;
+        text-shadow: -55px -25px #222;
+        transform:translateX(-18px);
+    }
+    40%{
+        letter-spacing: 6px;
+        text-shadow: 45px 65px #222;
+        transform:translateX(18px);
+    }
+    50%{
+        letter-spacing: 1px;
+        text-shadow: -55px 65px #222;
+        transform:translateX(0px);
+    }
+    60%{
+        letter-spacing: 2px;
+        text-shadow: -25px -75px #222;
+        transform:translateX(23px);
+    }
+    70%{
+        letter-spacing: 12px;
+        text-shadow: 0px -45px #222;
+        font-size: 4rem;
+        transform:translateX(28px);
+    }
+    80%{
+        letter-spacing: 6px;
+        text-shadow: 0px 35px #222;
+        font-size: 7.5rem;
+        transform:translateX(0px);
+    }
+    90%{
+        letter-spacing: 8px;
+        text-shadow: -55px 0px #222;
+        font-size: 2.5rem;
+        transform:translateX(-18px);
+    }
+    100%{
+        letter-spacing: 10px;
+        text-shadow: 35px 0px #222;
+        font-size: 3.5rem;
+        transform:translateX(0px);
+    }
+}
+
+@include mq(xlarge){
+    @keyframes textGallery{
+        0%{
+            letter-spacing: 0px;
+            text-shadow: 60px 20px #222;
+            font-size: 5rem;
+            transform:translateX(94px);
+        }
+        10%{
+            letter-spacing: 0px;
+            text-shadow: 70px 70px #222;
+            transform:translateX(0px);
+        }
+        20%{
+            letter-spacing: 2px;
+            text-shadow: 90px -110px #222;
+            transform:translateX(68px);
+        }
+        30%{
+            letter-spacing: 5px;
+            text-shadow: -110px -50px #222;
+            transform:translateX(-132px);
+        }
+        40%{
+            letter-spacing: 6px;
+            text-shadow: 90px 130px #222;
+            transform:translateX(132px);
+        }
+        50%{
+            letter-spacing: 1px;
+            text-shadow: -110px 130px #222;
+            transform:translateX(0px);
+        }
+        60%{
+            letter-spacing: 2px;
+            text-shadow: -50px -150px #222;
+            transform:translateX(166px);
+        }
+        70%{
+            letter-spacing: 12px;
+            text-shadow: 0px -90px #222;
+            font-size: 7rem;
+            transform:translateX(200px);
+        }
+        80%{
+            letter-spacing: 6px;
+            text-shadow: 0px 70px #222;
+            font-size: 13rem;
+            transform:translateX(0px);
+        }
+        90%{
+            letter-spacing: 8px;
+            text-shadow: -110px 0px #222;
+            font-size: 4rem;
+            transform:translateX(-132px);
+        }
+        100%{
+            letter-spacing: 10px;
+            text-shadow: 70px 0px #222;
+            font-size: 6rem;
+            transform:translateX(0px);
+        }
+    }
 }

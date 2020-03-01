@@ -6,19 +6,19 @@ function Bars() {
     <section className="bars">
       <div className="bars__item">
         <div className='bars__text'>
-          FrontEnd Developer - FrontEnd Developer -
-          FrontEnd Developer - FrontEnd Developer -
-          FrontEnd Developer - FrontEnd Developer -
+          Thanks For Visit - M - Hello You -
+          Thanks For Visit - M - Hello You -
+          Thanks For Visit - M - Hello You -
         </div>
-        <div className="bars__textUnder">FrontEnd Developer</div>
+        <div className="bars__textUnder">Welcome!</div>
       </div>
       <div className="bars__item">
         <div className='bars__text bars__text--reverse'>
-          WebSite Maker - WebSite Maker -
-          WebSite Maker - WebSite Maker -
-          WebSite Maker - WebSite Maker -
+          WebSite Maker - Web Developer - FrontEnd -
+          WebSite Maker - Web Developer - FrontEnd -
+          WebSite Maker - Web Developer - FrontEnd -
           </div>
-        <div className="bars__textUnder">Web Developer</div>
+        <div className="bars__textUnder">About Your Artist</div>
       </div>
       <div className="bars__item">
         <div className='bars__text'>

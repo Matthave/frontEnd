@@ -1,20 +1,28 @@
 .bars{
     display: flex;
     flex-direction: column;
-    overflow: hidden;
     &__item{
         @include barsContainer;
-        &:hover{
-            background-color: #000;
-            color:#fff;
-        }
-        &:hover .bars__text{
-        z-index: 0;
-        color: #222
-        }
+        color:#fff;
+        @include mq(large){
+            &:hover{
+                background-color: #000;
+                color:#fff;
+            }
+            &:hover .bars__text{
+            z-index: 0;
+            color: #222
+            }
+          }
     }
     &__text{
        @include barsText;
+       z-index: 0;
+        color: #aaa;
+        @include mq(large){
+            color: #222;
+            z-index: 1;
+        }
     }
     &__textUnder{
         position: absolute;
@@ -26,8 +34,20 @@
         font-family: 'IM Fell DW Pica';
         white-space: pre;
         margin:0px auto;
-        color: white;
+        color: #000;
         text-decoration: none;
+        @include mq(medium){
+            font-size: 5rem;
+            letter-spacing: 3px;
+          }
+          @include mq(large){
+            color: #fff;
+          }
+          @include mq(xlarge){
+            font-size: 7.5rem;
+            letter-spacing: 5px;
+          }
+        
     }
     &__text--reverse{
         animation: textReverse 25s linear infinite;

@@ -7,12 +7,14 @@ import AboutM from '../pages/AboutM';
 import Portfolio from '../pages/Portfolio';
 import Technology from '../pages/Technology';
 
-import { Route, Switch, BrowserRouter } from 'react-router-dom'
+import { Route, Switch, BrowserRouter, HashRouter } from 'react-router-dom'
 import '../css/style.css';
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter
+      basename="/"
+    >
       <div className="App">
         <Navigation />
         <Switch>
@@ -24,7 +26,7 @@ function App() {
         </Switch>
         <Footer />
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 

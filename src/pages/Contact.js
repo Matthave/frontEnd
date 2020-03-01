@@ -5,9 +5,9 @@ function Contact() {
     <section className="contact">
       <div className='bars__itemContact'>
         <div className='bars__textContact'>
-          Contact With Me - Contact With Me -
-          Contact With Me - Contact With Me -
-          Contact With Me - Contact With Me -
+          Contact Me - Contact Me - Contact Me -
+          Contact Me - Contact Me - Contact Me -
+          Contact Me - Contact Me - Contact Me -
           </div>
       </div>
     </section>

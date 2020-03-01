@@ -9,8 +9,9 @@
     z-index: 2;
     &__ul{
      display: flex;
-     justify-content: space-between;
+     justify-content: space-evenly;
      width:100%;
+     padding:0px 17px;
     }
     &__li{
         list-style: none;
@@ -26,6 +27,17 @@
       text-decoration: none;
       &:hover{
         color: #fff;
+      }
+      @include mq(xsmall){
+        font-size: 1.8rem ;
+        letter-spacing: 2px;
+      }
+      @include mq(medium){
+        font-size: 2rem;
+        letter-spacing: 3px;
+      }
+      @include mq(large){
+        height: 150px;
       }
     }
     &__smallLogo{

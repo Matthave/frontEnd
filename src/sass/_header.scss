@@ -6,4 +6,11 @@
     width:100%;
     height:100vh;
     overflow: hidden;
+    @include mq(medium){
+        background-size: 40%;
+        background-image: url('../IMG/LogoLargeSize.png');
+      }
+    @include mq(large){
+      background-size: 35%;
+    }
 }

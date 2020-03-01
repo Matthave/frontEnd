@@ -755,8 +755,18 @@ body {
 .contact {
   margin-top: 75px;
   opacity: 0;
-  -webkit-transition: 1s;
-  transition: 1s;
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+
+@media (min-width: 1200px) {
+  .contact {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }
 
 .contact--showIt {
@@ -779,6 +789,7 @@ body {
   transition: 0.1s linear;
   overflow: hidden;
   background-color: #000;
+  width: 100%;
 }
 
 @media (min-width: 800px) {
@@ -820,6 +831,254 @@ body {
   .bars__textContact {
     font-size: 13rem;
   }
+}
+
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 275px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0px auto;
+}
+
+@media (min-width: 460px) {
+  .form {
+    width: 400px;
+  }
+}
+
+@media (min-width: 640px) {
+  .form {
+    width: 500px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .form {
+    width: 700px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .form {
+    width: 40vw;
+  }
+}
+
+.form__label {
+  width: 100%;
+  color: white;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  font-weight: 500;
+  font-family: "IM Fell DW Pica";
+}
+
+.form__input {
+  width: 100%;
+  height: 40px;
+  margin-top: 3px;
+  margin-bottom: 20px;
+  border-radius: 3px;
+  border: none;
+  padding-left: 5px;
+  font-size: 1.6rem;
+}
+
+.form__textArea {
+  width: 100%;
+  border-radius: 5px;
+  height: 175px;
+  padding: 5px;
+  font-size: 1.6rem;
+}
+
+.form__btnContainer {
+  position: relative;
+  width: 100%;
+  height: 200px;
+}
+
+.form__btnContainer .form__btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 175px;
+  height: 45px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border: none;
+  background-color: transparent;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  color: white;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.form__btnContainer .form__btnCopy {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 175px;
+  height: 45px;
+  -webkit-transform: translate(-50%, -50%) rotate(0deg);
+          transform: translate(-50%, -50%) rotate(0deg);
+  border: 1px solid #aaa;
+  background-color: #222;
+  cursor: pointer;
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
+}
+
+.form__btnContainer .form__btnCopy2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 175px;
+  height: 45px;
+  -webkit-transform: translate(-50%, -50%) rotate(0deg);
+          transform: translate(-50%, -50%) rotate(0deg);
+  border: 1px solid #aaa;
+  background-color: #222;
+  cursor: pointer;
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
+}
+
+.form__btn:hover ~ .form__btnCopy {
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+          transform: translate(-50%, -50%) rotate(45deg);
+  background-color: transparent;
+}
+
+.form__btn:hover ~ .form__btnCopy2 {
+  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+          transform: translate(-50%, -50%) rotate(-45deg);
+  background-color: transparent;
+}
+
+.contact__textWrap {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.contact__textWrap h2:nth-child(1) {
+  margin-bottom: 20px;
+}
+
+.contact__textWrap .contact__text {
+  width: 275px;
+  margin: 40px auto;
+  font-weight: 500;
+  font-family: "IM Fell DW Pica";
+  line-height: 20px;
+  color: white;
+  text-align: justify;
+}
+
+@media (min-width: 640px) {
+  .contact__textWrap .contact__text {
+    width: 500px;
+    font-size: 2rem;
+    letter-spacing: 1.5px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .contact__textWrap .contact__text {
+    width: 700px;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    line-height: 25px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .contact__textWrap .contact__text {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+.platform {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 300px;
+  text-align: center;
+  margin: 50px auto 75px auto;
+}
+
+.platform__img {
+  width: 50px;
+  background-color: #aaa;
+  margin: 0px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 0.2s linear;
+  transition: -webkit-transform 0.2s linear;
+  transition: transform 0.2s linear;
+  transition: transform 0.2s linear, -webkit-transform 0.2s linear;
+}
+
+@media (min-width: 1024px) {
+  .platform__img:hover {
+    background-color: #fff;
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
+}
+
+.contact__wrapContactToMe {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (min-width: 1200px) {
+  .contact__wrapContactToMe {
+    width: 40vw;
+  }
+}
+
+.contactDetails {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.contactDetails__email, .contactDetails__phone {
+  color: white;
+  font-size: 2rem;
+  font-family: "IM Fell DW Pica";
+  letter-spacing: 2px;
+  text-align: center;
+  margin-bottom: 10px;
 }
 
 .about {

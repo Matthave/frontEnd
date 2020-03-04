@@ -757,6 +757,7 @@ body {
   opacity: 0;
   -webkit-transition: 2s;
   transition: 2s;
+  overflow-x: hidden;
 }
 
 @media (min-width: 1200px) {
@@ -837,7 +838,6 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 275px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -848,7 +848,18 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 0px auto;
+  width: 275px;
+  position: relative;
+  right: -100%;
+  margin: 30px auto 0px;
+  -webkit-transition: 1s;
+  transition: 1s;
+  z-index: 1;
+  background-color: black;
+}
+
+.form--onPosition {
+  right: 0;
 }
 
 @media (min-width: 460px) {
@@ -871,7 +882,7 @@ body {
 
 @media (min-width: 1200px) {
   .form {
-    width: 40vw;
+    width: 49vw;
   }
 }
 
@@ -882,6 +893,12 @@ body {
   letter-spacing: 2px;
   font-weight: 500;
   font-family: "IM Fell DW Pica";
+}
+
+@media (min-width: 1200px) {
+  .form__label {
+    width: 80%;
+  }
 }
 
 .form__input {
@@ -956,22 +973,27 @@ body {
   transition: 0.2s linear;
 }
 
-.form__btn:hover ~ .form__btnCopy {
-  -webkit-transform: translate(-50%, -50%) rotate(45deg);
-          transform: translate(-50%, -50%) rotate(45deg);
-  background-color: transparent;
+@media (min-width: 1024px) {
+  .form__btn:hover ~ .form__btnCopy {
+    -webkit-transform: translate(-50%, -50%) rotate(45deg);
+            transform: translate(-50%, -50%) rotate(45deg);
+    background-color: transparent;
+  }
 }
 
-.form__btn:hover ~ .form__btnCopy2 {
-  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
-          transform: translate(-50%, -50%) rotate(-45deg);
-  background-color: transparent;
+@media (min-width: 1024px) {
+  .form__btn:hover ~ .form__btnCopy2 {
+    -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+            transform: translate(-50%, -50%) rotate(-45deg);
+    background-color: transparent;
+  }
 }
 
 .contact__textWrap {
   width: 100%;
   text-align: center;
   margin-bottom: 20px;
+  margin-top: 35px;
 }
 
 .contact__textWrap h2:nth-child(1) {
@@ -1036,6 +1058,24 @@ body {
   transition: transform 0.2s linear, -webkit-transform 0.2s linear;
 }
 
+.platform__img--linkedUp {
+  -webkit-transform: translateY(-7px);
+          transform: translateY(-7px);
+  background-color: #fff;
+}
+
+.platform__img--gitHubUp {
+  -webkit-transform: translateY(-7px);
+          transform: translateY(-7px);
+  background-color: #fff;
+}
+
+.platform__img--instaUp {
+  -webkit-transform: translateY(-7px);
+          transform: translateY(-7px);
+  background-color: #fff;
+}
+
 @media (min-width: 1024px) {
   .platform__img:hover {
     background-color: #fff;
@@ -1052,11 +1092,21 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  position: relative;
+  right: -100%;
+  opacity: 0;
+  -webkit-transition: right 1s, opacity 2s ease;
+  transition: right 1s, opacity 2s ease;
+}
+
+.contact__wrapContactToMe--onPosition {
+  right: 0;
+  opacity: 1;
 }
 
 @media (min-width: 1200px) {
   .contact__wrapContactToMe {
-    width: 40vw;
+    width: 50vw;
   }
 }
 
@@ -1073,12 +1123,23 @@ body {
 }
 
 .contactDetails__email, .contactDetails__phone {
+  position: relative;
+  top: -40px;
   color: white;
   font-size: 2rem;
   font-family: "IM Fell DW Pica";
-  letter-spacing: 2px;
+  letter-spacing: 3px;
   text-align: center;
   margin-bottom: 10px;
+  opacity: 1;
+}
+
+.contactDetails__emailIcon, .contactDetails__phoneIcon {
+  width: 50px;
+  background-color: #fff;
+  margin: 0px auto;
+  border-radius: 10px;
+  opacity: 0.2;
 }
 
 .about {
@@ -1274,6 +1335,180 @@ body {
 @media (min-width: 1200px) {
   .bars__textPortfolio {
     font-size: 13rem;
+  }
+}
+
+.worksContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 1024px;
+  margin: 50px auto;
+  padding: 50px 0px;
+  overflow: hidden;
+}
+
+@media (min-width: 640px) {
+  .worksContainer {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+.work {
+  position: relative;
+  top: 0;
+  left: 0;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+          clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+  width: 290px;
+  height: 290px;
+  margin: 0px auto 30px;
+  background-color: #444;
+  cursor: pointer;
+  text-decoration: none;
+  -webkit-transition: -webkit-transform 0.2s linear;
+  transition: -webkit-transform 0.2s linear;
+  transition: transform 0.2s linear;
+  transition: transform 0.2s linear, -webkit-transform 0.2s linear;
+}
+
+@media (min-width: 1024px) {
+  .work:hover {
+    background: #fff;
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+}
+
+.work::before {
+  content: '';
+  position: absolute;
+  top: 0.8%;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  -webkit-clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+          clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+  width: 285px;
+  height: 285px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.work__trainer::before {
+  background-image: url("../IMG/trainerSite.png");
+}
+
+.work__kyokushin::before {
+  background-image: url("../IMG/kyokushinSite.png");
+}
+
+.work__christmas::before {
+  background-image: url("../IMG/christmas.png");
+  background-position: center;
+}
+
+.work__cvVol1::before {
+  background-image: url("../IMG/cvOnline.png");
+}
+
+.work__cvVol2::before {
+  background-image: url("../IMG/cvOnline2.png");
+}
+
+.work__trainer {
+  top: 2000px;
+  left: -2000px;
+  -webkit-transition: top 1s,left 1s, -webkit-transform 0.2s;
+  transition: top 1s,left 1s, -webkit-transform 0.2s;
+  transition: top 1s,left 1s, transform 0.2s;
+  transition: top 1s,left 1s, transform 0.2s,-webkit-transform 0.2s;
+}
+
+.work__kyokushin {
+  top: 2000px;
+  left: 0;
+  -webkit-transition: top 1s,left 1s, -webkit-transform 0.2s;
+  transition: top 1s,left 1s, -webkit-transform 0.2s;
+  transition: top 1s,left 1s, transform 0.2s;
+  transition: top 1s,left 1s, transform 0.2s,-webkit-transform 0.2s;
+}
+
+.work__christmas {
+  top: 2000px;
+  left: 2000px;
+  -webkit-transition: top 1s,left 1s, -webkit-transform 0.2s;
+  transition: top 1s,left 1s, -webkit-transform 0.2s;
+  transition: top 1s,left 1s, transform 0.2s;
+  transition: top 1s,left 1s, transform 0.2s,-webkit-transform 0.2s;
+}
+
+.work__cvVol1 {
+  top: 2000px;
+  left: -1000px;
+  -webkit-transition: top 1s,left 1s, -webkit-transform 0.2s;
+  transition: top 1s,left 1s, -webkit-transform 0.2s;
+  transition: top 1s,left 1s, transform 0.2s;
+  transition: top 1s,left 1s, transform 0.2s,-webkit-transform 0.2s;
+}
+
+.work__cvVol2 {
+  top: 2000px;
+  left: 1000px;
+  -webkit-transition: top 1s, left 1s, -webkit-transform 0.2s;
+  transition: top 1s, left 1s, -webkit-transform 0.2s;
+  transition: top 1s, left 1s, transform 0.2s;
+  transition: top 1s, left 1s, transform 0.2s, -webkit-transform 0.2s;
+}
+
+.work--onPosition {
+  top: 0;
+  left: 0;
+}
+
+.work__text {
+  position: relative;
+  letter-spacing: 3px;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 500;
+  font-family: "IM Fell DW Pica";
+  color: #fff;
+  z-index: 1000;
+  text-align: center;
+}
+
+.cover {
+  -webkit-clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+          clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+  position: relative;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 285px;
+  height: 285px;
+  background: linear-gradient(-45deg, black 40%, rgba(0, 0, 0, 0.8) 100%);
+  z-index: 999;
+  line-height: 285px;
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
+}
+
+@media (min-width: 1024px) {
+  .cover:hover {
+    opacity: 0;
   }
 }
 /*# sourceMappingURL=style.css.map */

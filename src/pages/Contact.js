@@ -118,15 +118,15 @@ class Contact extends React.Component {
           </div>
 
           <div className="platform">
-            <img src={linked} alt="" className={classesIconLinked.join(' ')} />
-            <img src={gitHub} alt="" className={classesIconGitHub.join(' ')} />
-            <img src={instagram} alt="" className={classesIconInsta.join(' ')} />
+            <a href="https://www.linkedin.com/in/mateusz-raty%C5%84ski-7b5737198/"><img src={linked} alt="linkedInIcon" className={classesIconLinked.join(' ')} /></a>
+            <a href="https://github.com/Matthave"><img src={gitHub} alt="gitHubIcon" className={classesIconGitHub.join(' ')} /></a>
+            <a href="https://www.instagram.com/i.mr.fit/"><img src={instagram} alt="instagramIcon" className={classesIconInsta.join(' ')} /></a>
           </div>
 
           <div className="contactDetails">
-            <img src={emailIcon} alt="" className="contactDetails__emailIcon" />
+            <img src={emailIcon} alt="emailIcon" className="contactDetails__emailIcon" />
             <div className="contactDetails__email">matthevr@gmail.com</div>
-            <img src={phoneIcon} alt="" className="contactDetails__phoneIcon" />
+            <img src={phoneIcon} alt="phoneIcon" className="contactDetails__phoneIcon" />
             <div className="contactDetails__phone">+48 609 404 940</div>
           </div>
         </div>

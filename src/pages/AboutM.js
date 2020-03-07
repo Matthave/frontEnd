@@ -8,25 +8,8 @@ class AboutM extends React.Component {
       showAboutMe: false,
     }
 
-    document.addEventListener('touchstart', (event) => this.startTouch(event))
-    document.addEventListener('touchmove', (event) => this.moveTouch(event))
-    this.sectionElement = document.querySelectorAll('.aboutM');
-    const sectionEleArray = [...this.sectionElement];
-
-    this.initX = null;
-    this.initY = null;
-    this.currentIndexOfSection = sectionEleArray.findIndex(this.isScrolledIntoView)
-    this.currentIndexOfSection = Math.max(this.currentIndexOfSection, 0);
+    this.currentIndexOfSection = -1;
     this.withHold = false;
-
-    this.events = {
-      swipeUp: new Event('swipeUp'),
-      swipeDown: new Event('swipeDown'),
-      swipeLeft: new Event('swipeLeft'),
-      swipeRight: new Event('swipeRight'),
-    }
-
-    this.activeDots()
   }
 
   componentWillUnmount() {
@@ -42,8 +25,6 @@ class AboutM extends React.Component {
     document.body.style.overflow = 'hidden';
     window.scrollTo({ top: 0, behavior: 'smooth' });
 
-    document.addEventListener('swipeUp', () => this.scroll(1));
-    document.addEventListener('swipeDown', () => this.scroll(-1));
     document.querySelector('.about').addEventListener('wheel', (event) => this.scrollDirection(event))
   }
 
@@ -53,38 +34,6 @@ class AboutM extends React.Component {
     const elemBottom = Math.floor(rect.bottom);
     const isVisible = (elemTop >= 0) && (elemBottom <= window.innerHeight)
     return isVisible;
-  }
-
-  startTouch = (event) => {
-    event.preventDefault();
-    this.initX = event.touches[0].clientX;
-    this.initY = event.touches[0].clientY;
-  }
-
-  moveTouch = (event) => {
-    if (!this.initX || !this.initY) return;
-    const currentX = event.touches[0].clientX;
-    const currentY = event.touches[0].clientY;
-
-    const diffrenceX = this.initX - currentX;
-    const diffrenceY = this.initY - currentY;
-
-    if (Math.abs(diffrenceX) > Math.abs(diffrenceY)) {
-      if (diffrenceX > 0) {
-        document.dispatchEvent(this.events.swipeLeft)
-      } else {
-        document.dispatchEvent(this.events.swipeRight)
-      }
-    } else {
-      if (diffrenceY > 0) {
-        document.dispatchEvent(this.events.swipeUp)
-      } else {
-        document.dispatchEvent(this.events.swipeDown)
-      }
-    }
-
-    this.initX = null;
-    this.initX = null;
   }
 
   activeDots = () => {
@@ -100,7 +49,7 @@ class AboutM extends React.Component {
 
   clickHandleDots = (index) => {
     this.currentIndexOfSection = index;
-    this.scrollToElement()
+    this.scrollToElement();
   }
 
   scrollDirection = (event) => {
@@ -130,7 +79,6 @@ class AboutM extends React.Component {
     this.currentIndexOfSection += direction;
 
     this.scrollToElement();
-    this.activeDots()
   }
 
   scrollToElement = () => {
@@ -148,7 +96,9 @@ class AboutM extends React.Component {
 
     const sectionElements = [...document.querySelectorAll('.aboutM')];
     const liList = sectionElements.map((ele, index) => (
-      <li onClick={() => this.clickHandleDots(index)} className="navigationAbout__listItem"></li>
+      <div key={index}>
+        <li onClick={() => this.clickHandleDots(index)} className="navigationAbout__listItem"></li>
+      </div>
     ))
 
     return (
@@ -162,10 +112,11 @@ class AboutM extends React.Component {
         </div>
         <div className="aboutMWrap">
           <div className="aboutM aboutM--start">
-            <h3 className='aboutM__text aboutM__text--start'>
+            <h1 className='aboutM__text aboutM__text--start'>
               <strong className='aboutM__hi'>Hi,</strong>I am a FrontEnd developer who some time ago started the adventure
                with programming and creating the appearance of websites and web applications.
-             </h3>
+               I invite you to see my projects in the portfolio tab.
+             </h1>
           </div>
 
           <div className="aboutM">

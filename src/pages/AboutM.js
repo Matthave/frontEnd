@@ -1,5 +1,4 @@
 import React from 'react'
-import myLogo from '../IMG/Logo contentSize.png'
 
 class AboutM extends React.Component {
   state = {
@@ -26,18 +25,16 @@ class AboutM extends React.Component {
             About Me - About Me -
           </div>
         </div>
-        <div className="welcome">
-          <h2 className="welcome__text">
-            <strong>Hi,</strong>
-            I am a FrontEnd developer who some time ago started
-             the adventure with programming and creating the appearance
-              of websites and web applications.
-          </h2>
-        </div>
         <div className="aboutMWrap">
+          <div className="aboutM aboutM--start">
+            <h3 className='aboutM__text aboutM__text--start'>
+              <strong className='aboutM__hi'>Hi,</strong>I am a FrontEnd developer who some time ago started the adventure
+               with programming and creating the appearance of websites and web applications.
+             </h3>
+          </div>
+
           <div className="aboutM">
-            <div className='aboutM__headingCointainer'>
-              <img src={myLogo} alt="hexPassionWithMyLogo" className="aboutM__img" />
+            <div className='aboutM__headingContainer'>
               <p className='aboutM__title'>passion</p>
               <p className="aboutM__titleFront">Project</p>
             </div>
@@ -49,13 +46,11 @@ class AboutM extends React.Component {
               I always try to be a project to do my best, realizing the importance of the smallest detail.
               You can see some of my projects that have already been
             completed in my <strong>portfolio</strong>.
-  
           </h3>
           </div>
 
           <div className="aboutM">
-            <div className='aboutM__headingCointainer'>
-              <img src={myLogo} alt="hexPassionWithMyLogo" className="aboutM__img" />
+            <div className='aboutM__headingContainer'>
               <p className='aboutM__title'>heart</p>
               <p className="aboutM__titleFront">I love IT</p>
             </div>
@@ -68,8 +63,7 @@ class AboutM extends React.Component {
           </div>
 
           <div className="aboutM">
-            <div className='aboutM__headingCointainer'>
-              <img src={myLogo} alt="hexPassionWithMyLogo" className="aboutM__img" />
+            <div className='aboutM__headingContainer'>
               <p className='aboutM__title'>time</p>
               <p className="aboutM__titleFront">Perfection</p>
             </div>

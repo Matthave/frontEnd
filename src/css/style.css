@@ -1182,63 +1182,6 @@ body {
   opacity: 1;
 }
 
-.welcome {
-  padding: 25px;
-  margin-top: 25px;
-}
-
-@media (min-width: 460px) {
-  .welcome {
-    padding: 0 55px;
-  }
-}
-
-.welcome strong {
-  display: block;
-  font-size: 3rem;
-  margin-bottom: 5px;
-  font-weight: 500;
-  font-family: "Nanum Gothic", sans-serif;
-}
-
-@media (min-width: 460px) {
-  .welcome strong {
-    font-size: 4rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .welcome strong {
-    font-size: 4.5rem;
-  }
-}
-
-.welcome__text {
-  color: white;
-  line-height: 20px;
-  font-size: 1.4rem;
-  font-weight: 500;
-  font-family: "Nanum Gothic", sans-serif;
-  max-width: 400px;
-  margin: 0 auto;
-}
-
-@media (min-width: 460px) {
-  .welcome__text {
-    font-size: 1.8rem;
-    line-height: 25px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .welcome__text {
-    text-align: center;
-    margin-bottom: 45px;
-    font-size: 2rem;
-    line-height: 28px;
-  }
-}
-
 .aboutMWrap {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1250,6 +1193,10 @@ body {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+}
+
+.aboutM--start .aboutM__text--start {
+  text-align: center;
 }
 
 .aboutM {
@@ -1273,14 +1220,14 @@ body {
   }
 }
 
-.aboutM__headingCointainer {
+.aboutM__headingContainer {
   position: relative;
   width: 100%;
   height: 50px;
 }
 
 @media (min-width: 1024px) {
-  .aboutM__headingCointainer {
+  .aboutM__headingContainer {
     -webkit-clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
             clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
     background-color: #000;
@@ -1290,7 +1237,7 @@ body {
     background-color: #222;
     z-index: 1;
   }
-  .aboutM__headingCointainer:after {
+  .aboutM__headingContainer:after {
     content: '';
     position: absolute;
     top: 50%;
@@ -1419,6 +1366,25 @@ body {
 @media (min-width: 640px) {
   .aboutM__text strong {
     font-size: 1.8rem;
+  }
+}
+
+.aboutM__text .aboutM__hi {
+  display: block;
+  font-size: 3rem;
+  margin-bottom: 8px;
+}
+
+@media (min-width: 800px) {
+  .aboutM__text .aboutM__hi {
+    font-size: 4rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .aboutM__text .aboutM__hi {
+    font-size: 5rem;
+    margin-bottom: 12px;
   }
 }
 

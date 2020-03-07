@@ -18,16 +18,16 @@ function Bars() {
           WebSite Maker - Web Developer - FrontEnd -
           WebSite Maker - Web Developer - FrontEnd -
           </div>
-        <div className="bars__textUnder">About Your Artist</div>
+        <NavLink className="bars__textUnder" to='AboutYourArtist'>About Your Artist</NavLink>
       </div>
-      <div className="bars__item">
+      {/* <div className="bars__item">
         <div className='bars__text'>
           JavaScript - React - SASS - CSS -
           JavaScript - React - SASS - CSS -
           JavaScript - React - SASS - CSS -
         </div>
         <NavLink className="bars__textUnder" to='Technology'>Technology I Use</NavLink>
-      </div>
+      </div> */}
     </section>
   )
 }

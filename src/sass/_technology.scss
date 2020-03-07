@@ -1,5 +1,11 @@
 .technology{
     margin-top: 75px;
+    opacity: 0;
+    transition: 2s;
+}
+
+.technology--showIt{
+  opacity: 1;
 }
 
 .bars__itemTechnology{

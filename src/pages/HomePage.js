@@ -6,26 +6,29 @@ import Bars2 from '../components/Bars2';
 
 class HomePage extends React.Component {
   state = {
-    introLogoMoveUp: false
+    introLogoMoveUp: false,
+    homePageShowIt: false,
   }
 
   componentDidMount() {
-    console.log('mount')
     setTimeout(() => {
       this.setState({
-        introLogoMoveUp: true
+        introLogoMoveUp: true,
+        homePageShowIt: true
       })
     }, 20)
   }
 
   render() {
+    const classes = ['homePage'];
+    if (this.state.homePageShowIt) classes.push(' homePage--showIt')
     return (
-      <>
+      <div className={classes.join(' ')}>
         <Header introLogoMoveUp={this.state.introLogoMoveUp} />
         <Bars />
         <Gallery />
         <Bars2 />
-      </>
+      </div>
     )
   }
 }

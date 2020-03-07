@@ -5,17 +5,90 @@ class AboutM extends React.Component {
     showAboutMe: false,
   }
 
+  currentIndexOfSection = -1;
+  withHold = false;
+
+
+  componentWillUnmount() {
+    document.body.style.overflow = 'visible';
+  }
+
   componentDidMount() {
     setTimeout(() => {
       this.setState({
         showAboutMe: true
       })
     }, 20);
+    document.body.style.overflow = 'hidden';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    document.querySelector('.about').addEventListener('wheel', (event) => this.scrollDirection(event))
+  }
+
+  activeDots = () => {
+    const liList = document.querySelectorAll('.navigationAbout__listItem');
+    liList.forEach((li, index) => {
+      if (index === this.currentIndexOfSection) {
+        li.classList.add('navigationAbout__listItem--active')
+      } else {
+        li.classList.remove('navigationAbout__listItem--active')
+      }
+    })
+  }
+
+  clickHandleDots = (index) => {
+    this.currentIndexOfSection = index;
+    this.scrollToElement()
+  }
+
+  scrollDirection = (event) => {
+    if (this.withHold) return;
+    this.withHold = true;
+
+    setTimeout(() => {
+      this.withHold = false;
+    }, 1000);
+
+    const direction = event.deltaY > 0 ? 1 : -1;
+
+    this.scroll(direction);
+  }
+
+  scroll = (direction) => {
+    const sectionElements = document.querySelectorAll('.aboutM')
+
+    if (direction === 1) {
+      const isLastSection = this.currentIndexOfSection === sectionElements.length - 1;
+      if (isLastSection) return;
+    } else if (direction === -1) {
+      const isFirstSection = this.currentIndexOfSection === 0;
+      if (isFirstSection) return;
+    }
+
+    this.currentIndexOfSection += direction;
+
+    this.scrollToElement();
+    this.activeDots()
+  }
+
+  scrollToElement = () => {
+    this.activeDots();
+    const sectionEle = document.querySelectorAll('.aboutM')
+    sectionEle[this.currentIndexOfSection].scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    })
   }
 
   render() {
     const classes = ['about'];
     if (this.state.showAboutMe) classes.push('about--showIt')
+
+    const sectionElements = [...document.querySelectorAll('.aboutM')];
+    const liList = sectionElements.map((ele, index) => (
+      <li onClick={() => this.clickHandleDots(index)} className="navigationAbout__listItem"></li>
+    ))
+
     return (
       <section className={classes.join(' ')}>
         <div className='bars__itemAbout'>
@@ -78,6 +151,11 @@ class AboutM extends React.Component {
           </h3>
           </div>
         </div>
+        <aside className="navigationAbout">
+          <ul className="navigationAbout__list">
+            {liList}
+          </ul>
+        </aside>
       </section>
     )
   }

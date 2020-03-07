@@ -36,6 +36,7 @@ class Contact extends React.Component {
     setInterval(() => {
       this.iconUp();
     }, 5000)
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
   iconUp = () => {

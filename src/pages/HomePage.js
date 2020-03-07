@@ -17,6 +17,8 @@ class HomePage extends React.Component {
         homePageShowIt: true
       })
     }, 20)
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
   render() {

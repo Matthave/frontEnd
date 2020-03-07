@@ -214,3 +214,42 @@ transform: rotate(0);
       transform: rotate(0);
       }
 }
+
+
+//Navigations 
+
+.navigationAbout{
+  display: none;
+  position: fixed;
+  top:50%;
+  right:5px;
+  transform: translate(-50%,-50%);
+  width:50px;
+  @include mq(large){
+    display: block;
+  }
+  &__list{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    list-style-type: none;
+  }
+  &__listItem{
+    width:25px;
+    height: 25px;
+    border-radius: 50%;
+    border:1px solid white;
+    background-color: #333;
+    margin: 10px auto;
+    transition: 0.2s linear;
+    cursor: pointer;
+    &:hover{
+      background-color: #aaa;
+      border:1px black solid;
+    }
+    &--active{
+      background-color: #aaa;
+      border:1px black solid;
+    }
+  }
+}

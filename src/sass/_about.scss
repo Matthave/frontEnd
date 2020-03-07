@@ -23,15 +23,19 @@
 }
 
 .aboutM{
-  padding:0 25px;
+  padding:0 45px;
   margin: 100px 0px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   @include mq(xsmall){
     padding: 0 55px;
   }
   @include mq(large){
-    height: 100vh;
     margin: 25px 0px;
     display: flex;
+    flex-direction: row;
   }
   &__headingContainer{
     position: relative;
@@ -72,13 +76,13 @@
   &__title{
     position: absolute;
     top:0;
-    left:75%;
+    left:50%;
     transform: translate(-50%,-50%);
     text-transform: uppercase;
     letter-spacing: 15px;
     font-size: 4rem;
     font-family: $default-font;
-    color:#171717;
+    color:#222;
     white-space: pre;
     animation: passTitle 15s infinite linear;
     @include mq(xsmall){
@@ -95,7 +99,7 @@
   &__titleFront{
     position: absolute;
     top:30%;
-    left:25%;
+    left:50%;
     transform: translate(-50%,-50%);
     text-transform: uppercase;
     letter-spacing: 3px;
@@ -117,11 +121,12 @@
   &__text{
     color:white;
     line-height: 20px;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     font-weight: 500;
     font-family: $special-font;
     max-width: 400px;
     margin: 0 auto;
+    text-align: justify;
     @include mq(xsmall){
       font-size:1.8rem;
       line-height: 25px;
@@ -130,13 +135,14 @@
       align-self: center;
     }
     strong{
-      letter-spacing: 3px;
+      letter-spacing: 5px;
       color: #ddd;
       cursor: pointer;
+      margin-left: 5px;
       font-family: $default-font;
-      font-size: 1.5rem;
+      font-size: 1.7rem;
       @include mq(small){
-        font-size:1.8rem;
+        font-size:2rem;
       }
     }
     .aboutM__hi{
@@ -164,69 +170,16 @@
 color: #fff;
 }
 
-@keyframes passTitle{
-0%{
-  left:55%;
-}
-50%{
-  left:45%;
-}
-60%{
-  left:45%;
-}
-90%{
-  left:55%;
-}
-100%{
-  left:55%;
-}
-}
-
-@keyframes passFrontTitle{
-  0%{
-    left:45%;
-  }
-  50%{
-    left:55%;
-  }
-  60%{
-    left:55%;
-  }
-  90%{
-    left:45%;
-  }
-  100%{
-    left:45%;
-  }
-}
-
-@keyframes rotate {
-  0%{
-transform: rotate(0);
-  }
-  50%{
-    transform: rotate(45deg);
-      }
-  51%{
-      transform: rotate(45deg);
-      }
-  100%{
-      transform: rotate(0);
-      }
-}
-
-
 //Navigations 
 
 .navigationAbout{
-  display: none;
   position: fixed;
   top:50%;
-  right:5px;
+  right:-25px;
   transform: translate(-50%,-50%);
   width:50px;
-  @include mq(large){
-    display: block;
+  @include mq(medium){
+    right:5px;
   }
   &__list{
     display: flex;
@@ -235,17 +188,23 @@ transform: rotate(0);
     list-style-type: none;
   }
   &__listItem{
-    width:25px;
-    height: 25px;
+    width:15px;
+    height: 15px;
     border-radius: 50%;
     border:1px solid white;
     background-color: #333;
-    margin: 10px auto;
+    margin: 15px auto;
     transition: 0.2s linear;
     cursor: pointer;
+    @include mq(medium){
+      width:25px;
+      height: 25px;
+    }
     &:hover{
-      background-color: #aaa;
-      border:1px black solid;
+      @include mq(large){
+        background-color: #aaa;
+        border:1px black solid;
+      }
     }
     &--active{
       background-color: #aaa;

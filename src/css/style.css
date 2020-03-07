@@ -1200,8 +1200,19 @@ body {
 }
 
 .aboutM {
-  padding: 0 25px;
+  padding: 0 45px;
   margin: 100px 0px;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 @media (min-width: 460px) {
@@ -1212,11 +1223,14 @@ body {
 
 @media (min-width: 1024px) {
   .aboutM {
-    height: 100vh;
     margin: 25px 0px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
 }
 
@@ -1268,14 +1282,14 @@ body {
 .aboutM__title {
   position: absolute;
   top: 0;
-  left: 75%;
+  left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   text-transform: uppercase;
   letter-spacing: 15px;
   font-size: 4rem;
   font-family: "IM Fell DW Pica";
-  color: #171717;
+  color: #222;
   white-space: pre;
   -webkit-animation: passTitle 15s infinite linear;
           animation: passTitle 15s infinite linear;
@@ -1301,7 +1315,7 @@ body {
 .aboutM__titleFront {
   position: absolute;
   top: 30%;
-  left: 25%;
+  left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   text-transform: uppercase;
@@ -1333,11 +1347,12 @@ body {
 .aboutM__text {
   color: white;
   line-height: 20px;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   font-weight: 500;
   font-family: "Nanum Gothic", sans-serif;
   max-width: 400px;
   margin: 0 auto;
+  text-align: justify;
 }
 
 @media (min-width: 460px) {
@@ -1356,16 +1371,17 @@ body {
 }
 
 .aboutM__text strong {
-  letter-spacing: 3px;
+  letter-spacing: 5px;
   color: #ddd;
   cursor: pointer;
+  margin-left: 5px;
   font-family: "IM Fell DW Pica";
-  font-size: 1.5rem;
+  font-size: 1.7rem;
 }
 
 @media (min-width: 640px) {
   .aboutM__text strong {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
 }
 
@@ -1447,129 +1463,18 @@ body {
   }
 }
 
-@-webkit-keyframes passTitle {
-  0% {
-    left: 55%;
-  }
-  50% {
-    left: 45%;
-  }
-  60% {
-    left: 45%;
-  }
-  90% {
-    left: 55%;
-  }
-  100% {
-    left: 55%;
-  }
-}
-
-@keyframes passTitle {
-  0% {
-    left: 55%;
-  }
-  50% {
-    left: 45%;
-  }
-  60% {
-    left: 45%;
-  }
-  90% {
-    left: 55%;
-  }
-  100% {
-    left: 55%;
-  }
-}
-
-@-webkit-keyframes passFrontTitle {
-  0% {
-    left: 45%;
-  }
-  50% {
-    left: 55%;
-  }
-  60% {
-    left: 55%;
-  }
-  90% {
-    left: 45%;
-  }
-  100% {
-    left: 45%;
-  }
-}
-
-@keyframes passFrontTitle {
-  0% {
-    left: 45%;
-  }
-  50% {
-    left: 55%;
-  }
-  60% {
-    left: 55%;
-  }
-  90% {
-    left: 45%;
-  }
-  100% {
-    left: 45%;
-  }
-}
-
-@-webkit-keyframes rotate {
-  0% {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
-  }
-  50% {
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
-  }
-  51% {
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
-  }
-  100% {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
-  }
-}
-
-@keyframes rotate {
-  0% {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
-  }
-  50% {
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
-  }
-  51% {
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
-  }
-  100% {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
-  }
-}
-
 .navigationAbout {
-  display: none;
   position: fixed;
   top: 50%;
-  right: 5px;
+  right: -25px;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   width: 50px;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 800px) {
   .navigationAbout {
-    display: block;
+    right: 5px;
   }
 }
 
@@ -1588,20 +1493,29 @@ body {
 }
 
 .navigationAbout__listItem {
-  width: 25px;
-  height: 25px;
+  width: 15px;
+  height: 15px;
   border-radius: 50%;
   border: 1px solid white;
   background-color: #333;
-  margin: 10px auto;
+  margin: 15px auto;
   -webkit-transition: 0.2s linear;
   transition: 0.2s linear;
   cursor: pointer;
 }
 
-.navigationAbout__listItem:hover {
-  background-color: #aaa;
-  border: 1px black solid;
+@media (min-width: 800px) {
+  .navigationAbout__listItem {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .navigationAbout__listItem:hover {
+    background-color: #aaa;
+    border: 1px black solid;
+  }
 }
 
 .navigationAbout__listItem--active {

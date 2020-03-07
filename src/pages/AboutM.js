@@ -1,13 +1,33 @@
 import React from 'react'
 
 class AboutM extends React.Component {
-  state = {
-    showAboutMe: false,
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      showAboutMe: false,
+    }
+
+    document.addEventListener('touchstart', (event) => this.startTouch(event))
+    document.addEventListener('touchmove', (event) => this.moveTouch(event))
+    this.sectionElement = document.querySelectorAll('.aboutM');
+    const sectionEleArray = [...this.sectionElement];
+
+    this.initX = null;
+    this.initY = null;
+    this.currentIndexOfSection = sectionEleArray.findIndex(this.isScrolledIntoView)
+    this.currentIndexOfSection = Math.max(this.currentIndexOfSection, 0);
+    this.withHold = false;
+
+    this.events = {
+      swipeUp: new Event('swipeUp'),
+      swipeDown: new Event('swipeDown'),
+      swipeLeft: new Event('swipeLeft'),
+      swipeRight: new Event('swipeRight'),
+    }
+
+    this.activeDots()
   }
-
-  currentIndexOfSection = -1;
-  withHold = false;
-
 
   componentWillUnmount() {
     document.body.style.overflow = 'visible';
@@ -22,7 +42,49 @@ class AboutM extends React.Component {
     document.body.style.overflow = 'hidden';
     window.scrollTo({ top: 0, behavior: 'smooth' });
 
+    document.addEventListener('swipeUp', () => this.scroll(1));
+    document.addEventListener('swipeDown', () => this.scroll(-1));
     document.querySelector('.about').addEventListener('wheel', (event) => this.scrollDirection(event))
+  }
+
+  isScrolledIntoView(el) {
+    const rect = el.getBoundingClientRect();
+    const elemTop = rect.top;
+    const elemBottom = Math.floor(rect.bottom);
+    const isVisible = (elemTop >= 0) && (elemBottom <= window.innerHeight)
+    return isVisible;
+  }
+
+  startTouch = (event) => {
+    event.preventDefault();
+    this.initX = event.touches[0].clientX;
+    this.initY = event.touches[0].clientY;
+  }
+
+  moveTouch = (event) => {
+    if (!this.initX || !this.initY) return;
+    const currentX = event.touches[0].clientX;
+    const currentY = event.touches[0].clientY;
+
+    const diffrenceX = this.initX - currentX;
+    const diffrenceY = this.initY - currentY;
+
+    if (Math.abs(diffrenceX) > Math.abs(diffrenceY)) {
+      if (diffrenceX > 0) {
+        document.dispatchEvent(this.events.swipeLeft)
+      } else {
+        document.dispatchEvent(this.events.swipeRight)
+      }
+    } else {
+      if (diffrenceY > 0) {
+        document.dispatchEvent(this.events.swipeUp)
+      } else {
+        document.dispatchEvent(this.events.swipeDown)
+      }
+    }
+
+    this.initX = null;
+    this.initX = null;
   }
 
   activeDots = () => {

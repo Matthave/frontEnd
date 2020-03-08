@@ -8,6 +8,8 @@
 
 html {
   font-size: 10px;
+  -ms-touch-action: pan-y;
+      touch-action: pan-y;
 }
 
 body {
@@ -970,6 +972,7 @@ body {
   color: white;
   cursor: pointer;
   z-index: 1;
+  outline: none;
 }
 
 .form__btnContainer .form__btnCopy {
@@ -985,6 +988,7 @@ body {
   cursor: pointer;
   -webkit-transition: 0.2s linear;
   transition: 0.2s linear;
+  outline: none;
 }
 
 .form__btnContainer .form__btnCopy2 {
@@ -1000,6 +1004,7 @@ body {
   cursor: pointer;
   -webkit-transition: 0.2s linear;
   transition: 0.2s linear;
+  outline: none;
 }
 
 @media (min-width: 1024px) {

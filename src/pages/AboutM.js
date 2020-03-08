@@ -7,13 +7,16 @@ class AboutM extends React.Component {
     this.state = {
       showAboutMe: false,
     }
-
-    this.currentIndexOfSection = -1;
+    this.sectionElements = document.querySelectorAll('.aboutM');
+    this.sectionArray = [...this.sectionElements];
+    this.currentIndexOfSection = this.sectionArray.findIndex(this.isScrolledIntoView);
+    this.currentIndexOfSection = Math.max(this.currentIndexOfSection, 0);
     this.withHold = false;
-  }
+    this.initialY = null;
+    this.initialX = null;
 
-  componentWillUnmount() {
-    document.body.style.overflow = 'visible';
+    this.startTouch = this.startTouch.bind(this)
+    this.moveTouch = this.moveTouch.bind(this)
   }
 
   componentDidMount() {
@@ -25,7 +28,53 @@ class AboutM extends React.Component {
     document.body.style.overflow = 'hidden';
     window.scrollTo({ top: 0, behavior: 'smooth' });
 
-    document.querySelector('.about').addEventListener('wheel', (event) => this.scrollDirection(event))
+    document.addEventListener('wheel', (event) => this.scrollDirection(event))
+    document.addEventListener('touchstart', this.startTouch, false);
+    document.addEventListener('touchmove', this.moveTouch, false);
+
+    document.addEventListener('swipeUp', () => this.scroll(1));
+    document.addEventListener('swipeDown', () => this.scroll(-1));
+    this.sectionElements = document.querySelectorAll('.aboutM')
+  }
+
+
+  componentWillUnmount() {
+    document.body.style.overflow = 'visible';
+    document.removeEventListener('touchstart', this.startTouch, false);
+    document.removeEventListener('touchmove', this.moveTouch, false);
+  }
+
+
+  startTouch(event) {
+    event.preventDefault();
+    this.initialX = event.touches[0].clientX;
+    this.initialY = event.touches[0].clientY;
+  }
+
+  moveTouch(event) {
+    if (!this.initialX || !this.initialY) return;
+    const currentX = event.touches[0].clientX;
+    const currentY = event.touches[0].clientY;
+
+    const diffX = this.initialX - currentX;
+    const diffY = this.initialY - currentY;
+
+    if (Math.abs(diffX) > Math.abs(diffY)) {
+      if (diffX > 0) {
+        document.dispatchEvent(new Event('swipeLeft'))
+      } else {
+        document.dispatchEvent(new Event('swipeRight'))
+      }
+    } else {
+      if (diffY > 0) {
+        document.dispatchEvent(new Event('swipeUp'))
+      } else {
+        document.dispatchEvent(new Event('swipeDown'))
+      }
+    }
+
+    this.initialX = null;
+    this.initialY = null;
   }
 
   isScrolledIntoView(el) {
@@ -66,10 +115,10 @@ class AboutM extends React.Component {
   }
 
   scroll = (direction) => {
-    const sectionElements = document.querySelectorAll('.aboutM')
+
 
     if (direction === 1) {
-      const isLastSection = this.currentIndexOfSection === sectionElements.length - 1;
+      const isLastSection = this.currentIndexOfSection === this.sectionElements.length - 1;
       if (isLastSection) return;
     } else if (direction === -1) {
       const isFirstSection = this.currentIndexOfSection === 0;
@@ -83,8 +132,7 @@ class AboutM extends React.Component {
 
   scrollToElement = () => {
     this.activeDots();
-    const sectionEle = document.querySelectorAll('.aboutM')
-    sectionEle[this.currentIndexOfSection].scrollIntoView({
+    this.sectionElements[this.currentIndexOfSection].scrollIntoView({
       behavior: 'smooth',
       block: 'start',
     })

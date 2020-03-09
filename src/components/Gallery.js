@@ -12,6 +12,16 @@ function Gallery() {
       <div className="gallery__passion gallery__obstinacy">
         <h2 className='gallery__text'>TIME</h2>
       </div>
+
+      <div className="gallery__passion gallery__passion duplicate">
+        <h2 className='gallery__text'>PASSION</h2>
+      </div>
+      <div className="gallery__passion gallery__heart duplicate">
+        <h2 className='gallery__text'>HEART</h2>
+      </div>
+      <div className="gallery__passion gallery__obstinacy duplicate">
+        <h2 className='gallery__text'>TIME</h2>
+      </div>
     </section>
   )
 }

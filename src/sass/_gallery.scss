@@ -39,6 +39,24 @@ animation: textGallery 1.5s 1.5s step-start infinite both;
 }
 
 
+.gallery__passion.duplicate {
+position: relative;
+left:-10%;
+animation: textGallery 1.7s step-start infinite both;
+}
+    
+.gallery__heart.duplicate{
+position: relative;
+left: -215%;
+animation: textGallery 1.3s 0.8s step-start infinite both;
+}
+    
+.gallery__obstinancy.duplicate{
+position: relative;
+left: -5%;
+animation: textGallery 1.8s 2s step-start infinite both;
+}
+
 @keyframes textGallery{
     0%{
         letter-spacing: 0px;
@@ -102,67 +120,78 @@ animation: textGallery 1.5s 1.5s step-start infinite both;
     }
 }
 
-@include mq(xlarge){
+@include mq(medium){
     @keyframes textGallery{
         0%{
             letter-spacing: 0px;
             text-shadow: 60px 20px #222;
             font-size: 5rem;
-            transform:translateX(94px);
+            transform:translateX(288px);
+            opacity: 1;
         }
         10%{
             letter-spacing: 0px;
             text-shadow: 70px 70px #222;
             transform:translateX(0px);
+            opacity: 0.7;
         }
         20%{
             letter-spacing: 2px;
             text-shadow: 90px -110px #222;
-            transform:translateX(68px);
+            transform:translateX(136px);
+            opacity: 0;
         }
         30%{
             letter-spacing: 5px;
             text-shadow: -110px -50px #222;
-            transform:translateX(-132px);
+            transform:translateX(-254px);
+            opacity: 1;
         }
         40%{
             letter-spacing: 6px;
             text-shadow: 90px 130px #222;
-            transform:translateX(132px);
+            transform:translateX(264px);
+            opacity: 0.4;
         }
         50%{
             letter-spacing: 1px;
             text-shadow: -110px 130px #222;
             transform:translateX(0px);
+            opacity: 1;
         }
         60%{
             letter-spacing: 2px;
             text-shadow: -50px -150px #222;
-            transform:translateX(166px);
+            transform:translateX(332px);
+            opacity: 0.5;
         }
         70%{
             letter-spacing: 12px;
             text-shadow: 0px -90px #222;
             font-size: 7rem;
-            transform:translateX(200px);
+            transform:translateX(400px);
+            opacity:0.9
         }
         80%{
             letter-spacing: 6px;
             text-shadow: 0px 70px #222;
             font-size: 13rem;
             transform:translateX(0px);
+            opacity: 1;
         }
         90%{
             letter-spacing: 8px;
             text-shadow: -110px 0px #222;
             font-size: 4rem;
-            transform:translateX(-132px);
+            transform:translateX(-264px);
+            opacity: 0.3;
         }
         100%{
             letter-spacing: 10px;
             text-shadow: 70px 0px #222;
             font-size: 6rem;
             transform:translateX(0px);
+            opacity: 1;
         }
     }
 }

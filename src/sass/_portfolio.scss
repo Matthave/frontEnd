@@ -20,7 +20,7 @@ color: #fff;
 .worksContainer{
   display: flex;
   flex-direction: column;
-  max-width: 1024px;
+  max-width: 1100px;
   margin:50px auto;
   padding: 50px 0px;
   // overflow: hidden;
@@ -43,6 +43,10 @@ color: #fff;
   cursor: pointer;
   text-decoration: none;
   transition: transform 0.2s linear;
+  @include mq(small){
+    width:340px;
+    height:340px;
+  }
   &:hover{
     @include mq(large){
       background: #fff;
@@ -62,6 +66,10 @@ color: #fff;
   height: 285px;
   background-repeat: no-repeat;
   background-size: cover;
+  @include mq(small){
+    width:335px;
+    height:335px;
+  }
 }
 
 .work__trainer::before{
@@ -128,6 +136,9 @@ transition:top 1s, left 1s, transform 0.2s;
   color:#fff;
   z-index: 1000;
   text-align: center;
+  @include mq(large){
+    font-size: 2.5rem;
+  }
 }
 
 
@@ -139,13 +150,18 @@ transition:top 1s, left 1s, transform 0.2s;
   transform: translate(-50%,-50%);
   width:285px;
   height:285px;
-  background: linear-gradient(-45deg, rgba(0,0,0,1) 40%, rgba(0,0,0,0.8) 100%);
+  background: linear-gradient(-45deg, rgba(0,0,0,1) 40%, rgba(0,0,0,1) 100%);
   z-index: 999;
   line-height: 285px;
   transition: 0.2s linear;
+  @include mq(small){
+    width:335px;
+    height:335px;
+    line-height: 335px;
+  }
   &:hover{
     @include mq(large){
-      opacity: 0;
+      opacity:0;
     }
   }
 }

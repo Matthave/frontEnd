@@ -26,7 +26,7 @@ class Portfolio extends React.Component {
         hexOnPosition: true,
       })
     }, 100);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: 'auto' });
   }
   render() {
     const classes = ['portfolio'];

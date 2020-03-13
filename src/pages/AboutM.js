@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
 class AboutM extends React.Component {
   constructor(props) {
@@ -26,7 +27,7 @@ class AboutM extends React.Component {
       })
     }, 20);
     document.body.style.overflow = 'hidden';
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: 'auto' });
 
     document.addEventListener('wheel', (event) => this.scrollDirection(event))
     document.addEventListener('touchstart', this.startTouch, false);
@@ -35,6 +36,8 @@ class AboutM extends React.Component {
     document.addEventListener('swipeUp', () => this.scroll(1));
     document.addEventListener('swipeDown', () => this.scroll(-1));
     this.sectionElements = document.querySelectorAll('.aboutM')
+    this.clickHandleDots(0);
+    this.activeDots();
   }
 
 
@@ -87,11 +90,26 @@ class AboutM extends React.Component {
 
   activeDots = () => {
     const liList = document.querySelectorAll('.navigationAbout__listItem');
+    const aboutMeElements = document.querySelectorAll('.aboutM')
     liList.forEach((li, index) => {
       if (index === this.currentIndexOfSection) {
         li.classList.add('navigationAbout__listItem--active')
       } else {
         li.classList.remove('navigationAbout__listItem--active')
+      }
+    })
+
+    aboutMeElements.forEach((element, index) => {
+      if (index === this.currentIndexOfSection) {
+        setTimeout(() => {
+          element.style.opacity = '1';
+          element.style.transform = 'translateX(0px)'
+        }, 500);
+      } else {
+        element.style.opacity = '0%';
+        setTimeout(() => {
+          element.style.transform = 'translateX(-100px)'
+        }, 200);
       }
     })
   }
@@ -179,7 +197,7 @@ class AboutM extends React.Component {
               it gives me a lot of satisfaction.
               I always try to be a project to do my best, realizing the importance of the smallest detail.
               You can see some of my projects that have already been
-            completed in my <strong>portfolio</strong>.
+            completed in my <strong> <NavLink to='/portfolio'>portfolio</NavLink></strong>.
           </h3>
           </div>
 

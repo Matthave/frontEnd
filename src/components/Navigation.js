@@ -1,6 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import smallLogo from '../IMG/Logo contentSize.png'
+import smallLogo from '../IMG/smallLogoTransparenBg.png'
 
 class Navigation extends React.Component {
 

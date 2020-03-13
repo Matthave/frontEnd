@@ -23,12 +23,16 @@
 }
 
 .aboutM{
+  position: relative;
+  top:0;
   padding:0 45px;
   margin: 100px 0px;
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  opacity: 0;
+  transition: 0.5s linear;
   @include mq(xsmall){
     padding: 0 55px;
   }
@@ -137,7 +141,7 @@
     font-family: $special-font;
     max-width: 400px;
     margin: 0 auto;
-    text-align: justify;
+    text-align: center;
     @include mq(xsmall){
       font-size:1.8rem;
       line-height: 25px;
@@ -146,14 +150,17 @@
       align-self: center;
     }
     strong{
+      a{
       letter-spacing: 5px;
       color: #ddd;
       cursor: pointer;
       margin-left: 5px;
       font-family: $default-font;
       font-size: 1.7rem;
+      text-decoration: none;
       @include mq(small){
         font-size:2rem;
+      }
       }
     }
     .aboutM__hi{

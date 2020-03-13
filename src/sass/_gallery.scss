@@ -32,10 +32,18 @@ animation: textGallery 1.5s step-start infinite both;
 
 .gallery__heart{
 animation: textGallery 1.5s 1s step-start infinite both;
+margin:50px 0px;
 }
 
 .gallery__obstinancy{
 animation: textGallery 1.5s 1.5s step-start infinite both;
+}
+
+.wrapDuplicate{
+    display: none;
+    @include mq(medium){
+        display: inherit;
+    }
 }
 
 

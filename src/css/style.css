@@ -35,18 +35,28 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: white;
+  background: #ccc;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: firebrick;
+  background: #fff;
+}
+
+*::-moz-selection {
+  color: darkcyan;
+  background-color: #000;
+}
+
+*::selection {
+  color: darkcyan;
+  background-color: #000;
 }
 
 .nav {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.85);
   width: 100%;
   height: 60px;
   padding: 15px 5px;
@@ -62,6 +72,13 @@ body {
           justify-content: space-evenly;
   width: 100%;
   padding: 0px 17px;
+}
+
+@media (min-width: 1024px) {
+  .nav__ul {
+    -webkit-transform: translateX(-3px);
+            transform: translateX(-3px);
+  }
 }
 
 .nav__li {
@@ -434,11 +451,22 @@ body {
 .gallery__heart {
   -webkit-animation: textGallery 1.5s 1s step-start infinite both;
           animation: textGallery 1.5s 1s step-start infinite both;
+  margin: 50px 0px;
 }
 
 .gallery__obstinancy {
   -webkit-animation: textGallery 1.5s 1.5s step-start infinite both;
           animation: textGallery 1.5s 1.5s step-start infinite both;
+}
+
+.wrapDuplicate {
+  display: none;
+}
+
+@media (min-width: 800px) {
+  .wrapDuplicate {
+    display: inherit;
+  }
 }
 
 .gallery__passion.duplicate {
@@ -1248,6 +1276,8 @@ body {
 }
 
 .aboutM {
+  position: relative;
+  top: 0;
   padding: 0 45px;
   margin: 100px 0px;
   height: 100vh;
@@ -1261,6 +1291,9 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  opacity: 0;
+  -webkit-transition: 0.5s linear;
+  transition: 0.5s linear;
 }
 
 @media (min-width: 460px) {
@@ -1412,7 +1445,7 @@ body {
   font-family: "Nanum Gothic", sans-serif;
   max-width: 400px;
   margin: 0 auto;
-  text-align: justify;
+  text-align: center;
 }
 
 @media (min-width: 460px) {
@@ -1430,17 +1463,18 @@ body {
   }
 }
 
-.aboutM__text strong {
+.aboutM__text strong a {
   letter-spacing: 5px;
   color: #ddd;
   cursor: pointer;
   margin-left: 5px;
   font-family: "IM Fell DW Pica";
   font-size: 1.7rem;
+  text-decoration: none;
 }
 
 @media (min-width: 640px) {
-  .aboutM__text strong {
+  .aboutM__text strong a {
     font-size: 2rem;
   }
 }

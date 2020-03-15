@@ -229,6 +229,37 @@ class AboutM extends React.Component {
               is in the highest order. I couldn't sleep without it.
           </h3>
           </div>
+
+          <div className="aboutM">
+            <div className='aboutM__headingContainer'>
+              <p className='aboutM__title'>Techniques</p>
+              <p className="aboutM__titleFront">Skills</p>
+            </div>
+            <div className='aboutM__text'>
+              <ul className="aboutM__icons">
+                <li><i className="fab fa-js"></i></li>
+                <li><i className="fab fa-react"></i></li>
+                <li><i className="fas fa-code"></i></li>
+                <li><i className="fab fa-css3"></i></li>
+                <li><i className="fab fa-sass"></i></li>
+              </ul>
+
+              <ul className="aboutM__nameIcons">
+                <li className="aboutM__iconsItem">Java Script</li>
+                <li className="aboutM__iconsItem">React.js</li>
+                <li className="aboutM__iconsItem">HTML5</li>
+                <li className="aboutM__iconsItem">CSS3</li>
+                <li className="aboutM__iconsItem">SASS</li>
+                <li className="aboutM__iconsItem">jQuery</li>
+                <li className="aboutM__iconsItem">AJAX</li>
+                <li className="aboutM__iconsItem">NPM</li>
+                <li className="aboutM__iconsItem">Node.js</li>
+                <li className="aboutM__iconsItem">Express</li>
+                <li className="aboutM__iconsItem">MongoDB</li>
+                <li className="aboutM__iconsItem">Git</li>
+              </ul>
+            </div>
+          </div>
         </div>
         <aside className="navigationAbout">
           <ul className="navigationAbout__list">

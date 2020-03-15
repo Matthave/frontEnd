@@ -1354,8 +1354,8 @@ body {
     -webkit-clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
             clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
     background-color: #000;
-    width: 500px;
-    height: 500px;
+    width: 640px;
+    height: 640px;
     margin: auto;
     background: linear-gradient(45deg, #333333 0%, #222222 100%);
     z-index: 1;
@@ -1365,11 +1365,11 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    -webkit-transform: translate(-50%, -50%) rotate(90deg);
-            transform: translate(-50%, -50%) rotate(90deg);
-    background-color: #111;
-    width: 415px;
-    height: 415px;
+    -webkit-transform: translate(-50%, -50%) rotate(120deg);
+            transform: translate(-50%, -50%) rotate(120deg);
+    background-color: #666;
+    width: 515px;
+    height: 515px;
     -webkit-clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
             clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
     z-index: -1;
@@ -1384,8 +1384,8 @@ body {
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
     background-color: black;
-    width: 495px;
-    height: 495px;
+    width: 635px;
+    height: 635px;
     -webkit-clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
             clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
     z-index: 0;
@@ -1411,8 +1411,8 @@ body {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   text-transform: uppercase;
-  letter-spacing: 15px;
-  font-size: 4rem;
+  letter-spacing: 4px;
+  font-size: 3rem;
   font-family: "IM Fell DW Pica";
   color: #222;
   white-space: pre;
@@ -1426,27 +1426,27 @@ body {
 
 @media (min-width: 1024px) {
   .aboutM__title {
-    top: 40%;
+    top: 45%;
     left: 50%;
     font-size: 6rem;
     -webkit-animation: none;
             animation: none;
-    letter-spacing: 14px;
+    letter-spacing: 10px;
   }
 }
 
 .aboutM__titleFront {
   position: absolute;
-  top: 30%;
+  top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   text-transform: uppercase;
-  letter-spacing: 3px;
   font-size: 2rem;
-  font-family: "IM Fell DW Pica";
+  font-family: "Nanum Gothic", sans-serif;
   color: white;
-  white-space: pre;
+  text-align: center;
+  letter-spacing: 5px;
 }
 
 @media (min-width: 460px) {
@@ -1460,8 +1460,6 @@ body {
     top: 50%;
     left: 50%;
     font-size: 5rem;
-    -webkit-animation: none;
-            animation: none;
   }
 }
 
@@ -1472,7 +1470,7 @@ body {
   font-weight: 500;
   font-family: "Nanum Gothic", sans-serif;
   max-width: 400px;
-  margin: 0 auto;
+  margin: 10px auto;
   text-align: center;
 }
 
@@ -1635,43 +1633,100 @@ body {
 
 @media (min-width: 1024px) {
   .navigationAbout__listItem:hover {
-    background-color: #aaa;
+    background-color: #eee;
     border: 1px black solid;
+    border-radius: 0%;
   }
 }
 
 .navigationAbout__listItem--active {
-  background-color: #aaa;
+  background-color: #eee;
   border: 1px black solid;
+  border-radius: 0%;
+}
+
+.aboutM__icons {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin: 20px 0px;
+}
+
+.aboutM__icons li {
+  font-size: 5.5rem;
+  margin: 10px 5px;
+}
+
+@media (min-width: 460px) {
+  .aboutM__icons li {
+    font-size: 6.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .aboutM__icons li {
+    font-size: 7.5rem;
+  }
+}
+
+.aboutM__nameIcons {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.aboutM__iconsItem {
+  font-size: 2rem;
+  margin: 10px;
+  line-height: 30px;
+  font-family: "Nanum Gothic", sans-serif;
+}
+
+@media (min-width: 460px) {
+  .aboutM__iconsItem {
+    font-size: 2.5rem;
+  }
 }
 
 @-webkit-keyframes bigger {
   0% {
-    width: 415px;
-    height: 415px;
+    width: 515px;
+    height: 515px;
   }
   50% {
-    width: 600px;
-    height: 600px;
+    width: 800px;
+    height: 800px;
   }
   100% {
-    width: 415px;
-    height: 415px;
+    width: 515px;
+    height: 515px;
   }
 }
 
 @keyframes bigger {
   0% {
-    width: 415px;
-    height: 415px;
+    width: 515px;
+    height: 515px;
   }
   50% {
-    width: 600px;
-    height: 600px;
+    width: 800px;
+    height: 800px;
   }
   100% {
-    width: 415px;
-    height: 415px;
+    width: 515px;
+    height: 515px;
   }
 }
 

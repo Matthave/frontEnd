@@ -1247,6 +1247,34 @@ body {
   opacity: 0.2;
 }
 
+.emailSent {
+  font-size: 2rem;
+  color: white;
+  font-family: "Nanum Gothic", sans-serif;
+  text-align: center;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+@media (min-width: 1200px) {
+  .emailSent {
+    max-height: 200px;
+    margin: auto 50px;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+}
+
+.emailSent--showIt {
+  opacity: 1;
+  padding: 50px 0px;
+  line-height: 40px;
+}
+
 .about {
   margin-top: 75px;
   opacity: 0;

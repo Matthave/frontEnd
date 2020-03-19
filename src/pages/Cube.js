@@ -2,6 +2,7 @@ import React from 'react'
 
 class Cube extends React.Component {
   state = {
+    cubeWrapMoveUp: false,
     frontCube: false,
     blacCube: false,
     greyRightSide: false,
@@ -11,24 +12,22 @@ class Cube extends React.Component {
     setTimeout(() => {
       this.setState({
         frontCube: true,
+        cubeWrapMoveUp: true,
       })
     }, 400);
 
     setTimeout(() => {
       this.setState({
         blackCube: true,
-      })
-    }, 1000);
-
-    setTimeout(() => {
-      this.setState({
         greyRightSide: true,
       })
-    }, 1500);
-
+    }, 1000);
   }
 
   render() {
+    const classesCubeWrap = ['cubeWrap'];
+    if (this.state.cubeWrapMoveUp) classesCubeWrap.push('cubeWrap--onPosition')
+
     const classesCube = ['cube'];
     if (this.state.frontCube) classesCube.push('cube--frontCube');
 
@@ -43,7 +42,7 @@ class Cube extends React.Component {
 
 
     return (
-      <div class="wrap">
+      <div class={classesCubeWrap.join(' ')}>
         <div class={classesCube.join(' ')}>
           <div class="cube__front">
             <div className={classesBlackLeft.join(' ')}></div>

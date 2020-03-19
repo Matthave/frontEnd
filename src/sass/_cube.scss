@@ -1,10 +1,14 @@
-.wrap {
+.cubeWrap {
     perspective: 1000px;
     perspective-origin: 50% 50%;
     position: relative;
-    top:50%;
+    top:130%;
     left:50%;
     transform: translate(-50%,-50%);
+    transition: 0.5s ;
+    &--onPosition{
+      top:50%;
+    }
   }
 
   .cube {
@@ -14,9 +18,9 @@
     width: 200px;
     transform-style: preserve-3d;
     transition: 0.8s;
-    transform: rotateX(-90deg) rotateY(-45deg);
-    animation: rotateLogo 10s 2s linear infinite;
+    transform: rotateX(-180deg) rotateY(-45deg);
     &--frontCube{
+      animation: rotateLogo 10s 2s linear infinite;
         transform: rotateX(-35deg) rotateY(-45deg);
     }
   }
@@ -51,7 +55,8 @@
     position: relative;
     transition: 2s;
     &--on{
-        background-color: #bbb;
+        background-color: #ccc;
+        animation: gradient 10s 2s linear infinite;
     }
   }
   
@@ -79,10 +84,10 @@
    right:-0.2%;
    width:80%;
    height: 80%;
-   border-top:60px solid white;
-   border-left:65px solid white;
+   border-top:60px solid #fff;
+   border-left:65px solid #fff;
    background-color: #fff;
-   transition: 1s;
+   transition: 1.2s;
    &--on{
     border-top:60px solid #000;
     border-left:65px solid #000;
@@ -95,10 +100,10 @@
     left:-0.2%;
     width:80%;
     height: 80%;
-    border-top:60px solid white;
-    border-right:65px solid white;
+    border-top:60px solid #fff;
+    border-right:65px solid #fff;
     background-color: transparent;
-    transition: 1s;
+    transition: 1.5s;
     &--on{
         border-top:60px solid #000;
         border-right:65px solid #000;
@@ -113,10 +118,10 @@
        }
 
        25%{
-        transform: rotateX(-35deg) rotateY(-42deg);
+        transform: rotateX(-35deg) rotateY(-41deg);
        }
        25.1%{
-        transform: rotateX(-35deg) rotateY(-42deg);
+        transform: rotateX(-35deg) rotateY(-41deg);
        }
        50%{
         transform: rotateX(-35deg) rotateY(-45deg);
@@ -125,12 +130,48 @@
         transform: rotateX(-35deg) rotateY(-45deg);
        }
        75%{
-        transform: rotateX(-35deg) rotateY(-48deg);
+        transform: rotateX(-35deg) rotateY(-49deg);
        }
        75.1%{
-        transform: rotateX(-35deg) rotateY(-48deg);   
+        transform: rotateX(-35deg) rotateY(-49deg);   
        }
        100%{
         transform: rotateX(-35deg) rotateY(-45deg);
        }
    }
+
+   @keyframes gradient{
+    0%{
+     
+     background-color: #ccc;
+    }
+
+    25%{
+     
+     background-color: #999;
+    }
+    25.1%{
+     
+     background-color: #999;
+    }
+    50%{
+     
+     background-color: #ccc;
+    }
+    50.1%{
+     
+     background-color: #ccc;
+    }
+    75%{
+     
+     background-color: #fff;
+    }
+    75.1%{
+    
+     background-color: #fff; 
+    }
+    100%{
+     
+     background-color: #ccc;
+    }
+}

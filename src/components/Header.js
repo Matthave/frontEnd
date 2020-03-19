@@ -7,9 +7,7 @@ function Header(props) {
 
   return (
     <section className="header">
-      <div className={classes.join(' ')}>
-        <Cube />
-      </div>
+      <Cube />
     </section>
   )
 }

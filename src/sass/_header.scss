@@ -2,7 +2,7 @@
     position: relative;
     top:300px;
     transform: rotateY(0deg);
-    background-image: url('../IMG/Logo\ contentSize.png');
+
     background-position: center;
     background-repeat: no-repeat;
     width:100%;
@@ -15,7 +15,7 @@
     }
     @include mq(medium){
         background-size: 40%;
-        background-image: url('../IMG/LogoLargeSize.png');
+        // background-image: url('../IMG/LogoLargeSize.png');
       }
     @include mq(large){
       background-size: 30%;

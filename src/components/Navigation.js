@@ -1,11 +1,25 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import smallLogo from '../IMG/smallLogoTransparenBg.png'
+import smallLogo from '../IMG/NewLogoSmallTransparent.png'
 
 class Navigation extends React.Component {
 
   logoClickHandle = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  componentDidMount() {
+    const myLogo = document.querySelector('.nav__smallLogo');
+    myLogo.addEventListener('mousedown', () => this.clickDown(myLogo))
+    myLogo.addEventListener('mouseup', () => this.clickUp(myLogo))
+  }
+
+  clickDown = (myLogo) => {
+    myLogo.style.transform = 'translateY(5px)'
+  }
+
+  clickUp = (myLogo) => {
+    myLogo.style.transform = 'translateY(0)'
   }
 
   render() {

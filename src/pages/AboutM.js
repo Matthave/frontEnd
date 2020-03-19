@@ -257,6 +257,7 @@ class AboutM extends React.Component {
                 <li className="aboutM__iconsItem">Express</li>
                 <li className="aboutM__iconsItem">MongoDB</li>
                 <li className="aboutM__iconsItem">Git</li>
+                <li className="aboutM__iconsItem">Webpack</li>
               </ul>
             </div>
           </div>

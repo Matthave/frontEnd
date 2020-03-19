@@ -51,7 +51,7 @@
       width:640px;
       height:640px;
       margin: auto;
-      background: linear-gradient(45deg, rgba(51,51,51,1) 0%, rgba(34,34,34,1) 100%);
+      background: linear-gradient(45deg, rgba(71,71,71,1) 0%, rgba(0,0,0,1) 100%);
       z-index: 1;
       &:after{
         content: '';
@@ -64,7 +64,6 @@
         height: 515px;
         clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
         z-index: -1;
-        animation: bigger 15s linear infinite;
       }
       &:before{
         content: '';
@@ -211,7 +210,7 @@ color: #fff;
     border:1px solid white;
     background-color: #333;
     margin: 15px auto;
-    transition: 0.2s linear;
+    transition: 0.3s linear;
     cursor: pointer;
     @include mq(medium){
       width:25px;
@@ -222,12 +221,14 @@ color: #fff;
         background-color: #eee;
         border:1px black solid;
         border-radius: 0%;
+        transform: rotate(-135deg);
       }
     }
     &--active{
       background-color: #eee;
       border:1px black solid;
       border-radius: 0%;
+      transform: rotate(-135deg);
     }
   }
 }

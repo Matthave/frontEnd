@@ -1,4 +1,5 @@
 import React from 'react'
+import Cube from '../pages/Cube'
 
 function Header(props) {
   const classes = ['introLogo'];
@@ -7,6 +8,7 @@ function Header(props) {
   return (
     <section className="header">
       <div className={classes.join(' ')}>
+        <Cube />
       </div>
     </section>
   )

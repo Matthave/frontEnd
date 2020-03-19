@@ -104,11 +104,29 @@ class Contact extends React.Component {
 
   sendFeedback(templateId, variables) {
     const { from_name, reply_to, message_html } = variables
-    if (from_name === '' || reply_to === '' || message_html === '') {
+    if (from_name === '' && reply_to === '' && message_html === '') {
       this.setState({
         fullName: 'Hey! What About Me?',
         email: 'Ups...You forgot about something',
         textArea: 'Same here!',
+      })
+      return
+    }
+    if (from_name === '') {
+      this.setState({
+        fullName: 'Hey! What About Me?',
+      })
+      return
+    }
+    if (reply_to === '') {
+      this.setState({
+        email: 'Ups...You forgot about something'
+      })
+      return
+    }
+    if (message_html === '') {
+      this.setState({
+        textArea: 'You should complete it'
       })
       return
     }
@@ -118,12 +136,19 @@ class Contact extends React.Component {
       })
       return
     }
-    if (reply_to.indexOf('@') === -1) {
+    if (reply_to === 'Your email address should have @') {
       this.setState({
-        email: 'Your email address should have @ '
+        email: "Still not valid email adress..."
       })
       return
     }
+    if (reply_to.indexOf('@') === -1) {
+      this.setState({
+        email: 'Your email address should have @'
+      })
+      return
+    }
+
     window.emailjs.send(
       'matthevr@gmail.com', templateId,
       variables

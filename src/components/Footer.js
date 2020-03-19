@@ -1,5 +1,5 @@
 import React from 'react'
-import smallLogo from '../IMG/Logo contentSize.png'
+import smallLogo from '../IMG/NewLogoSmallTransparent.png'
 
 function Footer() {
   return (

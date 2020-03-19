@@ -1,0 +1,136 @@
+.wrap {
+    perspective: 1000px;
+    perspective-origin: 50% 50%;
+    position: relative;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+  }
+
+  .cube {
+    margin: auto;
+    position: relative;
+    height: 200px;
+    width: 200px;
+    transform-style: preserve-3d;
+    transition: 0.8s;
+    transform: rotateX(-90deg) rotateY(-45deg);
+    animation: rotateLogo 10s 2s linear infinite;
+    &--frontCube{
+        transform: rotateX(-35deg) rotateY(-45deg);
+    }
+  }
+  
+  .cube > div {
+    position: absolute;
+    box-sizing: border-box;
+    padding: 10px;
+    height: 200px;
+    width: 200px;
+    color: #ffffff;
+    outline: none;
+    border:none;
+  }
+
+  .cube__front {
+      
+    transform: translateZ(100px);
+    background-color: white;
+    position: relative;
+  }
+  
+  .cube__back {
+    transform: translateZ(-100px) rotateY(180deg);
+    background-color: white;
+  }
+  
+  .cube__right {
+    transform: rotateY(-270deg) translateX(100px);
+    transform-origin: top right;
+    background-color: #fff;
+    position: relative;
+    transition: 2s;
+    &--on{
+        background-color: #bbb;
+    }
+  }
+  
+  .cube__left {
+    transform: rotateY(270deg) translateX(-100px);
+    transform-origin: center left;
+    background-color:white;
+  }
+  
+  .cube__top {
+    transform: rotateX(-270deg) translateY(-100px);
+    transform-origin: top center;
+    background-color:white;
+  }
+  
+  .cube__bottom {
+    transform: rotateX(270deg) translateY(100px);
+    transform-origin: bottom center;
+    background-color: white;
+  }
+
+  div.blackLeft{
+   position: absolute;
+   top:0;
+   right:-0.2%;
+   width:80%;
+   height: 80%;
+   border-top:60px solid white;
+   border-left:65px solid white;
+   background-color: #fff;
+   transition: 1s;
+   &--on{
+    border-top:60px solid #000;
+    border-left:65px solid #000;
+}
+  }
+
+  div.blackRight{
+    position: absolute;
+    top:0;
+    left:-0.2%;
+    width:80%;
+    height: 80%;
+    border-top:60px solid white;
+    border-right:65px solid white;
+    background-color: transparent;
+    transition: 1s;
+    &--on{
+        border-top:60px solid #000;
+        border-right:65px solid #000;
+    }
+   }
+
+
+
+   @keyframes rotateLogo{
+       0%{
+        transform: rotateX(-35deg) rotateY(-45deg);
+       }
+
+       25%{
+        transform: rotateX(-35deg) rotateY(-42deg);
+       }
+       25.1%{
+        transform: rotateX(-35deg) rotateY(-42deg);
+       }
+       50%{
+        transform: rotateX(-35deg) rotateY(-45deg);
+       }
+       50.1%{
+        transform: rotateX(-35deg) rotateY(-45deg);
+       }
+       75%{
+        transform: rotateX(-35deg) rotateY(-48deg);
+       }
+       75.1%{
+        transform: rotateX(-35deg) rotateY(-48deg);   
+       }
+       100%{
+        transform: rotateX(-35deg) rotateY(-45deg);
+       }
+   }

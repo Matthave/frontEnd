@@ -57,6 +57,7 @@ color: #fff;
     letter-spacing: 2px;
     font-weight: 500;
     font-family: $default-font;
+    transition: 0.2s linear;
     @include mq(xlarge){
       width:80%;
     }
@@ -70,13 +71,46 @@ color: #fff;
     border:none;
     padding-left: 5px;
     font-size: 1.6rem;
+    background-color: #333;
+    border:1px solid #666;
+    transition: 0.2s linear;
+    outline: none;
+    color:white;
+    cursor: pointer;
+    @include mq(large){
+      &:hover{
+        background-color: #666;
+      }
+    }
+    &:focus{
+      background-color: #fff;
+      color:black;
+      cursor: text;
+    }
   }
   &__textArea{
     width:100%;
     border-radius: 5px;
+    border:1px solid #666;
     height: 175px;
     padding:5px;
     font-size: 1.6rem;
+    background-color: #333;
+    transition: 0.2s linear;
+    outline: none;
+    resize: none;
+    color:white;
+    cursor: pointer;
+    @include mq(large){
+      &:hover{
+        background-color: #666;
+      }
+    }
+    &:focus{
+      background-color: #fff;
+      color:#222;
+      cursor: text;
+    }
   }
   &__btnContainer{
     position: relative;
@@ -106,7 +140,7 @@ color: #fff;
       height:45px;
       transform: translate(-50%,-50%) rotate(0deg);
       border:1px solid #aaa;
-      background-color: #222;
+      background-color: #333;
       cursor: pointer;
       transition: 0.2s linear;
       outline: none;
@@ -119,7 +153,7 @@ color: #fff;
       height:45px;
       transform: translate(-50%,-50%) rotate(0deg);
       border:1px solid #aaa;
-      background-color: #222;
+      background-color: #333;
       cursor: pointer;
       transition: 0.2s linear;
       outline: none;
@@ -139,6 +173,10 @@ color: #fff;
     transform: translate(-50%,-50%) rotate(-45deg);
   background-color: transparent;
   }
+}
+
+.form__label--filled{
+letter-spacing: 5px;
 }
 
 .contact__textWrap{

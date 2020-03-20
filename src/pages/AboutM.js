@@ -263,6 +263,19 @@ class AboutM extends React.Component {
               </ul>
             </div>
           </div>
+
+          <div className="aboutM">
+            <div className='aboutM__headingContainer'>
+              <p className='aboutM__title'>Weakness</p>
+              <p className="aboutM__titleFront" title='Hobby'>Hobby</p>
+            </div>
+            <h3 className='aboutM__text'>
+              Our weaknesses are something we can always work on.
+              I have been testing my capabilities for many years, pushing the limits further and further. I exercise my body, but also my mind and strong will, by following a proper diet and not giving in to bad addictions.
+              I am also a personal trainer.
+          </h3>
+          </div>
+
         </div>
         <aside className="navigationAbout">
           <ul className="navigationAbout__list">

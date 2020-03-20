@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/static/css/main.c7356906.chunk.css",
-    "main.js": "/static/js/main.1d23a827.chunk.js",
-    "main.js.map": "/static/js/main.1d23a827.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.8dd41c7c.js",
-    "runtime-main.js.map": "/static/js/runtime-main.8dd41c7c.js.map",
-    "static/js/2.a5eeea25.chunk.js": "/static/js/2.a5eeea25.chunk.js",
-    "static/js/2.a5eeea25.chunk.js.map": "/static/js/2.a5eeea25.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.7bebc77f31dc176452896eadd0596012.js": "/precache-manifest.7bebc77f31dc176452896eadd0596012.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.c7356906.chunk.css.map": "/static/css/main.c7356906.chunk.css.map",
-    "static/js/2.a5eeea25.chunk.js.LICENSE.txt": "/static/js/2.a5eeea25.chunk.js.LICENSE.txt",
-    "static/media/NewLogoSmallTransparent.png": "/static/media/NewLogoSmallTransparent.d7d06777.png",
-    "static/media/style.css": "/static/media/trainerSite.bd2f7495.png"
+    "main.css": "/frontEnd/static/css/main.1a0c4bd3.chunk.css",
+    "main.js": "/frontEnd/static/js/main.0a2e0de6.chunk.js",
+    "main.js.map": "/frontEnd/static/js/main.0a2e0de6.chunk.js.map",
+    "runtime-main.js": "/frontEnd/static/js/runtime-main.466070ab.js",
+    "runtime-main.js.map": "/frontEnd/static/js/runtime-main.466070ab.js.map",
+    "static/js/2.bbbec5f8.chunk.js": "/frontEnd/static/js/2.bbbec5f8.chunk.js",
+    "static/js/2.bbbec5f8.chunk.js.map": "/frontEnd/static/js/2.bbbec5f8.chunk.js.map",
+    "index.html": "/frontEnd/index.html",
+    "precache-manifest.29b87931d5059f4f7d91e4a23510bcad.js": "/frontEnd/precache-manifest.29b87931d5059f4f7d91e4a23510bcad.js",
+    "service-worker.js": "/frontEnd/service-worker.js",
+    "static/css/main.1a0c4bd3.chunk.css.map": "/frontEnd/static/css/main.1a0c4bd3.chunk.css.map",
+    "static/js/2.bbbec5f8.chunk.js.LICENSE.txt": "/frontEnd/static/js/2.bbbec5f8.chunk.js.LICENSE.txt",
+    "static/media/NewLogoSmallTransparent.png": "/frontEnd/static/media/NewLogoSmallTransparent.d7d06777.png",
+    "static/media/style.css": "/frontEnd/static/media/trainerSite.bd2f7495.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.8dd41c7c.js",
-    "static/js/2.a5eeea25.chunk.js",
-    "static/css/main.c7356906.chunk.css",
-    "static/js/main.1d23a827.chunk.js"
+    "static/js/runtime-main.466070ab.js",
+    "static/js/2.bbbec5f8.chunk.js",
+    "static/css/main.1a0c4bd3.chunk.css",
+    "static/js/main.0a2e0de6.chunk.js"
   ]
 }

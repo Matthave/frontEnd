@@ -14,8 +14,8 @@
   .cube {
     margin: auto;
     position: relative;
-    height: 200px;
-    width: 200px;
+    height: 150px;
+    width: 150px;
     transform-style: preserve-3d;
     transition: 0.8s;
     transform: rotateX(-180deg) rotateY(-45deg);
@@ -23,37 +23,54 @@
       animation: rotateLogo 8s 2s linear infinite;
         transform: rotateX(-35deg) rotateY(-45deg);
     }
+    @include mq(medium){
+      height: 200px;
+      width: 200px;
+    }
   }
   
   .cube > div {
     position: absolute;
     box-sizing: border-box;
     padding: 10px;
-    height: 200px;
-    width: 200px;
+    height: 150px;
+    width: 150px;
     color: #ffffff;
     outline: none;
     border:none;
+    @include mq(medium){
+      height: 200px;
+      width: 200px;
+    }
   }
 
   .cube__front {
       
-    transform: translateZ(100px);
+    transform: translateZ(75px);
     background-color: white;
     position: relative;
+    @include mq(medium){
+    transform: translateZ(100px);
+    }
   }
   
   .cube__back {
-    transform: translateZ(-100px) rotateY(180deg);
+    transform: translateZ(-75px) rotateY(180deg);
     background-color: white;
+    @include mq(medium){
+    transform: translateZ(-100px) rotateY(180deg);  
+    }
   }
   
   .cube__right {
-    transform: rotateY(-270deg) translateX(100px);
+    transform: rotateY(-270deg) translateX(75px);
     transform-origin: top right;
     background-color: #fff;
     position: relative;
-    transition: 2s;
+    transition: animation 2s;
+    @include mq(medium){
+    transform: rotateY(-270deg) translateX(100px);  
+    }
     &--on{
         background-color: #ccc;
         animation: gradient 8s 2s linear infinite;
@@ -61,21 +78,30 @@
   }
   
   .cube__left {
-    transform: rotateY(270deg) translateX(-100px);
+    transform: rotateY(270deg) translateX(-75px);
     transform-origin: center left;
     background-color:white;
+    @include mq(medium){
+    transform: rotateY(270deg) translateX(-100px);  
+    }
   }
   
   .cube__top {
-    transform: rotateX(-270deg) translateY(-100px);
+    transform: rotateX(-270deg) translateY(-75px);
     transform-origin: top center;
     background-color:white;
+    @include mq(medium){
+    transform: rotateX(-270deg) translateY(-100px);  
+    }
   }
   
   .cube__bottom {
-    transform: rotateX(270deg) translateY(100px);
+    transform: rotateX(270deg) translateY(75px);
     transform-origin: bottom center;
     background-color: white;
+    @include mq(medium){
+    transform: rotateX(270deg) translateY(100px);   
+    }
   }
 
   div.blackLeft{
@@ -84,14 +110,22 @@
    right:-0.2%;
    width:80%;
    height: 80%;
-   border-top:60px solid #fff;
-   border-left:65px solid #fff;
+   border-top:50px solid #fff;
+   border-left:55px solid #fff;
    background-color: #fff;
    transition: 1s;
    &--on{
-    border-top:60px solid #000;
-    border-left:65px solid #000;
-}
+    border-top:50px solid #000;
+    border-left:55px solid #000;
+   }
+   @include mq(medium){
+    border-top:60px solid #fff;
+    border-left:65px solid #fff;
+    &--on{
+      border-top:60px solid #000;
+      border-left:65px solid #000;
+     }
+   }
   }
 
   div.blackRight{
@@ -100,13 +134,21 @@
     left:-0.2%;
     width:80%;
     height: 80%;
-    border-top:60px solid #fff;
-    border-right:65px solid #fff;
+    border-top:50px solid #fff;
+    border-right:55px solid #fff;
     background-color: transparent;
     transition: 1s;
     &--on{
+        border-top:50px solid #000;
+        border-right:55px solid #000;
+    }
+    @include mq(medium){
+      border-top:60px solid #fff;
+      border-right:65px solid #fff;
+      &--on{
         border-top:60px solid #000;
         border-right:65px solid #000;
+    }
     }
    }
 

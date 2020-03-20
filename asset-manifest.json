@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/frontEnd/static/css/main.89c99c3f.chunk.css",
+    "main.css": "/frontEnd/static/css/main.f43d52fe.chunk.css",
     "main.js": "/frontEnd/static/js/main.0a2e0de6.chunk.js",
     "main.js.map": "/frontEnd/static/js/main.0a2e0de6.chunk.js.map",
     "runtime-main.js": "/frontEnd/static/js/runtime-main.466070ab.js",
@@ -8,9 +8,9 @@
     "static/js/2.bbbec5f8.chunk.js": "/frontEnd/static/js/2.bbbec5f8.chunk.js",
     "static/js/2.bbbec5f8.chunk.js.map": "/frontEnd/static/js/2.bbbec5f8.chunk.js.map",
     "index.html": "/frontEnd/index.html",
-    "precache-manifest.476527d89605840b10b73df0b26f8e63.js": "/frontEnd/precache-manifest.476527d89605840b10b73df0b26f8e63.js",
+    "precache-manifest.f5b0c8818587004222d8e6d54bbe96fd.js": "/frontEnd/precache-manifest.f5b0c8818587004222d8e6d54bbe96fd.js",
     "service-worker.js": "/frontEnd/service-worker.js",
-    "static/css/main.89c99c3f.chunk.css.map": "/frontEnd/static/css/main.89c99c3f.chunk.css.map",
+    "static/css/main.f43d52fe.chunk.css.map": "/frontEnd/static/css/main.f43d52fe.chunk.css.map",
     "static/js/2.bbbec5f8.chunk.js.LICENSE.txt": "/frontEnd/static/js/2.bbbec5f8.chunk.js.LICENSE.txt",
     "static/media/NewLogoSmallTransparent.png": "/frontEnd/static/media/NewLogoSmallTransparent.d7d06777.png",
     "static/media/style.css": "/frontEnd/static/media/trainerSite.bd2f7495.png"
@@ -18,7 +18,7 @@
   "entrypoints": [
     "static/js/runtime-main.466070ab.js",
     "static/js/2.bbbec5f8.chunk.js",
-    "static/css/main.89c99c3f.chunk.css",
+    "static/css/main.f43d52fe.chunk.css",
     "static/js/main.0a2e0de6.chunk.js"
   ]
 }

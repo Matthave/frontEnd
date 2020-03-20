@@ -4,7 +4,7 @@ class Cube extends React.Component {
   state = {
     cubeWrapMoveUp: false,
     frontCube: false,
-    blacCube: false,
+    blackCube: false,
     greyRightSide: false,
   }
 
@@ -25,20 +25,22 @@ class Cube extends React.Component {
   }
 
   render() {
+    const { cubeWrapMoveUp, frontCube, blackCube, greyRightSide } = this.state;
+
     const classesCubeWrap = ['cubeWrap'];
-    if (this.state.cubeWrapMoveUp) classesCubeWrap.push('cubeWrap--onPosition')
+    if (cubeWrapMoveUp) classesCubeWrap.push('cubeWrap--onPosition')
 
     const classesCube = ['cube'];
-    if (this.state.frontCube) classesCube.push('cube--frontCube');
+    if (frontCube) classesCube.push('cube--frontCube');
 
     const classesBlackLeft = ['blackLeft'];
-    if (this.state.blackCube) classesBlackLeft.push('blackLeft--on');
+    if (blackCube) classesBlackLeft.push('blackLeft--on');
 
     const classesBlackRight = ['blackRight'];
-    if (this.state.blackCube) classesBlackRight.push('blackRight--on');
+    if (blackCube) classesBlackRight.push('blackRight--on');
 
     const classesGrey = ['cube__right'];
-    if (this.state.greyRightSide) classesGrey.push('cube__right--on');
+    if (greyRightSide) classesGrey.push('cube__right--on');
 
 
     return (

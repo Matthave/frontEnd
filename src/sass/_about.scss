@@ -25,7 +25,6 @@
 .aboutM{
   position: relative;
   top:0;
-  padding:0 45px;
   margin: 100px 0px;
   height: 100vh;
   display: flex;
@@ -34,13 +33,14 @@
   opacity: 0;
   transition: 0.5s linear;
   @include mq(xsmall){
-    padding: 0 55px;
   }
   @include mq(large){
     margin: 25px 0px;
     display: flex;
     flex-direction: row;
-    padding: 0px 85px
+    &:nth-child(odd){
+      flex-direction: row-reverse;
+    }
   }
   &__headingContainer{
     position: relative;
@@ -48,8 +48,8 @@
     height: 50px;
     @include mq(large){
       clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
-      width:600px;
-      height:600px;
+      width:500px;
+      height:500px;
       margin: auto;
       background-color: #222;
       z-index: 1;
@@ -60,10 +60,18 @@
         left:50%;
         transform: translate(-50%,-50%);
         background-color:black;
-        width:595px;
-        height: 595px;
+        width:495px;
+        height: 495px;
         clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
         z-index: -1;
+      }
+    }
+    @include mq(xlarge){
+      width:600px;
+      height:600px;
+      &:after{
+        width:595px;
+        height: 595px;
       }
     }
   }
@@ -86,7 +94,7 @@
     letter-spacing: 4px;
     font-size: 3rem;
     font-family: $default-font;
-    color:#222;
+    color:#555;
     white-space: pre;
     @include mq(xsmall){
       font-size:5rem;
@@ -94,9 +102,12 @@
     @include mq(large){
       top:45%;
       left:50%;
-      font-size: 6rem;
+      font-size: 4.75rem;
       animation: none;
       letter-spacing: 10px;
+    }
+    @include mq(xlarge){
+      font-size: 5.5rem;
     }
   }
   &__titleFront{
@@ -129,6 +140,7 @@
     max-width: 400px;
     margin: 10px auto;
     text-align: center;
+    padding:0 35px;
     @include mq(xsmall){
       font-size:1.8rem;
       line-height: 25px;
@@ -136,6 +148,7 @@
     @include mq(large){
       align-self: center;
       line-height: 30px;
+      padding:0 45px;
     }
     strong{
       a{
@@ -242,7 +255,7 @@ color: #222;
     justify-content: space-evenly;
     margin:20px 0px;
     li{
-      font-size: 5.5rem;
+      font-size: 4.5rem;
       margin: 10px 5px;
       @include mq(xsmall){
         font-size: 6.5rem;
@@ -259,9 +272,9 @@ color: #222;
     justify-content: space-evenly;
   }
   &__iconsItem{
-    font-size: 2rem;
+    font-size: 1.7rem;
     margin:10px;
-    line-height: 25px;
+    line-height: 20px;
     font-family: $special-font;
     @include mq(xsmall){
       font-size: 2.5rem;

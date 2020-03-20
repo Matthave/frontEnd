@@ -30,12 +30,14 @@ color: #fff;
   align-items: center;
   width:275px;
   position: relative;
-  right:-100%;
+  right:-10%;
   margin: 30px auto 0px;
+  opacity: 0;
   transition: 1s;
   z-index: 1;
   background-color: black;
   &--onPosition{
+    opacity: 1;
     right:0;
   }
   @include mq(xsmall){
@@ -251,7 +253,7 @@ letter-spacing: 3px;
   display: flex;
   flex-direction: column;
   position: relative;
-  right:-100%;
+  right:-10%;
   opacity: 0;
   transition: right 1s, opacity 2s ease;
   &--onPosition{

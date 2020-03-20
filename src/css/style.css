@@ -114,15 +114,6 @@ body {
   }
 }
 
-@media (min-width: 1024px) {
-  .nav__link {
-    font-size: 2.3rem;
-  }
-  .nav__link:hover {
-    text-shadow: -35px -20px #555;
-  }
-}
-
 @media (min-width: 1200px) {
   .nav__link {
     font-size: 2.5rem;
@@ -139,6 +130,15 @@ body {
 @media (min-width: 1024px) {
   .nav__smallLogo {
     width: 55px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .nav__ul :nth-child(1):hover .nav__link {
+    text-shadow: 40px 25px #555;
+  }
+  .nav__ul :nth-child(3):hover .nav__link {
+    text-shadow: -40px 25px #555;
   }
 }
 
@@ -174,8 +174,8 @@ body {
 }
 
 .cube--frontCube {
-  -webkit-animation: rotateLogo 10s 2s linear infinite;
-          animation: rotateLogo 10s 2s linear infinite;
+  -webkit-animation: rotateLogo 8s 2s linear infinite;
+          animation: rotateLogo 8s 2s linear infinite;
   -webkit-transform: rotateX(-35deg) rotateY(-45deg);
           transform: rotateX(-35deg) rotateY(-45deg);
 }
@@ -218,8 +218,8 @@ body {
 
 .cube__right--on {
   background-color: #ccc;
-  -webkit-animation: gradient 10s 2s linear infinite;
-          animation: gradient 10s 2s linear infinite;
+  -webkit-animation: gradient 8s 2s linear infinite;
+          animation: gradient 8s 2s linear infinite;
 }
 
 .cube__left {
@@ -412,6 +412,12 @@ div.blackRight--on {
   height: 100vh;
 }
 
+@media (max-width: 812px) and (max-height: 450px) and (orientation: landscape) {
+  .header {
+    height: 150vh;
+  }
+}
+
 .bars {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -477,6 +483,7 @@ div.blackRight--on {
           animation: text 35s linear infinite;
   white-space: pre;
   z-index: 1;
+  padding: 5px 0px;
   z-index: 0;
   color: #ccc;
 }
@@ -680,19 +687,19 @@ div.blackRight--on {
 }
 
 .gallery__passion {
-  -webkit-animation: textGallery 2s step-start infinite both;
-          animation: textGallery 2s step-start infinite both;
+  -webkit-animation: textGallery 1.5s step-start infinite both;
+          animation: textGallery 1.5s step-start infinite both;
 }
 
 .gallery__heart {
-  -webkit-animation: textGallery 2s 1s step-start infinite both;
-          animation: textGallery 2s 1s step-start infinite both;
+  -webkit-animation: textGallery 1.5s 1s step-start infinite both;
+          animation: textGallery 1.5s 1s step-start infinite both;
   margin: 50px 0px;
 }
 
 .gallery__obstinancy {
-  -webkit-animation: textGallery 2s 1.5s step-start infinite both;
-          animation: textGallery 2s 1.5s step-start infinite both;
+  -webkit-animation: textGallery 1.5s 1.5s step-start infinite both;
+          animation: textGallery 1.5s 1.5s step-start infinite both;
 }
 
 .wrapDuplicate {
@@ -1188,6 +1195,7 @@ div.blackRight--on {
           animation: text 35s linear infinite;
   white-space: pre;
   z-index: 1;
+  padding: 5px 0px;
   color: #fff;
 }
 
@@ -1226,8 +1234,9 @@ div.blackRight--on {
           align-items: center;
   width: 275px;
   position: relative;
-  right: -100%;
+  right: -10%;
   margin: 30px auto 0px;
+  opacity: 0;
   -webkit-transition: 1s;
   transition: 1s;
   z-index: 1;
@@ -1235,6 +1244,7 @@ div.blackRight--on {
 }
 
 .form--onPosition {
+  opacity: 1;
   right: 0;
 }
 
@@ -1517,7 +1527,7 @@ div.blackRight--on {
       -ms-flex-direction: column;
           flex-direction: column;
   position: relative;
-  right: -100%;
+  right: -10%;
   opacity: 0;
   -webkit-transition: right 1s, opacity 2s ease;
   transition: right 1s, opacity 2s ease;
@@ -1625,7 +1635,6 @@ div.blackRight--on {
 .aboutM {
   position: relative;
   top: 0;
-  padding: 0 45px;
   margin: 100px 0px;
   height: 100vh;
   display: -webkit-box;
@@ -1643,12 +1652,6 @@ div.blackRight--on {
   transition: 0.5s linear;
 }
 
-@media (min-width: 460px) {
-  .aboutM {
-    padding: 0 55px;
-  }
-}
-
 @media (min-width: 1024px) {
   .aboutM {
     margin: 25px 0px;
@@ -1659,7 +1662,12 @@ div.blackRight--on {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    padding: 0px 85px;
+  }
+  .aboutM:nth-child(odd) {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
   }
 }
 
@@ -1673,8 +1681,8 @@ div.blackRight--on {
   .aboutM__headingContainer {
     -webkit-clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
             clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
-    width: 600px;
-    height: 600px;
+    width: 500px;
+    height: 500px;
     margin: auto;
     background-color: #222;
     z-index: 1;
@@ -1687,11 +1695,22 @@ div.blackRight--on {
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
     background-color: black;
-    width: 595px;
-    height: 595px;
+    width: 495px;
+    height: 495px;
     -webkit-clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
             clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
     z-index: -1;
+  }
+}
+
+@media (min-width: 1200px) {
+  .aboutM__headingContainer {
+    width: 600px;
+    height: 600px;
+  }
+  .aboutM__headingContainer:after {
+    width: 595px;
+    height: 595px;
   }
 }
 
@@ -1717,7 +1736,7 @@ div.blackRight--on {
   letter-spacing: 4px;
   font-size: 3rem;
   font-family: "IM Fell DW Pica";
-  color: #222;
+  color: #555;
   white-space: pre;
 }
 
@@ -1731,10 +1750,16 @@ div.blackRight--on {
   .aboutM__title {
     top: 45%;
     left: 50%;
-    font-size: 6rem;
+    font-size: 4.75rem;
     -webkit-animation: none;
             animation: none;
     letter-spacing: 10px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .aboutM__title {
+    font-size: 5.5rem;
   }
 }
 
@@ -1777,6 +1802,7 @@ div.blackRight--on {
   max-width: 400px;
   margin: 10px auto;
   text-align: center;
+  padding: 0 35px;
 }
 
 @media (min-width: 460px) {
@@ -1792,6 +1818,7 @@ div.blackRight--on {
         -ms-grid-row-align: center;
         align-self: center;
     line-height: 30px;
+    padding: 0 45px;
   }
 }
 
@@ -1884,6 +1911,7 @@ div.blackRight--on {
           animation: text 35s linear infinite;
   white-space: pre;
   z-index: 1;
+  padding: 5px 0px;
   color: #222;
 }
 
@@ -1992,7 +2020,7 @@ div.blackRight--on {
 }
 
 .aboutM__icons li {
-  font-size: 5.5rem;
+  font-size: 4.5rem;
   margin: 10px 5px;
 }
 
@@ -2021,9 +2049,9 @@ div.blackRight--on {
 }
 
 .aboutM__iconsItem {
-  font-size: 2rem;
+  font-size: 1.7rem;
   margin: 10px;
-  line-height: 25px;
+  line-height: 20px;
   font-family: "Nanum Gothic", sans-serif;
 }
 
@@ -2271,6 +2299,7 @@ div.blackRight--on {
           animation: text 35s linear infinite;
   white-space: pre;
   z-index: 1;
+  padding: 5px 0px;
   color: #fff;
 }
 
@@ -2327,7 +2356,7 @@ div.blackRight--on {
           clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
   width: 290px;
   height: 290px;
-  margin: 0px auto 30px;
+  margin: 0px auto 100px;
   background-color: #444;
   cursor: pointer;
   text-decoration: none;
@@ -2345,6 +2374,9 @@ div.blackRight--on {
 }
 
 @media (min-width: 1024px) {
+  .work {
+    margin: 0px auto 30px;
+  }
   .work:hover {
     background: #fff;
     -webkit-transform: translateY(-10px);

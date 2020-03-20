@@ -33,12 +33,6 @@
         font-size: 2rem;
         letter-spacing: 3px;
       }
-      @include mq(large){
-        font-size: 2.3rem;
-        &:hover{
-          text-shadow: -35px -20px #555;
-        }
-      }
       @include mq(xlarge){
         font-size:2.5rem;
       }
@@ -51,4 +45,14 @@
           width: 55px;
         }
     }
+}
+@include mq(large){
+  .nav__ul{
+  & :nth-child(1):hover .nav__link{
+    text-shadow: 40px 25px #555;
+    }
+  & :nth-child(3):hover .nav__link{
+    text-shadow: -40px 25px #555;
+    }
+  }
 }

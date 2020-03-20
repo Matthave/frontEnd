@@ -173,9 +173,9 @@ class AboutM extends React.Component {
       <section className={classes.join(' ')}>
         <div className='bars__itemAbout'>
           <div className='bars__textAbout'>
-            About Me - About Me -
-            About Me - About Me -
-            About Me - About Me -
+            About Me - About Me - About Me -
+            About Me - About Me - About Me -
+            About Me - About Me - About Me -
           </div>
         </div>
         <div className="aboutMWrap">
@@ -271,9 +271,9 @@ class AboutM extends React.Component {
         </aside>
         <div className='bars__itemAbout' style={{ bottom: '0' }}>
           <div className='bars__textAbout'>
-            About Me - About Me -
-            About Me - About Me -
-            About Me - About Me -
+            About Me - About Me - About Me -
+            About Me - About Me - About Me -
+            About Me - About Me - About Me -
           </div>
         </div>
       </section>

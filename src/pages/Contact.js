@@ -26,6 +26,7 @@ class Contact extends React.Component {
     }
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.intervalIndex = 0;
   }
   componentDidMount() {
     setTimeout(() => {
@@ -45,10 +46,25 @@ class Contact extends React.Component {
       })
     }, 600)
 
-    setInterval(() => {
+    this.intervalIndex = setInterval(() => {
       this.iconUp();
     }, 5000)
+
     window.scrollTo({ top: 0, behavior: 'auto' });
+  }
+
+  componentWillUnmount() {
+    this.setState({
+      showContact: false,
+      contactForm: false,
+      contactToMe: false,
+      iconUpLinked: false,
+      iconUpGitHub: false,
+      iconUpInsta: false,
+      emailSent: false,
+      showSuccess: false,
+    })
+    clearInterval(this.intervalIndex)
   }
 
   iconUp = () => {
@@ -96,10 +112,11 @@ class Contact extends React.Component {
     })
   }
 
-  handleSubmit = (event) => {
+  handleSubmit = () => {
     const templateId = 'MattHave';
+    const { textArea, fullName, email, phone } = this.state;
 
-    this.sendFeedback(templateId, { message_html: this.state.textArea, from_name: this.state.fullName, reply_to: this.state.email, phone: this.state.phone, to_name: 'Matthave' })
+    this.sendFeedback(templateId, { message_html: textArea, from_name: fullName, reply_to: email, phone: phone, to_name: 'Matthave' })
   }
 
   sendFeedback(templateId, variables) {

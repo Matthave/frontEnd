@@ -9,7 +9,7 @@ class Bars extends React.Component {
     textWelcome.addEventListener('touchend', () => this.textUp(textWelcome))
   }
   textUp = (textWelcome, color) => {
-    textWelcome.style.top = '45%'
+    textWelcome.style.top = '43%'
     setTimeout(() => {
       textWelcome.style.top = '50%'
     }, 100);

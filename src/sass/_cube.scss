@@ -20,7 +20,7 @@
     transition: 0.8s;
     transform: rotateX(-180deg) rotateY(-45deg);
     &--frontCube{
-      animation: rotateLogo 10s 2s linear infinite;
+      animation: rotateLogo 8s 2s linear infinite;
         transform: rotateX(-35deg) rotateY(-45deg);
     }
   }
@@ -56,7 +56,7 @@
     transition: 2s;
     &--on{
         background-color: #ccc;
-        animation: gradient 10s 2s linear infinite;
+        animation: gradient 8s 2s linear infinite;
     }
   }
   

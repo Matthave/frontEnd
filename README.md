@@ -15,7 +15,7 @@ It has several different tabs using the react router.
 
 ## Download Repo
 If you want to download my code,
-you must clone the repository with the command git clone https://github.com/Matthave/Kyokushin
+you must clone the repository with the command git clone https://github.com/Matthave/frontEnd
 
 ## Launching the application
 After cloning the application you must use the command 

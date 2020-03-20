@@ -10,3 +10,36 @@
     height: 150vh;
   }
 }
+
+.arrowDown{
+  position: absolute;
+  top:95%;
+  left:50%;
+  transform: translate(-50%,-100%);
+  width:60px;
+  height: 60px;
+  font-size: 4rem;
+  border-radius: 50%;
+  color:white;
+  z-index: 2;
+  text-align: center;
+}
+
+.fa-chevron-down{
+  position: relative;
+  transform: translate(0%,-50%);
+  animation: arrowDown 1s linear infinite;
+  transition: 0.5s linear;
+}
+
+
+@keyframes arrowDown{
+  0%{
+    top:0;
+    opacity: 1;
+  }
+  100%{
+    top:100%;
+    opacity: 0;
+  }
+}

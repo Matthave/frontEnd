@@ -240,10 +240,14 @@ body {
           transform-origin: top right;
   background-color: #fff;
   position: relative;
-  -webkit-transition: -webkit-animation 2s;
-  transition: -webkit-animation 2s;
-  transition: animation 2s;
-  transition: animation 2s, -webkit-animation 2s;
+  -webkit-transition: background-color 2s;
+  transition: background-color 2s;
+}
+
+.cube__right--on {
+  background-color: #ccc;
+  -webkit-animation: gradient 8s 2s linear infinite;
+          animation: gradient 8s 2s linear infinite;
 }
 
 @media (min-width: 800px) {
@@ -495,6 +499,53 @@ div.blackRight--on {
 @media (max-width: 812px) and (max-height: 450px) and (orientation: landscape) {
   .header {
     height: 150vh;
+  }
+}
+
+.arrowDown {
+  position: absolute;
+  top: 95%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -100%);
+          transform: translate(-50%, -100%);
+  width: 60px;
+  height: 60px;
+  font-size: 4rem;
+  border-radius: 50%;
+  color: white;
+  z-index: 2;
+  text-align: center;
+}
+
+.fa-chevron-down {
+  position: relative;
+  -webkit-transform: translate(0%, -50%);
+          transform: translate(0%, -50%);
+  -webkit-animation: arrowDown 1s linear infinite;
+          animation: arrowDown 1s linear infinite;
+  -webkit-transition: 0.5s linear;
+  transition: 0.5s linear;
+}
+
+@-webkit-keyframes arrowDown {
+  0% {
+    top: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 100%;
+    opacity: 0;
+  }
+}
+
+@keyframes arrowDown {
+  0% {
+    top: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 100%;
+    opacity: 0;
   }
 }
 
@@ -1348,7 +1399,7 @@ div.blackRight--on {
 
 @media (min-width: 1200px) {
   .form {
-    width: 49vw;
+    width: 45vw;
   }
 }
 

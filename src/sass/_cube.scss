@@ -21,7 +21,7 @@
     transform: rotateX(-180deg) rotateY(-45deg);
     &--frontCube{
       animation: rotateLogo 8s 2s linear infinite;
-        transform: rotateX(-35deg) rotateY(-45deg);
+      transform: rotateX(-35deg) rotateY(-45deg);
     }
     @include mq(medium){
       height: 200px;
@@ -67,7 +67,11 @@
     transform-origin: top right;
     background-color: #fff;
     position: relative;
-    transition: animation 2s;
+    transition: background-color 2s;
+    &--on{
+      background-color: #ccc;
+      animation: gradient 8s 2s linear infinite;
+    }
     @include mq(medium){
     transform: rotateY(-270deg) translateX(100px);  
     }

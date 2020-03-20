@@ -103,13 +103,15 @@ class AboutM extends React.Component {
       if (index === this.currentIndexOfSection) {
         setTimeout(() => {
           element.style.opacity = '1';
+        }, 800);
+        setTimeout(() => {
           element.style.transform = 'translateX(0px)'
         }, 500);
       } else {
-        element.style.opacity = '0%';
+        element.style.opacity = '0';
         setTimeout(() => {
-          element.style.transform = 'translateX(-100px)'
-        }, 200);
+          element.style.transform = 'translateX(-80px)'
+        }, 300);
       }
     })
   }
@@ -188,7 +190,7 @@ class AboutM extends React.Component {
           <div className="aboutM">
             <div className='aboutM__headingContainer'>
               <p className='aboutM__title'>passion</p>
-              <p className="aboutM__titleFront">Project</p>
+              <p className="aboutM__titleFront" title='Project'>Project</p>
             </div>
             <h3 className='aboutM__text'>
               At the moment I create my own projects on which I use knowledge
@@ -204,7 +206,7 @@ class AboutM extends React.Component {
           <div className="aboutM">
             <div className='aboutM__headingContainer'>
               <p className='aboutM__title'>heart</p>
-              <p className="aboutM__titleFront">I love IT</p>
+              <p className="aboutM__titleFront" title='I Love'>I Love</p>
             </div>
             <h3 className='aboutM__text'>
               I love working with interesting projects. During my own projects, when I have a free hand and everything "comes out in the wash", I can experiment and empower my creativity and imagination.
@@ -217,7 +219,7 @@ class AboutM extends React.Component {
           <div className="aboutM">
             <div className='aboutM__headingContainer'>
               <p className='aboutM__title'>time</p>
-              <p className="aboutM__titleFront">Perfection</p>
+              <p className="aboutM__titleFront" title='Perfection'>Perfection</p>
             </div>
             <h3 className='aboutM__text'>
               I pay great attention to details.
@@ -233,7 +235,7 @@ class AboutM extends React.Component {
           <div className="aboutM">
             <div className='aboutM__headingContainer'>
               <p className='aboutM__title'>Techniques</p>
-              <p className="aboutM__titleFront">Skills</p>
+              <p className="aboutM__titleFront" title='Skills'>Skills</p>
             </div>
             <div className='aboutM__text'>
               <ul className="aboutM__icons">
@@ -267,6 +269,13 @@ class AboutM extends React.Component {
             {liList}
           </ul>
         </aside>
+        <div className='bars__itemAbout' style={{ bottom: '0' }}>
+          <div className='bars__textAbout'>
+            About Me - About Me -
+            About Me - About Me -
+            About Me - About Me -
+          </div>
+        </div>
       </section>
     )
   }

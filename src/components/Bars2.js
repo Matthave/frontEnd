@@ -5,7 +5,7 @@ function Bars2() {
   return (
     <section className="bars">
       <div className='bars__item'>
-        <div className='bars__text bars__text--reverse'>
+        <div className='bars__text'>
           Portfolio - Portfolio - Portfolio -
           Portfolio - Portfolio - Portfolio -
           Portfolio - Portfolio - Portfolio -
@@ -13,7 +13,7 @@ function Bars2() {
         <NavLink className="bars__textUnder" to='Portfolio'>Portfolio</NavLink>
       </div>
       <div className='bars__item'>
-        <div className='bars__text'>
+        <div className='bars__text bars__text--reverse'>
           Contact Me - Contact Me - Contact Me -
           Contact Me - Contact Me - Contact Me -
           Contact Me - Contact Me - Contact Me -

@@ -18,7 +18,7 @@
     &__text{
        @include barsText;
        z-index: 0;
-        color: #aaa;
+        color: #ccc;
         @include mq(large){
             color: #222;
             z-index: 1;
@@ -36,6 +36,7 @@
         margin:0px auto;
         color: #000;
         text-decoration: none;
+        transition: 0.2s;
         @include mq(medium){
             font-size: 5rem;
             letter-spacing: 3px;
@@ -50,8 +51,11 @@
         
     }
     &__text--reverse{
-        animation: textReverse 25s linear infinite;
+        animation: textReverse 35s linear infinite;
         left:0;
+        @include mq(large){
+            animation: textReverse 25s linear infinite;
+        }
     }
 }
 

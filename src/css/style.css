@@ -4,6 +4,12 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 html {
@@ -62,6 +68,12 @@ body {
   z-index: 2;
 }
 
+@media (min-width: 1024px) {
+  .nav {
+    padding: 10px 5px;
+  }
+}
+
 .nav__ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -83,18 +95,9 @@ body {
   font-family: 'IM Fell DW Pica';
   letter-spacing: 1px;
   cursor: pointer;
-  -webkit-transition: 0.1s linear;
-  transition: 0.1s linear;
   text-decoration: none;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-
-@media (min-width: 1024px) {
-  .nav__link:hover {
-    color: #fff;
-    text-shadow: -35px -15px #444;
-  }
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 @media (min-width: 460px) {
@@ -111,10 +114,26 @@ body {
   }
 }
 
+@media (min-width: 1024px) {
+  .nav__link {
+    font-size: 2.3rem;
+  }
+  .nav__link:hover {
+    text-shadow: -35px -20px #555;
+  }
+}
+
+@media (min-width: 1200px) {
+  .nav__link {
+    font-size: 2.5rem;
+  }
+}
+
 .nav__smallLogo {
   width: 45px;
   -webkit-transition: 0.1s;
   transition: 0.1s;
+  outline: none;
 }
 
 @media (min-width: 1024px) {
@@ -133,8 +152,8 @@ body {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .cubeWrap--onPosition {
@@ -236,8 +255,8 @@ div.blackLeft {
   border-top: 60px solid #fff;
   border-left: 65px solid #fff;
   background-color: #fff;
-  -webkit-transition: 1.2s;
-  transition: 1.2s;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 div.blackLeft--on {
@@ -254,8 +273,8 @@ div.blackRight {
   border-top: 60px solid #fff;
   border-right: 65px solid #fff;
   background-color: transparent;
-  -webkit-transition: 1.5s;
-  transition: 1.5s;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 div.blackRight--on {
@@ -454,17 +473,24 @@ div.blackRight--on {
   font-size: 6rem;
   margin-right: 50px;
   font-family: 'IM Fell DW Pica';
-  -webkit-animation: text 25s linear infinite;
-          animation: text 25s linear infinite;
+  -webkit-animation: text 35s linear infinite;
+          animation: text 35s linear infinite;
   white-space: pre;
   z-index: 1;
   z-index: 0;
-  color: #aaa;
+  color: #ccc;
 }
 
 @media (min-width: 800px) {
   .bars__text {
     font-size: 10rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .bars__text {
+    -webkit-animation: text 25s linear infinite;
+            animation: text 25s linear infinite;
   }
 }
 
@@ -494,6 +520,8 @@ div.blackRight--on {
   margin: 0px auto;
   color: #000;
   text-decoration: none;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 @media (min-width: 800px) {
@@ -517,9 +545,16 @@ div.blackRight--on {
 }
 
 .bars__text--reverse {
-  -webkit-animation: textReverse 25s linear infinite;
-          animation: textReverse 25s linear infinite;
+  -webkit-animation: textReverse 35s linear infinite;
+          animation: textReverse 35s linear infinite;
   left: 0;
+}
+
+@media (min-width: 1024px) {
+  .bars__text--reverse {
+    -webkit-animation: textReverse 25s linear infinite;
+            animation: textReverse 25s linear infinite;
+  }
 }
 
 @-webkit-keyframes text {
@@ -599,16 +634,17 @@ div.blackRight--on {
 }
 
 .gallery {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 100%;
   height: 500px;
   background-color: #000;
@@ -644,50 +680,81 @@ div.blackRight--on {
 }
 
 .gallery__passion {
-  -webkit-animation: textGallery 1.5s step-start infinite both;
-          animation: textGallery 1.5s step-start infinite both;
+  -webkit-animation: textGallery 2s step-start infinite both;
+          animation: textGallery 2s step-start infinite both;
 }
 
 .gallery__heart {
-  -webkit-animation: textGallery 1.5s 1s step-start infinite both;
-          animation: textGallery 1.5s 1s step-start infinite both;
+  -webkit-animation: textGallery 2s 1s step-start infinite both;
+          animation: textGallery 2s 1s step-start infinite both;
   margin: 50px 0px;
 }
 
 .gallery__obstinancy {
-  -webkit-animation: textGallery 1.5s 1.5s step-start infinite both;
-          animation: textGallery 1.5s 1.5s step-start infinite both;
+  -webkit-animation: textGallery 2s 1.5s step-start infinite both;
+          animation: textGallery 2s 1.5s step-start infinite both;
 }
 
 .wrapDuplicate {
-  display: none;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  top: 50%;
+  left: 45%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 @media (min-width: 800px) {
   .wrapDuplicate {
     display: inherit;
+    position: static;
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+    top: 0;
+    left: 0;
   }
 }
 
 .gallery__passion.duplicate {
   position: relative;
   left: -10%;
-  -webkit-animation: textGallery 1.7s step-start infinite both;
-          animation: textGallery 1.7s step-start infinite both;
+  -webkit-animation: textGallery 2.7s step-start infinite both;
+          animation: textGallery 2.7s step-start infinite both;
 }
 
 .gallery__heart.duplicate {
   position: relative;
   left: -215%;
-  -webkit-animation: textGallery 1.3s 0.8s step-start infinite both;
-          animation: textGallery 1.3s 0.8s step-start infinite both;
+  -webkit-animation: textGallery 2.3s 0.8s step-start infinite both;
+          animation: textGallery 2.3s 0.8s step-start infinite both;
 }
 
 .gallery__obstinancy.duplicate {
   position: relative;
   left: -5%;
-  -webkit-animation: textGallery 1.8s 2s step-start infinite both;
-          animation: textGallery 1.8s 2s step-start infinite both;
+  -webkit-animation: textGallery 2.8s 2s step-start infinite both;
+          animation: textGallery 2.8s 2s step-start infinite both;
+}
+
+@media (min-width: 1024px) {
+  .gallery:hover .gallery__passion,
+  .gallery:hover .gallery__heart,
+  .gallery:hover .gallery__obstinancy {
+    -webkit-animation-duration: 8s;
+            animation-duration: 8s;
+  }
+  .gallery:hover .gallery__passion.duplicate,
+  .gallery:hover .gallery__heart.duplicate,
+  .gallery:hover .gallery__obstinancy.duplicate {
+    -webkit-animation-duration: 10s;
+            animation-duration: 10s;
+  }
 }
 
 @-webkit-keyframes textGallery {
@@ -1117,8 +1184,8 @@ div.blackRight--on {
   font-size: 6rem;
   margin-right: 50px;
   font-family: 'IM Fell DW Pica';
-  -webkit-animation: text 25s linear infinite;
-          animation: text 25s linear infinite;
+  -webkit-animation: text 35s linear infinite;
+          animation: text 35s linear infinite;
   white-space: pre;
   z-index: 1;
   color: #fff;
@@ -1127,6 +1194,13 @@ div.blackRight--on {
 @media (min-width: 800px) {
   .bars__textContact {
     font-size: 10rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .bars__textContact {
+    -webkit-animation: text 25s linear infinite;
+            animation: text 25s linear infinite;
   }
 }
 
@@ -1336,7 +1410,7 @@ div.blackRight--on {
 }
 
 .form__label--filled {
-  letter-spacing: 5px;
+  letter-spacing: 3px;
 }
 
 .contact__textWrap {
@@ -1585,6 +1659,7 @@ div.blackRight--on {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    padding: 0px 85px;
   }
 }
 
@@ -1598,11 +1673,10 @@ div.blackRight--on {
   .aboutM__headingContainer {
     -webkit-clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
             clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
-    background-color: #000;
-    width: 640px;
-    height: 640px;
+    width: 600px;
+    height: 600px;
     margin: auto;
-    background: linear-gradient(45deg, #474747 0%, black 100%);
+    background-color: #222;
     z-index: 1;
   }
   .aboutM__headingContainer:after {
@@ -1610,28 +1684,14 @@ div.blackRight--on {
     position: absolute;
     top: 50%;
     left: 50%;
-    -webkit-transform: translate(-50%, -50%) rotate(120deg);
-            transform: translate(-50%, -50%) rotate(120deg);
-    background-color: #666;
-    width: 515px;
-    height: 515px;
-    -webkit-clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
-            clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
-    z-index: -1;
-  }
-  .aboutM__headingContainer:before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
     background-color: black;
-    width: 635px;
-    height: 635px;
+    width: 595px;
+    height: 595px;
     -webkit-clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
             clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
-    z-index: 0;
+    z-index: -1;
   }
 }
 
@@ -1686,10 +1746,12 @@ div.blackRight--on {
           transform: translate(-50%, -50%);
   text-transform: uppercase;
   font-size: 2rem;
-  font-family: "Nanum Gothic", sans-serif;
+  font-family: "IM Fell DW Pica";
   color: white;
   text-align: center;
   letter-spacing: 5px;
+  -webkit-animation: mainText 1s linear infinite;
+          animation: mainText 1s linear infinite;
 }
 
 @media (min-width: 460px) {
@@ -1708,7 +1770,7 @@ div.blackRight--on {
 
 .aboutM__text {
   color: white;
-  line-height: 20px;
+  line-height: 23px;
   font-size: 1.5rem;
   font-weight: 500;
   font-family: "Nanum Gothic", sans-serif;
@@ -1729,22 +1791,31 @@ div.blackRight--on {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
+    line-height: 30px;
   }
 }
 
 .aboutM__text strong a {
   letter-spacing: 5px;
-  color: #ddd;
+  color: #bbb;
   cursor: pointer;
   margin-left: 5px;
   font-family: "IM Fell DW Pica";
   font-size: 1.7rem;
   text-decoration: none;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 @media (min-width: 640px) {
   .aboutM__text strong a {
     font-size: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .aboutM__text strong a:hover {
+    color: white;
   }
 }
 
@@ -1783,6 +1854,8 @@ div.blackRight--on {
   transition: 0.1s linear;
   overflow: hidden;
   background-color: #000;
+  position: fixed;
+  z-index: -999;
 }
 
 @media (min-width: 800px) {
@@ -1807,11 +1880,11 @@ div.blackRight--on {
   font-size: 6rem;
   margin-right: 50px;
   font-family: 'IM Fell DW Pica';
-  -webkit-animation: text 25s linear infinite;
-          animation: text 25s linear infinite;
+  -webkit-animation: text 35s linear infinite;
+          animation: text 35s linear infinite;
   white-space: pre;
   z-index: 1;
-  color: #fff;
+  color: #222;
 }
 
 @media (min-width: 800px) {
@@ -1820,9 +1893,22 @@ div.blackRight--on {
   }
 }
 
+@media (min-width: 1024px) {
+  .bars__textAbout {
+    -webkit-animation: text 25s linear infinite;
+            animation: text 25s linear infinite;
+  }
+}
+
 @media (min-width: 1200px) {
   .bars__textAbout {
     font-size: 13rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .bars__textAbout {
+    color: #111;
   }
 }
 
@@ -1937,7 +2023,7 @@ div.blackRight--on {
 .aboutM__iconsItem {
   font-size: 2rem;
   margin: 10px;
-  line-height: 30px;
+  line-height: 25px;
   font-family: "Nanum Gothic", sans-serif;
 }
 
@@ -1947,33 +2033,185 @@ div.blackRight--on {
   }
 }
 
-@-webkit-keyframes bigger {
+.aboutM__titleFront:before {
+  content: attr(title);
+  position: absolute;
+  left: 0;
+  clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+  -webkit-animation: before 1.3s linear infinite;
+          animation: before 1.3s linear infinite;
+}
+
+.aboutM__titleFront:after {
+  content: attr(title);
+  position: absolute;
+  left: 0;
+  clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+  -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+  -webkit-animation: after 1.5s linear infinite;
+          animation: after 1.5s linear infinite;
+}
+
+@-webkit-keyframes before {
   0% {
-    width: 515px;
-    height: 515px;
+    -webkit-transform: translate(2px, -2px);
+            transform: translate(2px, -2px);
+    @media (min-width: 1024px) {
+      -webkit-transform: translate(4px, -4px);
+              transform: translate(4px, -4px);
+    }
   }
-  50% {
-    width: 800px;
-    height: 800px;
+  97% {
+    -webkit-transform: translate(-2px, 2px);
+            transform: translate(-2px, 2px);
+    @media (min-width: 1024px) {
+      -webkit-transform: translate(-4px, 4px);
+              transform: translate(-4px, 4px);
+    }
   }
   100% {
-    width: 515px;
-    height: 515px;
+    -webkit-transform: translate(15px, -1px) skew(-13deg);
+            transform: translate(15px, -1px) skew(-13deg);
+    @media (min-width: 1024px) {
+      -webkit-transform: translate(25px, -2px) skew(-18deg);
+              transform: translate(25px, -2px) skew(-18deg);
+    }
   }
 }
 
-@keyframes bigger {
+@keyframes before {
   0% {
-    width: 515px;
-    height: 515px;
+    -webkit-transform: translate(2px, -2px);
+            transform: translate(2px, -2px);
+    @media (min-width: 1024px) {
+      -webkit-transform: translate(4px, -4px);
+              transform: translate(4px, -4px);
+    }
   }
-  50% {
-    width: 800px;
-    height: 800px;
+  97% {
+    -webkit-transform: translate(-2px, 2px);
+            transform: translate(-2px, 2px);
+    @media (min-width: 1024px) {
+      -webkit-transform: translate(-4px, 4px);
+              transform: translate(-4px, 4px);
+    }
   }
   100% {
-    width: 515px;
-    height: 515px;
+    -webkit-transform: translate(15px, -1px) skew(-13deg);
+            transform: translate(15px, -1px) skew(-13deg);
+    @media (min-width: 1024px) {
+      -webkit-transform: translate(25px, -2px) skew(-18deg);
+              transform: translate(25px, -2px) skew(-18deg);
+    }
+  }
+}
+
+@-webkit-keyframes after {
+  0% {
+    -webkit-transform: translate(-2px, 0px);
+            transform: translate(-2px, 0px);
+    @media (min-width: 1024px) {
+      -webkit-transform: translate(-4px, 0px);
+              transform: translate(-4px, 0px);
+    }
+  }
+  97% {
+    -webkit-transform: translate(-2px, 0px);
+            transform: translate(-2px, 0px);
+    @media (min-width: 1024px) {
+      -webkit-transform: translate(-4px, 0px);
+              transform: translate(-4px, 0px);
+    }
+  }
+  100% {
+    -webkit-transform: translate(-22px, 3px) skew(21deg);
+            transform: translate(-22px, 3px) skew(21deg);
+    @media (min-width: 1024px) {
+      -webkit-transform: translate(-32px, 6px) skew(25deg);
+              transform: translate(-32px, 6px) skew(25deg);
+    }
+  }
+}
+
+@keyframes after {
+  0% {
+    -webkit-transform: translate(-2px, 0px);
+            transform: translate(-2px, 0px);
+    @media (min-width: 1024px) {
+      -webkit-transform: translate(-4px, 0px);
+              transform: translate(-4px, 0px);
+    }
+  }
+  97% {
+    -webkit-transform: translate(-2px, 0px);
+            transform: translate(-2px, 0px);
+    @media (min-width: 1024px) {
+      -webkit-transform: translate(-4px, 0px);
+              transform: translate(-4px, 0px);
+    }
+  }
+  100% {
+    -webkit-transform: translate(-22px, 3px) skew(21deg);
+            transform: translate(-22px, 3px) skew(21deg);
+    @media (min-width: 1024px) {
+      -webkit-transform: translate(-32px, 6px) skew(25deg);
+              transform: translate(-32px, 6px) skew(25deg);
+    }
+  }
+}
+
+@-webkit-keyframes mainText {
+  0% {
+    -webkit-transform: translateX(2px), translate(-50%, -50%);
+            transform: translateX(2px), translate(-50%, -50%);
+    @media (min-width: 1024px) {
+      -webkit-transform: translateX(4px), translate(-50%, -50%);
+              transform: translateX(4px), translate(-50%, -50%);
+    }
+  }
+  97% {
+    -webkit-transform: translateX(-2px) translate(-50%, -50%) skew(-2deg);
+            transform: translateX(-2px) translate(-50%, -50%) skew(-2deg);
+    @media (min-width: 1024px) {
+      -webkit-transform: translateX(-4px), translate(-50%, -50%);
+              transform: translateX(-4px), translate(-50%, -50%);
+    }
+  }
+  100% {
+    -webkit-transform: translateX(22px) translate(-50%, -50%) skew(5deg);
+            transform: translateX(22px) translate(-50%, -50%) skew(5deg);
+    @media (min-width: 1024px) {
+      -webkit-transform: translateX(32px) translate(-50%, -50%) skew(10deg);
+              transform: translateX(32px) translate(-50%, -50%) skew(10deg);
+    }
+  }
+}
+
+@keyframes mainText {
+  0% {
+    -webkit-transform: translateX(2px), translate(-50%, -50%);
+            transform: translateX(2px), translate(-50%, -50%);
+    @media (min-width: 1024px) {
+      -webkit-transform: translateX(4px), translate(-50%, -50%);
+              transform: translateX(4px), translate(-50%, -50%);
+    }
+  }
+  97% {
+    -webkit-transform: translateX(-2px) translate(-50%, -50%) skew(-2deg);
+            transform: translateX(-2px) translate(-50%, -50%) skew(-2deg);
+    @media (min-width: 1024px) {
+      -webkit-transform: translateX(-4px), translate(-50%, -50%);
+              transform: translateX(-4px), translate(-50%, -50%);
+    }
+  }
+  100% {
+    -webkit-transform: translateX(22px) translate(-50%, -50%) skew(5deg);
+            transform: translateX(22px) translate(-50%, -50%) skew(5deg);
+    @media (min-width: 1024px) {
+      -webkit-transform: translateX(32px) translate(-50%, -50%) skew(10deg);
+              transform: translateX(32px) translate(-50%, -50%) skew(10deg);
+    }
   }
 }
 
@@ -2029,8 +2267,8 @@ div.blackRight--on {
   font-size: 6rem;
   margin-right: 50px;
   font-family: 'IM Fell DW Pica';
-  -webkit-animation: text 25s linear infinite;
-          animation: text 25s linear infinite;
+  -webkit-animation: text 35s linear infinite;
+          animation: text 35s linear infinite;
   white-space: pre;
   z-index: 1;
   color: #fff;
@@ -2039,6 +2277,13 @@ div.blackRight--on {
 @media (min-width: 800px) {
   .bars__textPortfolio {
     font-size: 10rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .bars__textPortfolio {
+    -webkit-animation: text 25s linear infinite;
+            animation: text 25s linear infinite;
   }
 }
 

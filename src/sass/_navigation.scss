@@ -6,6 +6,9 @@
     width:100%;
     padding:5px 5px;
     z-index: 2;
+    @include mq(large){
+      padding:10px 5px;
+    }
     &__ul{
      display: flex;
      justify-content: space-around;
@@ -20,15 +23,8 @@
       font-family: 'IM Fell DW Pica';
       letter-spacing: 1px;
       cursor: pointer;
-      transition: 0.1s linear;
       text-decoration: none;
-      transition: 0.3s;
-      @include mq(large){
-        &:hover{
-          color: #fff;
-          text-shadow: -35px -15px #444;
-        }
-      }
+      transition: 0.2s;
       @include mq(xsmall){
         font-size: 1.8rem ;
         letter-spacing: 2px;
@@ -37,10 +33,20 @@
         font-size: 2rem;
         letter-spacing: 3px;
       }
+      @include mq(large){
+        font-size: 2.3rem;
+        &:hover{
+          text-shadow: -35px -20px #555;
+        }
+      }
+      @include mq(xlarge){
+        font-size:2.5rem;
+      }
     }
     &__smallLogo{
         width: 45px;
         transition: 0.1s;
+        outline: none;
         @include mq(large){
           width: 55px;
         }

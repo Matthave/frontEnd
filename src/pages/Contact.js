@@ -205,7 +205,7 @@ class Contact extends React.Component {
         <div className={classesDetails.join(' ')}>
           <div className="contact__textWrap">
             <h2 className='contact__text'>
-              If you want to get more information, contact me to start cooperation,
+              If you want to get more information or contact me to start cooperation,
            write to me, I will definitely answer!</h2>
             <h2 className='contact__text'>I also encourage you to visit me on other platforms!</h2>
           </div>

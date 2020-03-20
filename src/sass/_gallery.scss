@@ -1,7 +1,8 @@
 .gallery{
+    position: relative;
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+    flex-direction: row;
+    justify-content: center;
     width:100%;
     height: 500px;
     background-color: #000;
@@ -27,22 +28,31 @@
 }
 
 .gallery__passion{
-animation: textGallery 1.5s step-start infinite both;
+animation: textGallery 2s step-start infinite both;
 }
 
 .gallery__heart{
-animation: textGallery 1.5s 1s step-start infinite both;
+animation: textGallery 2s 1s step-start infinite both;
 margin:50px 0px;
 }
 
 .gallery__obstinancy{
-animation: textGallery 1.5s 1.5s step-start infinite both;
+animation: textGallery 2s 1.5s step-start infinite both;
 }
 
 .wrapDuplicate{
-    display: none;
+    position: absolute;
+    display: flex;
+    flex-direction: column-reverse;
+    top:50%;
+    left:45%;
+    transform: translate(-50%,-50%);
     @include mq(medium){
         display: inherit;
+        position: static;
+        transform: translate(0px, 0px);
+        top:0;
+        left:0;
     }
 }
 
@@ -50,19 +60,33 @@ animation: textGallery 1.5s 1.5s step-start infinite both;
 .gallery__passion.duplicate {
 position: relative;
 left:-10%;
-animation: textGallery 1.7s step-start infinite both;
+animation: textGallery 2.7s step-start infinite both;
 }
     
 .gallery__heart.duplicate{
 position: relative;
 left: -215%;
-animation: textGallery 1.3s 0.8s step-start infinite both;
+animation: textGallery 2.3s 0.8s step-start infinite both;
 }
     
 .gallery__obstinancy.duplicate{
 position: relative;
 left: -5%;
-animation: textGallery 1.8s 2s step-start infinite both;
+animation: textGallery 2.8s 2s step-start infinite both;
+}
+
+@include mq(large){
+    .gallery:hover .gallery__passion,
+    .gallery:hover .gallery__heart,
+    .gallery:hover .gallery__obstinancy{
+      animation-duration: 8s;
+    }
+
+    .gallery:hover .gallery__passion.duplicate,
+    .gallery:hover .gallery__heart.duplicate,
+    .gallery:hover .gallery__obstinancy.duplicate{
+        animation-duration: 10s;
+    }
 }
 
 @keyframes textGallery{

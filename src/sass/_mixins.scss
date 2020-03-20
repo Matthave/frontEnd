@@ -27,11 +27,14 @@
   font-size: 6rem;
   margin-right: 50px;
   font-family: 'IM Fell DW Pica';
-  animation: text 25s linear infinite;
+  animation: text 35s linear infinite;
   white-space: pre;
   z-index: 1;
   @include mq(medium){
     font-size: 10rem;
+  }
+  @include mq(large){
+    animation: text 25s linear infinite;
   }
   @include mq(xlarge){
     font-size: 13rem;
@@ -55,3 +58,19 @@ xxlarge: (min-width: 1440px),
     }
   }
 } 
+
+@mixin afterValue {
+  content: attr(title);
+  position: absolute;
+  left:0;
+  clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+  -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+}
+
+@mixin beforeValue {
+  content: attr(title);
+  position: absolute;
+  left:0;
+  clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+}

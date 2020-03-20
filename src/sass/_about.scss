@@ -40,6 +40,7 @@
     margin: 25px 0px;
     display: flex;
     flex-direction: row;
+    padding: 0px 85px
   }
   &__headingContainer{
     position: relative;
@@ -47,35 +48,22 @@
     height: 50px;
     @include mq(large){
       clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
-      background-color: #000;
-      width:640px;
-      height:640px;
+      width:600px;
+      height:600px;
       margin: auto;
-      background: linear-gradient(45deg, rgba(71,71,71,1) 0%, rgba(0,0,0,1) 100%);
+      background-color: #222;
       z-index: 1;
       &:after{
         content: '';
         position: absolute;
         top:50%;
         left:50%;
-        transform: translate(-50%,-50%) rotate(120deg);
-        background-color: #666;
-        width:515px;
-        height: 515px;
+        transform: translate(-50%,-50%);
+        background-color:black;
+        width:595px;
+        height: 595px;
         clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
         z-index: -1;
-      }
-      &:before{
-        content: '';
-        position: absolute;
-        top:50%;
-        left:50%;
-        transform: translate(-50%, -50%);
-        background-color: black;
-        width:635px;
-        height: 635px;
-        clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
-        z-index: 0;
       }
     }
   }
@@ -118,10 +106,11 @@
     transform: translate(-50%,-50%);
     text-transform: uppercase;
     font-size: 2rem;
-    font-family: $special-font;
+    font-family: $default-font;
     color:white;
     text-align: center;
     letter-spacing: 5px;
+    animation: mainText 1s linear infinite;
     @include mq(xsmall){
       font-size:3rem;
     }
@@ -133,7 +122,7 @@
   }
   &__text{
     color:white;
-    line-height: 20px;
+    line-height: 23px;
     font-size: 1.5rem;
     font-weight: 500;
     font-family: $special-font;
@@ -146,19 +135,26 @@
     }
     @include mq(large){
       align-self: center;
+      line-height: 30px;
     }
     strong{
       a{
       letter-spacing: 5px;
-      color: #ddd;
+      color: #bbb;
       cursor: pointer;
       margin-left: 5px;
       font-family: $default-font;
       font-size: 1.7rem;
       text-decoration: none;
+      transition: 0.2s;
       @include mq(small){
         font-size:2rem;
-      }
+       }
+       @include mq(large){
+         &:hover{
+           color:white;
+         }
+       }
       }
     }
     .aboutM__hi{
@@ -179,11 +175,16 @@
 .bars__itemAbout{
   @include barsContainer;
   background-color: #000;
+  position: fixed;
+  z-index: -999;
 }
 
 .bars__textAbout{
 @include barsText;
-color: #fff;
+color: #222;
+@include mq(large){
+  color:#111;
+}
 }
 
 //Navigations 
@@ -260,7 +261,7 @@ color: #fff;
   &__iconsItem{
     font-size: 2rem;
     margin:10px;
-    line-height: 30px;
+    line-height: 25px;
     font-family: $special-font;
     @include mq(xsmall){
       font-size: 2.5rem;
@@ -268,17 +269,75 @@ color: #fff;
   }
 }
 
-@keyframes bigger {
+.aboutM__titleFront:before{
+@include beforeValue;
+  animation: before 1.3s linear infinite;
+}
+
+.aboutM__titleFront:after{
+@include afterValue;
+  animation: after 1.5s linear infinite;
+}
+
+@keyframes before {
   0%{
-    width:515px;
-    height: 515px;
+   transform: translate(2px,-2px);
+   @include mq(large){
+    transform: translate(4px,-4px);
+   }
   }
-  50%{
-    width:800px;
-    height: 800px;
+  97%{
+    transform: translate(-2px,2px);
+    @include mq(large){
+      transform: translate(-4px,4px);
+    }
   }
   100%{
-    width:515px;
-    height: 515px;
-  }
+    transform: translate(15px,-1px) skew(-13deg);
+    @include mq(large){
+      transform: translate(25px,-2px) skew(-18deg);
+    }
+   }
 }
+
+@keyframes after {
+  0%{
+   transform: translate(-2px, 0px);
+   @include mq(large){
+    transform: translate(-4px, 0px);
+   }
+  }
+  97%{
+    transform: translate(-2px, 0px);
+    @include mq(large){
+      transform: translate(-4px, 0px);
+    }
+  }
+  100%{
+    transform: translate(-22px, 3px) skew(21deg);
+    @include mq(large){
+      transform: translate(-32px, 6px) skew(25deg);
+    }
+   }
+}
+
+@keyframes mainText{
+  0%{
+    transform: translateX(2px), translate(-50%,-50%);
+    @include mq(large){
+      transform: translateX(4px), translate(-50%,-50%);
+    }
+   }
+   97%{
+     transform: translateX(-2px) translate(-50%,-50%) skew(-2deg);
+     @include mq(large){
+      transform: translateX(-4px), translate(-50%,-50%);
+     }
+   }
+   100%{
+     transform: translateX(22px) translate(-50%,-50%) skew(5deg);
+     @include mq(large){
+      transform: translateX(32px) translate(-50%,-50%) skew(10deg);
+     }
+    }
+ }

@@ -42,16 +42,16 @@ class Cube extends React.Component {
 
 
     return (
-      <div class={classesCubeWrap.join(' ')}>
-        <div class={classesCube.join(' ')}>
-          <div class="cube__front">
+      <div className={classesCubeWrap.join(' ')}>
+        <div className={classesCube.join(' ')}>
+          <div className="cube__front">
             <div className={classesBlackLeft.join(' ')}></div>
           </div>
-          <div class="cube__back"></div>
-          <div class="cube__top"></div>
-          <div class="cube__bottom"></div>
-          <div class="cube__left"> </div>
-          <div class={classesGrey.join(' ')}>
+          <div className="cube__back"></div>
+          <div className="cube__top"></div>
+          <div className="cube__bottom"></div>
+          <div className="cube__left"> </div>
+          <div className={classesGrey.join(' ')}>
             <div className={classesBlackRight.join(' ')}></div>
           </div>
         </div>

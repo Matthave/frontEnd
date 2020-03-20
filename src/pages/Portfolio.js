@@ -45,9 +45,9 @@ class Portfolio extends React.Component {
       <section className={classes.join(' ')}>
         <div className='bars__itemPortfolio'>
           <div className='bars__textPortfolio'>
-            Portfolio - Portfolio -
-            Portfolio - Portfolio -
-            Portfolio - Portfolio -
+            Portfolio - Portfolio - Portfolio -
+            Portfolio - Portfolio - Portfolio -
+            Portfolio - Portfolio - Portfolio -
         </div>
         </div>
         <section className="worksContainer">
@@ -55,9 +55,9 @@ class Portfolio extends React.Component {
         </section>
         <div className='bars__itemPortfolio'>
           <div className='bars__textPortfolio'>
-            Portfolio - Portfolio -
-            Portfolio - Portfolio -
-            Portfolio - Portfolio -
+            Portfolio - Portfolio - Portfolio -
+            Portfolio - Portfolio - Portfolio -
+            Portfolio - Portfolio - Portfolio -
         </div>
         </div>
       </section>

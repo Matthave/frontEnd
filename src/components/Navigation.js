@@ -11,8 +11,14 @@ class Navigation extends React.Component {
   componentDidMount() {
     const myLogo = document.querySelector('.nav__smallLogo');
     myLogo.addEventListener('mouseup', () => this.clickUp(myLogo))
-
     myLogo.addEventListener('touchend', () => this.clickUp(myLogo))
+
+    const nav = document.querySelector('.nav');
+    setTimeout(() => {
+      nav.style.top = '0';
+      nav.style.opacity = '1';
+    }, 1750);
+    console.log(nav)
   }
 
   clickUp = (myLogo) => {

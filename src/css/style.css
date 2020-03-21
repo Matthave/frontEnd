@@ -60,12 +60,15 @@ body {
 
 .nav {
   position: fixed;
-  top: 0;
+  top: -1%;
   left: 0;
   background-color: rgba(0, 0, 0, 0.75);
   width: 100%;
-  padding: 5px 5px;
+  padding: 7.5px 5px;
   z-index: 2;
+  opacity: 0;
+  -webkit-transition: 0.5s linear;
+  transition: 0.5s linear;
 }
 
 @media (min-width: 1024px) {
@@ -87,6 +90,13 @@ body {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  width: 50px;
+}
+
+@media (min-width: 1024px) {
+  .nav__li {
+    width: 120px;
+  }
 }
 
 .nav__link {

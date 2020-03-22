@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "fdec5d90ff234a9e6b10a40c12febeed",
+    "revision": "a71085d1ea513263367c253565f9673b",
     "url": "/frontEnd/index.html"
   },
   {
-    "revision": "159f8e3e234f31f6ea2c",
-    "url": "/frontEnd/static/css/main.0ad4d5be.chunk.css"
+    "revision": "ebd97920186d0fafe654",
+    "url": "/frontEnd/static/css/main.7cc3ad69.chunk.css"
   },
   {
     "revision": "db66fa2919e5d419055b",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/frontEnd/static/js/2.dfb00592.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "159f8e3e234f31f6ea2c",
-    "url": "/frontEnd/static/js/main.94d13547.chunk.js"
+    "revision": "ebd97920186d0fafe654",
+    "url": "/frontEnd/static/js/main.0f81abca.chunk.js"
   },
   {
     "revision": "9ee290165be41d8ecd07",
@@ -40,8 +40,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/frontEnd/static/media/cvOnline2.71a41f0e.png"
   },
   {
+    "revision": "0dfbca95659c0dd3c7b41351442465ba",
+    "url": "/frontEnd/static/media/headerSlider.0dfbca95.png"
+  },
+  {
     "revision": "c48ff48b3b9ab747e5ed2ae96d09f2eb",
     "url": "/frontEnd/static/media/kyokushinSite.c48ff48b.png"
+  },
+  {
+    "revision": "667a8c456153b0d365f26d4afca4df71",
+    "url": "/frontEnd/static/media/toDoApp.667a8c45.png"
   },
   {
     "revision": "bd2f7495da0d0a157669be4b8142e82c",

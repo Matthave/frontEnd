@@ -62,10 +62,11 @@ body {
   position: fixed;
   top: -1%;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.75);
+  background-color: black;
   width: 100%;
+  height: 60px;
   padding: 7.5px 5px;
-  z-index: 2;
+  z-index: 999;
   opacity: 0;
   -webkit-transition: 0.5s linear;
   transition: 0.5s linear;
@@ -74,6 +75,7 @@ body {
 @media (min-width: 1024px) {
   .nav {
     padding: 10px 5px;
+    height: 75px;
   }
 }
 
@@ -145,10 +147,135 @@ body {
 
 @media (min-width: 1024px) {
   .nav__ul :nth-child(1):hover .nav__link {
-    text-shadow: 40px 25px #555;
+    text-shadow: 40px 20px #555;
   }
   .nav__ul :nth-child(3):hover .nav__link {
-    text-shadow: -40px 25px #555;
+    text-shadow: -40px 20px #555;
+  }
+}
+
+.barsNav {
+  position: fixed;
+  top: -100px;
+  z-index: 998;
+  opacity: 1;
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
+}
+
+.barsNav--showIt {
+  top: 0;
+}
+
+.barsLi {
+  position: absolute;
+  top: 0;
+  opacity: 1;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.barsLi .bars__text {
+  font-size: 3.5rem;
+  height: 60px;
+  color: #222;
+  -webkit-animation-duration: 90s;
+          animation-duration: 90s;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+@media (min-width: 800px) {
+  .barsLi .bars__text {
+    font-size: 3.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .barsLi .bars__text {
+    font-size: 3.75rem;
+  }
+}
+
+.barsLi .bars__item {
+  height: 60px;
+  line-height: 60px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+@media (min-width: 800px) {
+  .barsLi .bars__item {
+    height: 60px;
+    padding: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .barsLi .bars__item {
+    height: 75px;
+    line-height: 75px;
+    padding: 0px;
+  }
+}
+
+.barsLi__aboutMe {
+  z-index: -3;
+}
+
+.barsLi__portfolio {
+  z-index: -4;
+}
+
+.barsLi__contact {
+  z-index: -5;
+}
+
+.barsLi__itemNavAboutMe {
+  top: 160px;
+  opacity: 1;
+  z-index: -3;
+}
+
+@media (min-width: 1024px) {
+  .barsLi__itemNavAboutMe {
+    top: 175px;
+  }
+}
+
+.barsLi__itemNavPortfolio {
+  top: 220px;
+  opacity: 1;
+  z-index: -4;
+}
+
+@media (min-width: 1024px) {
+  .barsLi__itemNavPortfolio {
+    top: 250px;
+  }
+}
+
+.barsLi__itemNavContact {
+  top: 280px;
+  opacity: 1;
+  z-index: -5;
+}
+
+@media (min-width: 1024px) {
+  .barsLi__itemNavContact {
+    top: 325px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .barsLi:hover > .bars__item {
+    background-color: #000;
+  }
+}
+
+@media (min-width: 1024px) {
+  .barsLi:hover .bars__text {
+    color: #555;
   }
 }
 
@@ -601,17 +728,6 @@ div.blackRight--on {
   }
 }
 
-@media (min-width: 1024px) {
-  .bars__item:hover {
-    background-color: #000;
-    color: #fff;
-  }
-  .bars__item:hover .bars__text {
-    z-index: 0;
-    color: #222;
-  }
-}
-
 .bars__text {
   position: relative;
   -webkit-transform: translateX(0);
@@ -781,6 +897,17 @@ div.blackRight--on {
   }
 }
 
+@media (min-width: 1024px) {
+  .bars > .bars__item:hover {
+    background-color: #000;
+    color: #fff;
+  }
+  .bars > .bars__item:hover .bars__text {
+    z-index: 0;
+    color: #222;
+  }
+}
+
 .gallery {
   position: relative;
   display: -webkit-box;
@@ -894,14 +1021,14 @@ div.blackRight--on {
   .gallery:hover .gallery__passion,
   .gallery:hover .gallery__heart,
   .gallery:hover .gallery__obstinancy {
-    -webkit-animation-duration: 8s;
-            animation-duration: 8s;
+    -webkit-animation-duration: 7s;
+            animation-duration: 7s;
   }
   .gallery:hover .gallery__passion.duplicate,
   .gallery:hover .gallery__heart.duplicate,
   .gallery:hover .gallery__obstinancy.duplicate {
-    -webkit-animation-duration: 10s;
-            animation-duration: 10s;
+    -webkit-animation-duration: 9s;
+            animation-duration: 9s;
   }
 }
 

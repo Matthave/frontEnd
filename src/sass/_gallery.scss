@@ -79,13 +79,13 @@ animation: textGallery 2.8s 2s step-start infinite both;
     .gallery:hover .gallery__passion,
     .gallery:hover .gallery__heart,
     .gallery:hover .gallery__obstinancy{
-      animation-duration: 8s;
+      animation-duration: 7s;
     }
 
     .gallery:hover .gallery__passion.duplicate,
     .gallery:hover .gallery__heart.duplicate,
     .gallery:hover .gallery__obstinancy.duplicate{
-        animation-duration: 10s;
+        animation-duration: 9s;
     }
 }
 

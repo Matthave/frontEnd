@@ -2,14 +2,16 @@
     position: fixed;
     top:-1%;
     left:0;
-    background-color: rgba(0,0,0,0.75);
+    background-color: rgba(0,0,0,1);
     width:100%;
+    height: 60px;
     padding:7.5px 5px;
-    z-index: 2;
+    z-index: 999;
     opacity: 0;
     transition: 0.5s linear;
     @include mq(large){
       padding:10px 5px;
+      height: 75px;
     }
     &__ul{
      display: flex;
@@ -55,10 +57,112 @@
 @include mq(large){
   .nav__ul{
   & :nth-child(1):hover .nav__link{
-    text-shadow: 40px 25px #555;
+    text-shadow: 40px 20px #555;
     }
   & :nth-child(3):hover .nav__link{
-    text-shadow: -40px 25px #555;
+    text-shadow: -40px 20px #555;
     }
   }
+}
+
+
+.barsNav{
+  position: fixed;
+  top:-100px;
+  z-index: 998;
+  opacity: 1;
+  transition: 0.2s linear;
+}
+
+.barsNav--showIt{
+top:0;
+}
+
+
+.barsLi{
+  position: absolute;
+  top:0;
+  opacity: 1;
+  transition: 1s;
+  & .bars__text{
+    font-size: 3.5rem;
+    height: 60px;
+    color:#222;
+    animation-duration: 90s;
+    transition: 0.2s;
+    @include mq(medium){
+      font-size: 3.5rem;
+    }
+    @include mq(large){
+      font-size: 3.75rem;
+    }
+  }
+  & .bars__item{
+    height: 60px;
+    line-height: 60px;
+    transition: 0.2s;
+    @include mq(medium){
+      height: 60px;
+      padding:0;
+    }
+    @include mq(large){
+      height:75px;
+      line-height: 75px;
+      padding:0px;
+    }
+  }
+}
+
+.barsLi__aboutMe{
+  z-index: -3;
+}
+
+.barsLi__portfolio{
+  z-index: -4;
+
+}
+
+.barsLi__contact{
+z-index: -5;
+}
+
+.barsLi__itemNavAboutMe{
+  top:160px;
+  opacity: 1;
+  z-index: -3;
+  @include mq(large){
+    top:175px
+  }
+}
+
+.barsLi__itemNavPortfolio{
+  top:220px;
+  opacity: 1;
+  z-index: -4;
+  @include mq(large){
+    top:250px
+  }
+}
+
+.barsLi__itemNavContact{
+  top:280px;
+  opacity: 1;
+  z-index: -5;
+  @include mq(large){
+    top:325px;
+  }
+}
+
+
+
+.barsLi:hover > .bars__item{
+  @include mq(large){
+    background-color: #000;
+  }
+}
+
+.barsLi:hover  .bars__text{
+@include mq(large){
+  color:#555;
+}
 }

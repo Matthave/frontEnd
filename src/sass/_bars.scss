@@ -4,16 +4,6 @@
     &__item{
         @include barsContainer;
         color:#fff;
-        @include mq(large){
-            &:hover{
-                background-color: #000;
-                color:#fff;
-            }
-            &:hover .bars__text{
-            z-index: 0;
-            color: #222
-            }
-          }
     }
     &__text{
        @include barsText;
@@ -87,4 +77,17 @@
     100%{
         transform: translateX(-1500px);
     }
+}
+
+.bars > .bars__item{
+    @include mq(large){
+        &:hover{
+            background-color: #000;
+            color:#fff;
+        }
+        &:hover .bars__text{
+        z-index: 0;
+        color: #222
+        }
+      }
 }

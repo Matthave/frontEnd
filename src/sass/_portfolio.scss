@@ -92,6 +92,14 @@ color: #fff;
   background-image: url('../IMG/cvOnline2.png') ;
 }
 
+.work__toDoApp::before{
+  background-image: url('../IMG/toDoApp.png') ;
+}
+
+.work__headerSlider::before{
+  background-image: url('../IMG/headerSlider.png') ;
+}
+
 
 .work__trainer{
 top:2000px;
@@ -119,6 +127,18 @@ transition:top 1s,left 1s, transform 0.2s;
 top:2000px;
 left:1000px;
 transition:top 1s, left 1s, transform 0.2s;
+}
+
+.work__toDoApp{
+  top:2000px;
+  left:1000px;
+  transition:top 1s,left 1s, transform 0.2s;
+}
+
+.work__headerSlider{
+top:2000px;
+left:0;
+transition:top 1s,left 1s, transform 0.2s;
 }
 
 .work--onPosition{

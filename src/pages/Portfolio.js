@@ -4,8 +4,10 @@ const myWorks = [
   { id: 1, title: 'Personal Trainer Site', class: '__trainer', link: 'https://matthave.github.io/PersonalTrainer/' },
   { id: 2, title: 'KyoKushin Site', class: '__kyokushin', link: 'https://matthave.github.io/Kyokushin/' },
   { id: 3, title: 'Christmas Draw', class: '__christmas', link: 'http://www.christmasdraw.pl/' },
-  { id: 4, title: 'My CvOnline vol.1', class: '__cvVol1', link: 'https://matthave.github.io/lookAtThisAwesomeCv/' },
-  { id: 5, title: 'My CvOnline vol.2', class: '__cvVol2', link: 'https://matthave.github.io/cvOnline/' }
+  { id: 4, title: 'My CvOnline vol.1', class: '__cvVol1', link: 'https://matthave.github.io/cvOnline/' },
+  { id: 5, title: 'My CvOnline vol.2', class: '__cvVol2', link: 'https://matthave.github.io/lookAtThisAwesomeCv/' },
+  { id: 6, title: 'To Do App - React', class: '__toDoApp', link: 'https://matthave.github.io/toDoAppReact/' },
+  { id: 7, title: 'Header - Slider', class: '__headerSlider', link: 'https://matthave.github.io/slider/' },
 ]
 
 class Portfolio extends React.Component {

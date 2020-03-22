@@ -1788,7 +1788,6 @@ div.blackRight--on {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  opacity: 0;
   -webkit-transition: 0.5s linear;
   transition: 0.5s linear;
 }
@@ -1814,8 +1813,17 @@ div.blackRight--on {
 
 .aboutM__headingContainer {
   position: relative;
+  top: 20px;
   width: 100%;
   height: 50px;
+  -webkit-transition: 0.5s 0.5s linear;
+  transition: 0.5s 0.5s linear;
+  opacity: 0;
+}
+
+.aboutM__headingContainer--currentToShow {
+  opacity: 1;
+  top: 0;
 }
 
 @media (min-width: 1024px) {
@@ -1827,6 +1835,10 @@ div.blackRight--on {
     margin: auto;
     background-color: #222;
     z-index: 1;
+  }
+  .aboutM__headingContainer--currentToShow {
+    opacity: 1;
+    top: 0;
   }
   .aboutM__headingContainer:after {
     content: '';
@@ -1935,6 +1947,8 @@ div.blackRight--on {
 }
 
 .aboutM__text {
+  position: relative;
+  top: -20px;
   color: white;
   line-height: 23px;
   font-size: 1.5rem;
@@ -1944,6 +1958,14 @@ div.blackRight--on {
   margin: 10px auto;
   text-align: center;
   padding: 0 35px;
+  opacity: 0;
+  -webkit-transition: 0.5s 0.5s linear;
+  transition: 0.5s 0.5s linear;
+}
+
+.aboutM__text--currentToShow {
+  opacity: 1;
+  top: 0;
 }
 
 @media (min-width: 460px) {

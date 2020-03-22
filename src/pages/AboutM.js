@@ -90,7 +90,9 @@ class AboutM extends React.Component {
 
   activeDots = () => {
     const liList = document.querySelectorAll('.navigationAbout__listItem');
-    const aboutMeElements = document.querySelectorAll('.aboutM')
+    const aboutMeElements = document.querySelectorAll('.aboutM__headingContainer')
+    const aboutMeText = document.querySelectorAll('.aboutM__text')
+
     liList.forEach((li, index) => {
       if (index === this.currentIndexOfSection) {
         li.classList.add('navigationAbout__listItem--active')
@@ -100,18 +102,18 @@ class AboutM extends React.Component {
     })
 
     aboutMeElements.forEach((element, index) => {
-      if (index === this.currentIndexOfSection) {
-        setTimeout(() => {
-          element.style.opacity = '1';
-        }, 800);
-        setTimeout(() => {
-          element.style.transform = 'translateX(0px)'
-        }, 500);
+      if (index === this.currentIndexOfSection - 1) {
+        element.classList.add('aboutM__headingContainer--currentToShow')
       } else {
-        element.style.opacity = '0';
-        setTimeout(() => {
-          element.style.transform = 'translateX(-80px)'
-        }, 300);
+        element.classList.remove('aboutM__headingContainer--currentToShow')
+      }
+    })
+
+    aboutMeText.forEach((element, index) => {
+      if (index === this.currentIndexOfSection) {
+        element.classList.add('aboutM__text--currentToShow')
+      } else {
+        element.classList.remove('aboutM__text--currentToShow')
       }
     })
   }

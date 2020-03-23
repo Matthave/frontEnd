@@ -16,9 +16,9 @@ class Navigation extends React.Component {
 
   scrollHeightMenu = () => {
     const scrollHeight = window.scrollY;
+    const myLogo = document.querySelector('.nav__smallLogo');
     if (scrollHeight === 0 && this.state.navFlag === false && this.props.homePageMounted) {
       this.setState({
-        navFlag: true,
         itemNavAboutMe: true,
       });
 
@@ -33,10 +33,18 @@ class Navigation extends React.Component {
           itemNavContact: true,
         })
       }, 400);
+
+      setTimeout(() => {
+        this.setState({
+          navFlag: true,
+        })
+      }, 1500);
+
+      this.clickUp(myLogo)
+
       return
     } else if (scrollHeight === 0 && this.state.navFlag === true) {
       this.setState({
-        navFlag: false,
         itemNavContact: false,
       });
 
@@ -44,16 +52,25 @@ class Navigation extends React.Component {
         this.setState({
           itemNavPortfolio: false,
         })
-      }, 250);
+      }, 200);
 
       setTimeout(() => {
         this.setState({
           itemNavAboutMe: false,
         })
-      }, 500);
+      }, 400);
+
+      setTimeout(() => {
+        this.setState({
+          navFlag: false,
+        })
+      }, 1500);
+      this.clickUp(myLogo)
       return
     } else if (scrollHeight > 0) {
       window.scrollTo({ top: 0, behavior: 'smooth' });
+
+      this.clickUp(myLogo)
       return
     }
   }

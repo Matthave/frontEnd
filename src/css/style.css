@@ -12,6 +12,10 @@
   user-select: none;
 }
 
+a {
+  text-decoration: none;
+}
+
 html {
   font-size: 10px;
   -ms-touch-action: pan-y;
@@ -707,6 +711,7 @@ div.blackRight--on {
   background-color: #fff;
   text-align: center;
   line-height: 100px;
+  padding: 2.5px 0px;
   cursor: pointer;
   -webkit-transition: 0.1s linear;
   transition: 0.1s linear;
@@ -782,6 +787,7 @@ div.blackRight--on {
   font-family: 'IM Fell DW Pica';
   white-space: pre;
   margin: 0px auto;
+  padding: 5px 100vw;
   color: #000;
   text-decoration: none;
   -webkit-transition: 0.2s;
@@ -1429,6 +1435,7 @@ div.blackRight--on {
   background-color: #fff;
   text-align: center;
   line-height: 100px;
+  padding: 2.5px 0px;
   cursor: pointer;
   -webkit-transition: 0.1s linear;
   transition: 0.1s linear;
@@ -2166,6 +2173,7 @@ div.blackRight--on {
   background-color: #fff;
   text-align: center;
   line-height: 100px;
+  padding: 2.5px 0px;
   cursor: pointer;
   -webkit-transition: 0.1s linear;
   transition: 0.1s linear;
@@ -2556,6 +2564,7 @@ div.blackRight--on {
   background-color: #fff;
   text-align: center;
   line-height: 100px;
+  padding: 2.5px 0px;
   cursor: pointer;
   -webkit-transition: 0.1s linear;
   transition: 0.1s linear;

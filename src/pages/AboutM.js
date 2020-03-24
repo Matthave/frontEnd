@@ -224,13 +224,6 @@ class AboutM extends React.Component {
 
     return (
       <section className={this.state.showAboutMe ? 'about about--showIt' : 'about'}>
-        {/* <div className='bars__itemAbout'>
-          <div className='bars__textAbout'>
-            About Me - About Me - About Me -
-            About Me - About Me - About Me -
-            About Me - About Me - About Me -
-          </div>
-        </div> */}
         <div className="aboutMWrap">
           <div className="aboutM aboutM--start">
             <h1 className='aboutM__text aboutM__text--start'>
@@ -280,13 +273,6 @@ class AboutM extends React.Component {
             {liList}
           </ul>
         </aside>
-        {/* <div className='bars__itemAbout' style={{ bottom: '0' }}>
-          <div className='bars__textAbout'>
-            About Me - About Me - About Me -
-            About Me - About Me - About Me -
-            About Me - About Me - About Me -
-          </div>
-        </div> */}
       </section>
     )
   }

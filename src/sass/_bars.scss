@@ -42,7 +42,7 @@
         
     }
     &__text--reverse{
-        animation: textReverse 35s linear infinite;
+        animation: textReverse 55s linear infinite;
         left:0;
         @include mq(large){
             animation: textReverse 25s linear infinite;

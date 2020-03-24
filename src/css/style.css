@@ -741,8 +741,8 @@ div.blackRight--on {
   font-size: 6rem;
   margin-right: 50px;
   font-family: 'IM Fell DW Pica';
-  -webkit-animation: text 35s linear infinite;
-          animation: text 35s linear infinite;
+  -webkit-animation: text 55s linear infinite;
+          animation: text 55s linear infinite;
   white-space: pre;
   z-index: 1;
   padding: 5px 0px;
@@ -815,8 +815,8 @@ div.blackRight--on {
 }
 
 .bars__text--reverse {
-  -webkit-animation: textReverse 35s linear infinite;
-          animation: textReverse 35s linear infinite;
+  -webkit-animation: textReverse 55s linear infinite;
+          animation: textReverse 55s linear infinite;
   left: 0;
 }
 
@@ -1466,8 +1466,8 @@ div.blackRight--on {
   font-size: 6rem;
   margin-right: 50px;
   font-family: 'IM Fell DW Pica';
-  -webkit-animation: text 35s linear infinite;
-          animation: text 35s linear infinite;
+  -webkit-animation: text 55s linear infinite;
+          animation: text 55s linear infinite;
   white-space: pre;
   z-index: 1;
   padding: 5px 0px;
@@ -2205,8 +2205,8 @@ div.blackRight--on {
   font-size: 6rem;
   margin-right: 50px;
   font-family: 'IM Fell DW Pica';
-  -webkit-animation: text 35s linear infinite;
-          animation: text 35s linear infinite;
+  -webkit-animation: text 55s linear infinite;
+          animation: text 55s linear infinite;
   white-space: pre;
   z-index: 1;
   padding: 5px 0px;
@@ -2594,8 +2594,8 @@ div.blackRight--on {
   font-size: 6rem;
   margin-right: 50px;
   font-family: 'IM Fell DW Pica';
-  -webkit-animation: text 35s linear infinite;
-          animation: text 35s linear infinite;
+  -webkit-animation: text 55s linear infinite;
+          animation: text 55s linear infinite;
   white-space: pre;
   z-index: 1;
   padding: 5px 0px;

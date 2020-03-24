@@ -27,34 +27,18 @@ class Cube extends React.Component {
   render() {
     const { cubeWrapMoveUp, frontCube, blackCube, greyRightSide } = this.state;
 
-    const classesCubeWrap = ['cubeWrap'];
-    if (cubeWrapMoveUp) classesCubeWrap.push('cubeWrap--onPosition')
-
-    const classesCube = ['cube'];
-    if (frontCube) classesCube.push('cube--frontCube');
-
-    const classesBlackLeft = ['blackLeft'];
-    if (blackCube) classesBlackLeft.push('blackLeft--on');
-
-    const classesBlackRight = ['blackRight'];
-    if (blackCube) classesBlackRight.push('blackRight--on');
-
-    const classesGrey = ['cube__right'];
-    if (greyRightSide) classesGrey.push('cube__right--on');
-
-
     return (
-      <div className={classesCubeWrap.join(' ')}>
-        <div className={classesCube.join(' ')}>
+      <div className={cubeWrapMoveUp ? 'cubeWrap cubeWrap--onPosition' : 'cubeWrap'}>
+        <div className={frontCube ? 'cube cube--frontCube' : 'cube '}>
           <div className="cube__front">
-            <div className={classesBlackLeft.join(' ')}></div>
+            <div className={blackCube ? 'blackLeft blackLeft--on' : 'blackLeft'}></div>
           </div>
           <div className="cube__back"></div>
           <div className="cube__top"></div>
           <div className="cube__bottom"></div>
           <div className="cube__left"> </div>
-          <div className={classesGrey.join(' ')}>
-            <div className={classesBlackRight.join(' ')}></div>
+          <div className={greyRightSide ? 'cube__right cube__right--on' : 'cube__right'}>
+            <div className={blackCube ? 'blackRight blackRight--on' : 'blackRight'}></div>
           </div>
         </div>
       </div>

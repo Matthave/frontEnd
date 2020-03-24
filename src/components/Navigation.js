@@ -107,15 +107,8 @@ class Navigation extends React.Component {
   }
 
   render() {
-    const classesBarsNav = ['barsNav'];
-    const classesItemNavAboutMe = ['barsLi barsLi__aboutMe'];
-    const classesItemNavPortfolio = ['barsLi barsLi__portfolio'];
-    const classesItemNavContactMe = ['barsLi barsLi__contact'];
 
-    if (this.state.barsNav) classesBarsNav.push('barsNav--showIt')
-    if (this.state.itemNavAboutMe) classesItemNavAboutMe.push('barsLi__itemNavAboutMe')
-    if (this.state.itemNavPortfolio) classesItemNavPortfolio.push('barsLi__itemNavPortfolio')
-    if (this.state.itemNavContact) classesItemNavContactMe.push('barsLi__itemNavContact')
+    const { barsNav, itemNavAboutMe, itemNavPortfolio, itemNavContact } = this.state;
 
     return (
       <>
@@ -126,10 +119,10 @@ class Navigation extends React.Component {
             <li className="nav__li"><NavLink className='nav__link' title='Contact' to='/contact'>Contact</NavLink></li>
           </ul>
         </nav>
-        <nav className={classesBarsNav.join(' ')}>
+        <nav className={barsNav ? 'barsNav barsNav--showIt' : 'barsNav'}>
           <ul className="barsUl">
             <NavLink to='AboutYourArtist'>
-              <li className={classesItemNavAboutMe.join(' ')}>
+              <li className={itemNavAboutMe ? 'barsLi barsLi__aboutMe barsLi__itemNavAboutMe' : 'barsLi barsLi__aboutMe'}>
                 <div className="bars__item">
                   <div className='bars__text'>
                     About Your Artist - About Your Artist - About Your Artist - About Your Artist -
@@ -141,7 +134,7 @@ class Navigation extends React.Component {
             </NavLink>
 
             <NavLink to='portfolio'>
-              <li className={classesItemNavPortfolio.join(' ')}>
+              <li className={itemNavPortfolio ? 'barsLi barsLi__portfolio barsLi__itemNavPortfolio' : 'barsLi barsLi__portfolio'}>
                 <div className="bars__item ">
                   <div className='bars__text bars__text--reverse'>
                     Portfolio - Portfolio - Portfolio - Portfolio - Portfolio - Portfolio -
@@ -153,7 +146,7 @@ class Navigation extends React.Component {
             </NavLink>
 
             <NavLink to='contact'>
-              <li className={classesItemNavContactMe.join(' ')}>
+              <li className={itemNavContact ? 'barsLi barsLi__contact barsLi__itemNavContact' : 'barsLi barsLi__contact'}>
                 <div className="bars__item">
                   <div className='bars__text'>
                     Contact Me - Contact Me - Contact Me - Contact Me - Contact Me -

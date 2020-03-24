@@ -1,5 +1,49 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import AboutMeSection from './AboutMeSection';
+
+
+const aboutMeSections = [
+  {
+    title: 'Passion',
+    frontTitle: 'Project',
+    text: `At the moment I create my own projects on which I use knowledge
+   that I constantly expand every day.
+   It doesn't bother me, on the contrary,
+   it gives me a lot of satisfaction.
+   I always try to be a project to do my best, realizing the importance of the smallest detail.
+   You can see some of my projects that have already been
+   completed in my `,
+  },
+
+  {
+    title: 'Heart',
+    frontTitle: 'I Love',
+    text: ` I love working with interesting projects. During my own projects, when I have a free hand and everything "comes out in the wash", I can experiment and empower my creativity and imagination.
+   Thanks to the fact that it is something that I love, I can work for hours without feeling the passing of time.
+   That's why I live my belief
+   "Do what you love and you'll never work a day in your life."` ,
+  },
+
+  {
+    title: 'Time',
+    frontTitle: 'Perfection',
+    text: `I pay great attention to details.
+   This is not even because of the desire to make the best project
+   possible, but I just can't get past any aspect that requires
+   more work or correction. It is a part of the work that
+   requires a lot of time, but as the saying goes "the devil
+   is in the details" and I feel much better when everything
+   is in the highest order. I couldn't sleep without it.`,
+  },
+
+  {
+    title: 'Weakness',
+    frontTitle: 'Hobby',
+    text: `Our weaknesses are something we can always work on.
+   I have been testing my capabilities for many years, pushing the limits further and further. I exercise my body, but also my mind and strong will, by following a proper diet and not giving in to bad addictions.
+   I am also a personal trainer.`,
+  }
+]
 
 class AboutM extends React.Component {
   constructor(props) {
@@ -161,9 +205,6 @@ class AboutM extends React.Component {
   }
 
   render() {
-    const classes = ['about'];
-    if (this.state.showAboutMe) classes.push('about--showIt')
-
     const sectionElements = [...document.querySelectorAll('.aboutM')];
     const liList = sectionElements.map((ele, index) => (
       <div key={index}>
@@ -171,8 +212,18 @@ class AboutM extends React.Component {
       </div>
     ))
 
+    const aboutMeSectionsMap = aboutMeSections.map((section, index) => (
+      <AboutMeSection
+        key={index}
+        title={section.title}
+        frontTitle={section.frontTitle}
+        text={section.text}
+        index={index}
+      />
+    ))
+
     return (
-      <section className={classes.join(' ')}>
+      <section className={this.state.showAboutMe ? 'about about--showIt' : 'about'}>
         <div className='bars__itemAbout'>
           <div className='bars__textAbout'>
             About Me - About Me - About Me -
@@ -189,50 +240,7 @@ class AboutM extends React.Component {
              </h1>
           </div>
 
-          <div className="aboutM">
-            <div className='aboutM__headingContainer'>
-              <p className='aboutM__title'>passion</p>
-              <p className="aboutM__titleFront" title='Project'>Project</p>
-            </div>
-            <h3 className='aboutM__text'>
-              At the moment I create my own projects on which I use knowledge
-              that I constantly expand every day.
-              It doesn't bother me, on the contrary,
-              it gives me a lot of satisfaction.
-              I always try to be a project to do my best, realizing the importance of the smallest detail.
-              You can see some of my projects that have already been
-            completed in my <strong> <NavLink to='/portfolio'>portfolio</NavLink></strong>.
-          </h3>
-          </div>
-
-          <div className="aboutM">
-            <div className='aboutM__headingContainer'>
-              <p className='aboutM__title'>heart</p>
-              <p className="aboutM__titleFront" title='I Love'>I Love</p>
-            </div>
-            <h3 className='aboutM__text'>
-              I love working with interesting projects. During my own projects, when I have a free hand and everything "comes out in the wash", I can experiment and empower my creativity and imagination.
-              Thanks to the fact that it is something that I love, I can work for hours without feeling the passing of time.
-              That's why I live my belief
-              "Do what you love and you'll never work a day in your life."
-          </h3>
-          </div>
-
-          <div className="aboutM">
-            <div className='aboutM__headingContainer'>
-              <p className='aboutM__title'>time</p>
-              <p className="aboutM__titleFront" title='Perfection'>Perfection</p>
-            </div>
-            <h3 className='aboutM__text'>
-              I pay great attention to details.
-              This is not even because of the desire to make the best project
-              possible, but I just can't get past any aspect that requires
-              more work or correction. It is a part of the work that
-              requires a lot of time, but as the saying goes "the devil
-              is in the details" and I feel much better when everything
-              is in the highest order. I couldn't sleep without it.
-          </h3>
-          </div>
+          {aboutMeSectionsMap}
 
           <div className="aboutM">
             <div className='aboutM__headingContainer'>
@@ -264,18 +272,6 @@ class AboutM extends React.Component {
                 <li className="aboutM__iconsItem">Webpack</li>
               </ul>
             </div>
-          </div>
-
-          <div className="aboutM">
-            <div className='aboutM__headingContainer'>
-              <p className='aboutM__title'>Weakness</p>
-              <p className="aboutM__titleFront" title='Hobby'>Hobby</p>
-            </div>
-            <h3 className='aboutM__text'>
-              Our weaknesses are something we can always work on.
-              I have been testing my capabilities for many years, pushing the limits further and further. I exercise my body, but also my mind and strong will, by following a proper diet and not giving in to bad addictions.
-              I am also a personal trainer.
-          </h3>
           </div>
 
         </div>

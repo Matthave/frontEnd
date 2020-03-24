@@ -39,8 +39,6 @@ class Header extends React.Component {
   }
 
   render() {
-    const classes = ['introLogo'];
-    if (this.props.introLogoMoveUp) classes.push('introLogo--onTop')
     return (
       <section className="header">
         <Cube />

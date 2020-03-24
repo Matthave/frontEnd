@@ -29,15 +29,14 @@ class HomePage extends React.Component {
   }
 
   render() {
-    const classes = ['homePage'];
-    if (this.state.homePageShowIt) classes.push(' homePage--showIt')
+    const { homePageShowIt, homePageMounted } = this.state;
     return (
-      <div className={classes.join(' ')}>
+      <div className={homePageShowIt ? 'homePage homePage--showIt' : 'homePage'}>
         <Header />
         <Bars />
         <Gallery />
         <Bars2 />
-        <Navigation style={{ diplay: 'none' }} homePageMounted={this.state.homePageMounted} />
+        <Navigation style={{ diplay: 'none' }} homePageMounted={homePageMounted} />
       </div>
     )
   }

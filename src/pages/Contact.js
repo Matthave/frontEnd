@@ -191,26 +191,8 @@ class Contact extends React.Component {
   render() {
     const { showContact, contactToMe, contactForm, iconUpLinked, iconUpGitHub, iconUpInsta, fullName, email, phone, textArea, emailSent, showSuccess } = this.state
 
-    const classes = ['contact'];
-    if (showContact) classes.push('contact--showIt')
-
-    const classesDetails = ['contact__wrapContactToMe']
-    if (contactToMe) classesDetails.push('contact__wrapContactToMe--onPosition');
-
-    const classesIconLinked = ['platform__img'];
-    if (iconUpLinked) classesIconLinked.push('platform__img--linkedUp')
-
-    const classesIconGitHub = ['platform__img'];
-    if (iconUpGitHub) classesIconGitHub.push('platform__img--gitHubUp')
-
-    const classesIconInsta = ['platform__img'];
-    if (iconUpInsta) classesIconInsta.push('platform__img--instaUp')
-
-    const classesEmailSent = ['emailSent'];
-    if (showSuccess) classesEmailSent.push('emailSent--showIt')
-
     return (
-      <section className={classes.join(' ')}>
+      <section className={showContact ? 'contact contact--showIt' : 'contact'}>
         <div className='bars__itemContact'>
           <div className='bars__textContact'>
             Contact Me - Contact Me - Contact Me -
@@ -219,7 +201,7 @@ class Contact extends React.Component {
           </div>
         </div>
 
-        <div className={classesDetails.join(' ')}>
+        <div className={contactToMe ? 'contact__wrapContactToMe contact__wrapContactToMe--onPosition' : 'contact__wrapContactToMe'}>
           <div className="contact__textWrap">
             <h2 className='contact__text'>
               If you want to get more information or contact me to start cooperation,
@@ -228,9 +210,9 @@ class Contact extends React.Component {
           </div>
 
           <div className="platform">
-            <a href="https://www.linkedin.com/in/mateusz-raty%C5%84ski-7b5737198/"><img src={linked} alt="linkedInIcon" className={classesIconLinked.join(' ')} /></a>
-            <a href="https://github.com/Matthave"><img src={gitHub} alt="gitHubIcon" className={classesIconGitHub.join(' ')} /></a>
-            <a href="https://www.instagram.com/i.mr.fit/"><img src={instagram} alt="instagramIcon" className={classesIconInsta.join(' ')} /></a>
+            <a href="https://www.linkedin.com/in/mateusz-raty%C5%84ski-7b5737198/"><img src={linked} alt="linkedInIcon" className={iconUpLinked ? 'platform__img platform__img--linkedUp' : 'platform__img'} /></a>
+            <a href="https://github.com/Matthave"><img src={gitHub} alt="gitHubIcon" className={iconUpGitHub ? 'platform__img platform__img--gitHubUp' : 'platform__img'} /></a>
+            <a href="https://www.instagram.com/i.mr.fit/"><img src={instagram} alt="instagramIcon" className={iconUpInsta ? 'platform__img platform__img--instaUp' : 'platform__img'} /></a>
           </div>
 
           <div className="contactDetails">
@@ -240,7 +222,7 @@ class Contact extends React.Component {
             <div className="contactDetails__phone">+48 609 404 940</div>
           </div>
         </div>
-        {emailSent ? <div className={classesEmailSent.join(' ')}>Email was sent successfully! <br /> Check your email box too</div> :
+        {emailSent ? <div className={showSuccess ? 'emailSent emailSent--showIt' : 'emailSent'}>Email was sent successfully! <br /> Check your email box too</div> :
           <Form
             fullName={fullName}
             email={email}

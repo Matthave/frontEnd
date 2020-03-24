@@ -31,20 +31,19 @@ class Portfolio extends React.Component {
     window.scrollTo({ top: 0, behavior: 'auto' });
   }
   render() {
-    const classes = ['portfolio'];
-    if (this.state.showPortfolio) classes.push('portfolio--showIt')
+    const { showPortfolio, hexOnPosition } = this.state;
 
     let hexClasses = [''];
-    if (this.state.hexOnPosition) hexClasses = 'work--onPosition';
+    if (hexOnPosition) hexClasses = 'work--onPosition';
 
     const works = myWorks.map((work) => (
-      <a href={work.link} key={work.id} className={`work work${work.class} ${hexClasses}`}>
+      <a href={work.link} key={work.id} target="_blank" rel='noopener noreferrer' className={`work work${work.class} ${hexClasses}`}>
         <div className="cover"><h2 className="work__text">{work.title}</h2></div>
       </a>
     ))
 
     return (
-      <section className={classes.join(' ')}>
+      <section className={showPortfolio ? 'portfolio portfolio--showIt' : 'portfolio'}>
         <div className='bars__itemPortfolio'>
           <div className='bars__textPortfolio'>
             Portfolio - Portfolio - Portfolio -

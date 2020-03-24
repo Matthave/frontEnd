@@ -9,25 +9,22 @@ import Portfolio from '../pages/Portfolio';
 import { Route, Switch, HashRouter, } from 'react-router-dom'
 import '../css/style.css';
 
-class App extends React.Component {
-  state = {
-  }
-  render() {
-    return (
-      <HashRouter
-      >
-        <div className="App">
-          <Navigation />
-          <Switch>
-            <Route exact path='/' component={HomePage}></Route>
-            <Route path='/aboutYourArtist' component={AboutM}></Route>
-            <Route path='/portfolio' component={Portfolio}></Route>
-            <Route path='/contact' component={Contact}></Route>
-          </Switch>
-          <Footer />
-        </div>
-      </HashRouter>
-    );
-  }
+function App() {
+  return (
+    <HashRouter
+    >
+      <div className="App">
+        <Navigation />
+        <Switch>
+          <Route exact path='/' component={HomePage}></Route>
+          <Route path='/aboutYourArtist' component={AboutM}></Route>
+          <Route path='/portfolio' component={Portfolio}></Route>
+          <Route path='/contact' component={Contact}></Route>
+        </Switch>
+        <Footer />
+      </div>
+    </HashRouter>
+  );
 }
+
 export default App;

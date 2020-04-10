@@ -8,6 +8,7 @@ const myWorks = [
   { id: 5, title: 'My CvOnline vol.2', class: '__cvVol2', link: 'https://matthave.github.io/lookAtThisAwesomeCv/' },
   { id: 6, title: 'To Do App - React', class: '__toDoApp', link: 'https://matthave.github.io/toDoAppReact/' },
   { id: 7, title: 'Header - Slider', class: '__headerSlider', link: 'https://matthave.github.io/slider/' },
+  { id: 8, title: 'Covid-19', class: '__covid', link: 'https://matthave.github.io/covid19/' },
 ]
 
 class Portfolio extends React.Component {

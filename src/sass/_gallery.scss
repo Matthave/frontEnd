@@ -28,16 +28,16 @@
 }
 
 .gallery__passion{
-animation: textGallery 1.5s step-start infinite both;
+animation: textGallery 3.5s step-start infinite both;
 }
 
 .gallery__heart{
-animation: textGallery 1.5s 1s step-start infinite both;
+animation: textGallery 3.5s 1s step-start infinite both;
 margin:50px 0px;
 }
 
 .gallery__obstinancy{
-animation: textGallery 1.5s 1.5s step-start infinite both;
+animation: textGallery 3.5s 1.5s step-start infinite both;
 }
 
 .wrapDuplicate{
@@ -60,19 +60,19 @@ animation: textGallery 1.5s 1.5s step-start infinite both;
 .gallery__passion.duplicate {
 position: relative;
 left:-10%;
-animation: textGallery 2.7s step-start infinite both;
+animation: textGallery 4.7s step-start infinite both;
 }
     
 .gallery__heart.duplicate{
 position: relative;
 left: -215%;
-animation: textGallery 2.3s 0.8s step-start infinite both;
+animation: textGallery 4.3s 0.8s step-start infinite both;
 }
     
 .gallery__obstinancy.duplicate{
 position: relative;
 left: -5%;
-animation: textGallery 2.8s 2s step-start infinite both;
+animation: textGallery 4.8s 2s step-start infinite both;
 }
 
 @include mq(large){

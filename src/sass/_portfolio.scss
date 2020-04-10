@@ -100,6 +100,13 @@ color: #fff;
   background-image: url('../IMG/headerSlider.png') ;
 }
 
+.work__covid::before{
+  background-image: url('../IMG/virus192.png') ;
+  background-size: 50%;
+  background-position: center;
+  background-color: #eee;
+}
+
 
 .work__trainer{
 top:2000px;

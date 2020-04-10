@@ -961,19 +961,19 @@ div.blackRight--on {
 }
 
 .gallery__passion {
-  -webkit-animation: textGallery 1.5s step-start infinite both;
-          animation: textGallery 1.5s step-start infinite both;
+  -webkit-animation: textGallery 3.5s step-start infinite both;
+          animation: textGallery 3.5s step-start infinite both;
 }
 
 .gallery__heart {
-  -webkit-animation: textGallery 1.5s 1s step-start infinite both;
-          animation: textGallery 1.5s 1s step-start infinite both;
+  -webkit-animation: textGallery 3.5s 1s step-start infinite both;
+          animation: textGallery 3.5s 1s step-start infinite both;
   margin: 50px 0px;
 }
 
 .gallery__obstinancy {
-  -webkit-animation: textGallery 1.5s 1.5s step-start infinite both;
-          animation: textGallery 1.5s 1.5s step-start infinite both;
+  -webkit-animation: textGallery 3.5s 1.5s step-start infinite both;
+          animation: textGallery 3.5s 1.5s step-start infinite both;
 }
 
 .wrapDuplicate {
@@ -1005,22 +1005,22 @@ div.blackRight--on {
 .gallery__passion.duplicate {
   position: relative;
   left: -10%;
-  -webkit-animation: textGallery 2.7s step-start infinite both;
-          animation: textGallery 2.7s step-start infinite both;
+  -webkit-animation: textGallery 4.7s step-start infinite both;
+          animation: textGallery 4.7s step-start infinite both;
 }
 
 .gallery__heart.duplicate {
   position: relative;
   left: -215%;
-  -webkit-animation: textGallery 2.3s 0.8s step-start infinite both;
-          animation: textGallery 2.3s 0.8s step-start infinite both;
+  -webkit-animation: textGallery 4.3s 0.8s step-start infinite both;
+          animation: textGallery 4.3s 0.8s step-start infinite both;
 }
 
 .gallery__obstinancy.duplicate {
   position: relative;
   left: -5%;
-  -webkit-animation: textGallery 2.8s 2s step-start infinite both;
-          animation: textGallery 2.8s 2s step-start infinite both;
+  -webkit-animation: textGallery 4.8s 2s step-start infinite both;
+          animation: textGallery 4.8s 2s step-start infinite both;
 }
 
 @media (min-width: 1024px) {
@@ -2274,8 +2274,8 @@ div.blackRight--on {
   border: 1px solid white;
   background-color: #333;
   margin: 15px auto;
-  -webkit-transition: 0.3s linear;
-  transition: 0.3s linear;
+  -webkit-transition: 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   cursor: pointer;
 }
 
@@ -2732,6 +2732,13 @@ div.blackRight--on {
 
 .work__headerSlider::before {
   background-image: url("../IMG/headerSlider.png");
+}
+
+.work__covid::before {
+  background-image: url("../IMG/virus192.png");
+  background-size: 50%;
+  background-position: center;
+  background-color: #eee;
 }
 
 .work__trainer {

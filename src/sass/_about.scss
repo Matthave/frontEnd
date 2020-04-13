@@ -192,6 +192,7 @@
       display: block;
       font-size: 3rem;
       margin-bottom: 8px;
+      font-family: $default-font;
       @include mq(medium){
         font-size: 4rem;
       }

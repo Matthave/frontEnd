@@ -20,7 +20,7 @@ class Bars extends React.Component {
   render() {
     return (
       <section className="bars">
-        <div className="bars__item">
+        <div className="bars__item reference">
           <div className='bars__text'>
             Thanks For Visit - M - Hello You -
             Thanks For Visit - M - Hello You -

@@ -19,7 +19,7 @@ class HomePage extends React.Component {
       })
     }, 20)
 
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: 'auto' });
   }
 
   componentWillUnmount() {

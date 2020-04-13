@@ -148,6 +148,12 @@ left:0;
 transition:top 1s,left 1s, transform 0.2s;
 }
 
+.work__covid{
+  top:2000px;
+  left:0;
+transition:top 1s,left 1s, transform 0.2s;
+}
+
 .work--onPosition{
   top:0;
   left:0;
@@ -160,7 +166,7 @@ transition:top 1s,left 1s, transform 0.2s;
   text-align: center;
   font-size: 2rem;
   font-weight: 500;
-  font-family: $default-font;
+  font-family: $special-font;
   color:#fff;
   z-index: 1000;
   text-align: center;

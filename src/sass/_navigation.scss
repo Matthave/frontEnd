@@ -28,7 +28,7 @@
     &__link{
       font-size: 1.4rem;
       color:#ccc;
-      font-family: 'IM Fell DW Pica';
+      font-family: $special-font;
       letter-spacing: 1px;
       cursor: pointer;
       text-decoration: none;
@@ -85,16 +85,16 @@ top:0;
   opacity: 1;
   transition: 1s;
   & .bars__text{
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     height: 60px;
     color:#222;
     animation-duration: 90s;
     transition: 0.2s;
     @include mq(medium){
-      font-size: 3.5rem;
+      font-size: 3rem;
     }
     @include mq(large){
-      font-size: 3.75rem;
+      font-size: 3.25rem;
     }
   }
   & .bars__item{
@@ -162,7 +162,7 @@ z-index: -5;
 }
 
 .barsLi:hover  .bars__text{
-@include mq(large){
+ @include mq(large){
   color:#555;
 }
 }

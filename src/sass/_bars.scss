@@ -20,8 +20,8 @@
         left:50%;
         transform: translate(-50%,-50%);
         height: 100px;
-        font-size: 3.5rem;
-        font-family: 'IM Fell DW Pica';
+        font-size: 2.5rem;
+        font-family: myFont;
         white-space: pre;
         margin:0px auto;
         padding:5px 100vw;
@@ -29,14 +29,14 @@
         text-decoration: none;
         transition: 0.2s;
         @include mq(medium){
-            font-size: 5rem;
+            font-size: 4rem;
             letter-spacing: 3px;
           }
           @include mq(large){
             color: #fff;
           }
           @include mq(xlarge){
-            font-size: 7.5rem;
+            font-size: 6.5rem;
             letter-spacing: 5px;
           }
         

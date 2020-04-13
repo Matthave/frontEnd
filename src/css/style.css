@@ -1,3 +1,13 @@
+@font-face {
+  font-family: myFont;
+  src: url("../fonts/Azonix.otf");
+}
+
+@font-face {
+  font-family: mySpecialFont;
+  src: url("../fonts//gilroy-light.otf");
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -108,7 +118,7 @@ body {
 .nav__link {
   font-size: 1.4rem;
   color: #ccc;
-  font-family: 'IM Fell DW Pica';
+  font-family: mySpecialFont;
   letter-spacing: 1px;
   cursor: pointer;
   text-decoration: none;
@@ -180,7 +190,7 @@ body {
 }
 
 .barsLi .bars__text {
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   height: 60px;
   color: #222;
   -webkit-animation-duration: 90s;
@@ -191,13 +201,13 @@ body {
 
 @media (min-width: 800px) {
   .barsLi .bars__text {
-    font-size: 3.5rem;
+    font-size: 3rem;
   }
 }
 
 @media (min-width: 1024px) {
   .barsLi .bars__text {
-    font-size: 3.75rem;
+    font-size: 3.25rem;
   }
 }
 
@@ -635,6 +645,8 @@ div.blackRight--on {
   position: relative;
   width: 100%;
   height: 100vh;
+  z-index: 1;
+  background-color: #000;
 }
 
 @media (max-width: 812px) and (max-height: 450px) and (orientation: landscape) {
@@ -701,7 +713,9 @@ div.blackRight--on {
 }
 
 .bars__item {
-  position: relative;
+  position: sticky;
+  position: -webkit-sticky;
+  bottom: 0px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -740,7 +754,7 @@ div.blackRight--on {
   height: 100px;
   font-size: 6rem;
   margin-right: 50px;
-  font-family: 'IM Fell DW Pica';
+  font-family: myFont;
   -webkit-animation: text 55s linear infinite;
           animation: text 55s linear infinite;
   white-space: pre;
@@ -783,8 +797,8 @@ div.blackRight--on {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   height: 100px;
-  font-size: 3.5rem;
-  font-family: 'IM Fell DW Pica';
+  font-size: 2.5rem;
+  font-family: myFont;
   white-space: pre;
   margin: 0px auto;
   padding: 5px 100vw;
@@ -796,7 +810,7 @@ div.blackRight--on {
 
 @media (min-width: 800px) {
   .bars__textUnder {
-    font-size: 5rem;
+    font-size: 4rem;
     letter-spacing: 3px;
   }
 }
@@ -809,7 +823,7 @@ div.blackRight--on {
 
 @media (min-width: 1200px) {
   .bars__textUnder {
-    font-size: 7.5rem;
+    font-size: 6.5rem;
     letter-spacing: 5px;
   }
 }
@@ -919,447 +933,119 @@ div.blackRight--on {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
-  height: 500px;
-  background-color: #000;
-  border-top: 1px solid #222;
-  border-bottom: 1px solid #222;
+  min-height: 75vh;
+  background-color: transparent;
   overflow: hidden;
-}
-
-.gallery__passion {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-}
-
-.gallery__text {
-  color: white;
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  font-family: "IM Fell DW Pica";
-  font-weight: 500;
-  height: 100px;
-}
-
-.gallery .fas, .gallery .fab {
-  font-size: 90px;
-  color: #ddd;
-}
-
-.gallery__passion {
-  -webkit-animation: textGallery 3.5s step-start infinite both;
-          animation: textGallery 3.5s step-start infinite both;
-}
-
-.gallery__heart {
-  -webkit-animation: textGallery 3.5s 1s step-start infinite both;
-          animation: textGallery 3.5s 1s step-start infinite both;
-  margin: 50px 0px;
-}
-
-.gallery__obstinancy {
-  -webkit-animation: textGallery 3.5s 1.5s step-start infinite both;
-          animation: textGallery 3.5s 1.5s step-start infinite both;
-}
-
-.wrapDuplicate {
-  position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: column-reverse;
-          flex-direction: column-reverse;
-  top: 50%;
-  left: 45%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  z-index: -1;
 }
 
 @media (min-width: 800px) {
-  .wrapDuplicate {
-    display: inherit;
-    position: static;
-    -webkit-transform: translate(0px, 0px);
-            transform: translate(0px, 0px);
-    top: 0;
-    left: 0;
+  .gallery {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
 }
 
-.gallery__passion.duplicate {
+.gallery__chartWrap {
   position: relative;
-  left: -10%;
-  -webkit-animation: textGallery 4.7s step-start infinite both;
-          animation: textGallery 4.7s step-start infinite both;
-}
-
-.gallery__heart.duplicate {
-  position: relative;
-  left: -215%;
-  -webkit-animation: textGallery 4.3s 0.8s step-start infinite both;
-          animation: textGallery 4.3s 0.8s step-start infinite both;
-}
-
-.gallery__obstinancy.duplicate {
-  position: relative;
-  left: -5%;
-  -webkit-animation: textGallery 4.8s 2s step-start infinite both;
-          animation: textGallery 4.8s 2s step-start infinite both;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+  width: 100%;
+  height: 200px;
 }
 
 @media (min-width: 1024px) {
-  .gallery:hover .gallery__passion,
-  .gallery:hover .gallery__heart,
-  .gallery:hover .gallery__obstinancy {
-    -webkit-animation-duration: 7s;
-            animation-duration: 7s;
-  }
-  .gallery:hover .gallery__passion.duplicate,
-  .gallery:hover .gallery__heart.duplicate,
-  .gallery:hover .gallery__obstinancy.duplicate {
-    -webkit-animation-duration: 9s;
-            animation-duration: 9s;
+  .gallery__chartWrap {
+    height: 500px;
   }
 }
 
-@-webkit-keyframes textGallery {
-  0% {
-    letter-spacing: 0px;
-    text-shadow: 30px 10px #222;
-    font-size: 3rem;
-    -webkit-transform: translateX(13px);
-            transform: translateX(13px);
-  }
-  10% {
-    letter-spacing: 0px;
-    text-shadow: 35px 35px #222;
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
-  }
-  20% {
-    letter-spacing: 2px;
-    text-shadow: 45px -55px #222;
-    -webkit-transform: translateX(8px);
-            transform: translateX(8px);
-  }
-  30% {
-    letter-spacing: 5px;
-    text-shadow: -55px -25px #222;
-    -webkit-transform: translateX(-18px);
-            transform: translateX(-18px);
-  }
-  40% {
-    letter-spacing: 6px;
-    text-shadow: 45px 65px #222;
-    -webkit-transform: translateX(18px);
-            transform: translateX(18px);
-  }
-  50% {
-    letter-spacing: 1px;
-    text-shadow: -55px 65px #222;
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
-  }
-  60% {
-    letter-spacing: 2px;
-    text-shadow: -25px -75px #222;
-    -webkit-transform: translateX(23px);
-            transform: translateX(23px);
-  }
-  70% {
-    letter-spacing: 12px;
-    text-shadow: 0px -45px #222;
-    font-size: 4rem;
-    -webkit-transform: translateX(28px);
-            transform: translateX(28px);
-  }
-  80% {
-    letter-spacing: 6px;
-    text-shadow: 0px 35px #222;
-    font-size: 7.5rem;
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
-  }
-  90% {
-    letter-spacing: 8px;
-    text-shadow: -55px 0px #222;
-    font-size: 2.5rem;
-    -webkit-transform: translateX(-18px);
-            transform: translateX(-18px);
-  }
-  100% {
-    letter-spacing: 10px;
-    text-shadow: 35px 0px #222;
-    font-size: 3.5rem;
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
+.gallery .canvas {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  opacity: 0;
+  margin: 0 auto;
+  -webkit-transition: opacity 0.2s linear, top 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: opacity 0.2s linear, top 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.gallery .canvas--canvVisibility {
+  top: 50%;
+  opacity: 1;
+}
+
+.gallery__chartText {
+  color: #fff;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  opacity: 0;
+  z-index: 5;
+  font-size: 16px;
+  font-family: myFont;
+  letter-spacing: 3px;
+  -webkit-transition: opacity 0.2s linear, top 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: opacity 0.2s linear, top 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.gallery__chartText--visibility {
+  opacity: 1;
+  top: 50%;
+}
+
+@media (min-width: 1024px) {
+  .gallery__chartText {
+    font-size: 23px;
   }
 }
 
-@keyframes textGallery {
-  0% {
-    letter-spacing: 0px;
-    text-shadow: 30px 10px #222;
-    font-size: 3rem;
-    -webkit-transform: translateX(13px);
-            transform: translateX(13px);
-  }
-  10% {
-    letter-spacing: 0px;
-    text-shadow: 35px 35px #222;
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
-  }
-  20% {
-    letter-spacing: 2px;
-    text-shadow: 45px -55px #222;
-    -webkit-transform: translateX(8px);
-            transform: translateX(8px);
-  }
-  30% {
-    letter-spacing: 5px;
-    text-shadow: -55px -25px #222;
-    -webkit-transform: translateX(-18px);
-            transform: translateX(-18px);
-  }
-  40% {
-    letter-spacing: 6px;
-    text-shadow: 45px 65px #222;
-    -webkit-transform: translateX(18px);
-            transform: translateX(18px);
-  }
-  50% {
-    letter-spacing: 1px;
-    text-shadow: -55px 65px #222;
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
-  }
-  60% {
-    letter-spacing: 2px;
-    text-shadow: -25px -75px #222;
-    -webkit-transform: translateX(23px);
-            transform: translateX(23px);
-  }
-  70% {
-    letter-spacing: 12px;
-    text-shadow: 0px -45px #222;
-    font-size: 4rem;
-    -webkit-transform: translateX(28px);
-            transform: translateX(28px);
-  }
-  80% {
-    letter-spacing: 6px;
-    text-shadow: 0px 35px #222;
-    font-size: 7.5rem;
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
-  }
-  90% {
-    letter-spacing: 8px;
-    text-shadow: -55px 0px #222;
-    font-size: 2.5rem;
-    -webkit-transform: translateX(-18px);
-            transform: translateX(-18px);
-  }
-  100% {
-    letter-spacing: 10px;
-    text-shadow: 35px 0px #222;
-    font-size: 3.5rem;
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
+@media (min-width: 1024px) {
+  .gallery .gallery__chartWrap:nth-child(2) {
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
   }
 }
 
-@media (min-width: 800px) {
-  @-webkit-keyframes textGallery {
-    0% {
-      letter-spacing: 0px;
-      text-shadow: 60px 20px #222;
-      font-size: 5rem;
-      -webkit-transform: translateX(288px);
-              transform: translateX(288px);
-      opacity: 1;
-    }
-    10% {
-      letter-spacing: 0px;
-      text-shadow: 70px 70px #222;
-      -webkit-transform: translateX(0px);
-              transform: translateX(0px);
-      opacity: 0.7;
-    }
-    20% {
-      letter-spacing: 2px;
-      text-shadow: 90px -110px #222;
-      -webkit-transform: translateX(136px);
-              transform: translateX(136px);
-      opacity: 0;
-    }
-    30% {
-      letter-spacing: 5px;
-      text-shadow: -110px -50px #222;
-      -webkit-transform: translateX(-254px);
-              transform: translateX(-254px);
-      opacity: 1;
-    }
-    40% {
-      letter-spacing: 6px;
-      text-shadow: 90px 130px #222;
-      -webkit-transform: translateX(264px);
-              transform: translateX(264px);
-      opacity: 0.4;
-    }
-    50% {
-      letter-spacing: 1px;
-      text-shadow: -110px 130px #222;
-      -webkit-transform: translateX(0px);
-              transform: translateX(0px);
-      opacity: 1;
-    }
-    60% {
-      letter-spacing: 2px;
-      text-shadow: -50px -150px #222;
-      -webkit-transform: translateX(332px);
-              transform: translateX(332px);
-      opacity: 0.5;
-    }
-    70% {
-      letter-spacing: 12px;
-      text-shadow: 0px -90px #222;
-      font-size: 7rem;
-      -webkit-transform: translateX(400px);
-              transform: translateX(400px);
-      opacity: 0.9;
-    }
-    80% {
-      letter-spacing: 6px;
-      text-shadow: 0px 70px #222;
-      font-size: 13rem;
-      -webkit-transform: translateX(0px);
-              transform: translateX(0px);
-      opacity: 1;
-    }
-    90% {
-      letter-spacing: 8px;
-      text-shadow: -110px 0px #222;
-      font-size: 4rem;
-      -webkit-transform: translateX(-264px);
-              transform: translateX(-264px);
-      opacity: 0.3;
-    }
-    100% {
-      letter-spacing: 10px;
-      text-shadow: 70px 0px #222;
-      font-size: 6rem;
-      -webkit-transform: translateX(0px);
-              transform: translateX(0px);
-      opacity: 1;
-    }
+@media (min-width: 1024px) {
+  .gallery .gallery__chartWrap:nth-child(1) {
+    -webkit-transform: translateY(25px);
+            transform: translateY(25px);
   }
-  @keyframes textGallery {
-    0% {
-      letter-spacing: 0px;
-      text-shadow: 60px 20px #222;
-      font-size: 5rem;
-      -webkit-transform: translateX(288px);
-              transform: translateX(288px);
-      opacity: 1;
-    }
-    10% {
-      letter-spacing: 0px;
-      text-shadow: 70px 70px #222;
-      -webkit-transform: translateX(0px);
-              transform: translateX(0px);
-      opacity: 0.7;
-    }
-    20% {
-      letter-spacing: 2px;
-      text-shadow: 90px -110px #222;
-      -webkit-transform: translateX(136px);
-              transform: translateX(136px);
-      opacity: 0;
-    }
-    30% {
-      letter-spacing: 5px;
-      text-shadow: -110px -50px #222;
-      -webkit-transform: translateX(-254px);
-              transform: translateX(-254px);
-      opacity: 1;
-    }
-    40% {
-      letter-spacing: 6px;
-      text-shadow: 90px 130px #222;
-      -webkit-transform: translateX(264px);
-              transform: translateX(264px);
-      opacity: 0.4;
-    }
-    50% {
-      letter-spacing: 1px;
-      text-shadow: -110px 130px #222;
-      -webkit-transform: translateX(0px);
-              transform: translateX(0px);
-      opacity: 1;
-    }
-    60% {
-      letter-spacing: 2px;
-      text-shadow: -50px -150px #222;
-      -webkit-transform: translateX(332px);
-              transform: translateX(332px);
-      opacity: 0.5;
-    }
-    70% {
-      letter-spacing: 12px;
-      text-shadow: 0px -90px #222;
-      font-size: 7rem;
-      -webkit-transform: translateX(400px);
-              transform: translateX(400px);
-      opacity: 0.9;
-    }
-    80% {
-      letter-spacing: 6px;
-      text-shadow: 0px 70px #222;
-      font-size: 13rem;
-      -webkit-transform: translateX(0px);
-              transform: translateX(0px);
-      opacity: 1;
-    }
-    90% {
-      letter-spacing: 8px;
-      text-shadow: -110px 0px #222;
-      font-size: 4rem;
-      -webkit-transform: translateX(-264px);
-              transform: translateX(-264px);
-      opacity: 0.3;
-    }
-    100% {
-      letter-spacing: 10px;
-      text-shadow: 70px 0px #222;
-      font-size: 6rem;
-      -webkit-transform: translateX(0px);
-              transform: translateX(0px);
-      opacity: 1;
-    }
+}
+
+@media (min-width: 1024px) {
+  .gallery .gallery__chartWrap:nth-child(3) {
+    -webkit-transform: translateY(25px);
+            transform: translateY(25px);
   }
 }
 
 .footer {
   width: 100%;
-  height: 100px;
+  height: 150px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1376,7 +1062,7 @@ div.blackRight--on {
 }
 
 .footer__text {
-  font-family: "IM Fell DW Pica";
+  font-family: mySpecialFont;
   color: white;
   font-size: 1.3rem;
   letter-spacing: 1px;
@@ -1425,7 +1111,9 @@ div.blackRight--on {
 }
 
 .bars__itemContact {
-  position: relative;
+  position: sticky;
+  position: -webkit-sticky;
+  bottom: 0px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1465,7 +1153,7 @@ div.blackRight--on {
   height: 100px;
   font-size: 6rem;
   margin-right: 50px;
-  font-family: 'IM Fell DW Pica';
+  font-family: myFont;
   -webkit-animation: text 55s linear infinite;
           animation: text 55s linear infinite;
   white-space: pre;
@@ -1553,7 +1241,7 @@ div.blackRight--on {
   font-size: 1.5rem;
   letter-spacing: 2px;
   font-weight: 500;
-  font-family: "IM Fell DW Pica";
+  font-family: mySpecialFont;
   -webkit-transition: 0.2s linear;
   transition: 0.2s linear;
 }
@@ -1644,6 +1332,7 @@ div.blackRight--on {
   cursor: pointer;
   z-index: 1;
   outline: none;
+  font-family: mySpecialFont;
 }
 
 .form__btnContainer .form__btnCopy {
@@ -1713,7 +1402,7 @@ div.blackRight--on {
   width: 275px;
   margin: 40px auto;
   font-weight: 500;
-  font-family: "IM Fell DW Pica";
+  font-family: mySpecialFont;
   line-height: 20px;
   color: white;
   text-align: justify;
@@ -1836,7 +1525,7 @@ div.blackRight--on {
   top: -40px;
   color: white;
   font-size: 2rem;
-  font-family: "IM Fell DW Pica";
+  font-family: mySpecialFont;
   letter-spacing: 3px;
   text-align: center;
   margin-bottom: 10px;
@@ -1854,7 +1543,7 @@ div.blackRight--on {
 .emailSent {
   font-size: 2rem;
   color: white;
-  font-family: "Nanum Gothic", sans-serif;
+  font-family: mySpecialFont;
   text-align: center;
   border-top: 1px solid white;
   border-bottom: 1px solid white;
@@ -2022,7 +1711,7 @@ div.blackRight--on {
   text-transform: uppercase;
   letter-spacing: 4px;
   font-size: 3rem;
-  font-family: "IM Fell DW Pica";
+  font-family: myFont;
   color: #555;
   white-space: pre;
 }
@@ -2058,7 +1747,7 @@ div.blackRight--on {
           transform: translate(-50%, -50%);
   text-transform: uppercase;
   font-size: 2rem;
-  font-family: "IM Fell DW Pica";
+  font-family: myFont;
   color: white;
   text-align: center;
   letter-spacing: 5px;
@@ -2087,7 +1776,7 @@ div.blackRight--on {
   line-height: 23px;
   font-size: 1.5rem;
   font-weight: 500;
-  font-family: "Nanum Gothic", sans-serif;
+  font-family: mySpecialFont;
   max-width: 400px;
   margin: 10px auto;
   text-align: center;
@@ -2124,7 +1813,7 @@ div.blackRight--on {
   color: #bbb;
   cursor: pointer;
   margin-left: 5px;
-  font-family: "IM Fell DW Pica";
+  font-family: myFont;
   font-size: 1.7rem;
   text-decoration: none;
   -webkit-transition: 0.2s;
@@ -2147,6 +1836,7 @@ div.blackRight--on {
   display: block;
   font-size: 3rem;
   margin-bottom: 8px;
+  font-family: myFont;
 }
 
 @media (min-width: 800px) {
@@ -2163,7 +1853,9 @@ div.blackRight--on {
 }
 
 .bars__itemAbout {
-  position: relative;
+  position: sticky;
+  position: -webkit-sticky;
+  bottom: 0px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2204,7 +1896,7 @@ div.blackRight--on {
   height: 100px;
   font-size: 6rem;
   margin-right: 50px;
-  font-family: 'IM Fell DW Pica';
+  font-family: myFont;
   -webkit-animation: text 55s linear infinite;
           animation: text 55s linear infinite;
   white-space: pre;
@@ -2350,7 +2042,7 @@ div.blackRight--on {
   font-size: 1.7rem;
   margin: 10px;
   line-height: 20px;
-  font-family: "Nanum Gothic", sans-serif;
+  font-family: mySpecialFont;
 }
 
 @media (min-width: 460px) {
@@ -2554,7 +2246,9 @@ div.blackRight--on {
 }
 
 .bars__itemPortfolio {
-  position: relative;
+  position: sticky;
+  position: -webkit-sticky;
+  bottom: 0px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2593,7 +2287,7 @@ div.blackRight--on {
   height: 100px;
   font-size: 6rem;
   margin-right: 50px;
-  font-family: 'IM Fell DW Pica';
+  font-family: myFont;
   -webkit-animation: text 55s linear infinite;
           animation: text 55s linear infinite;
   white-space: pre;
@@ -2804,6 +2498,15 @@ div.blackRight--on {
   transition: top 1s,left 1s, transform 0.2s,-webkit-transform 0.2s;
 }
 
+.work__covid {
+  top: 2000px;
+  left: 0;
+  -webkit-transition: top 1s,left 1s, -webkit-transform 0.2s;
+  transition: top 1s,left 1s, -webkit-transform 0.2s;
+  transition: top 1s,left 1s, transform 0.2s;
+  transition: top 1s,left 1s, transform 0.2s,-webkit-transform 0.2s;
+}
+
 .work--onPosition {
   top: 0;
   left: 0;
@@ -2815,7 +2518,7 @@ div.blackRight--on {
   text-align: center;
   font-size: 2rem;
   font-weight: 500;
-  font-family: "IM Fell DW Pica";
+  font-family: mySpecialFont;
   color: #fff;
   z-index: 1000;
   text-align: center;

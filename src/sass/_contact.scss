@@ -58,7 +58,7 @@ color: #fff;
     font-size: 1.5rem;
     letter-spacing: 2px;
     font-weight: 500;
-    font-family: $default-font;
+    font-family: $special-font;
     transition: 0.2s linear;
     @include mq(xlarge){
       width:80%;
@@ -133,6 +133,7 @@ color: #fff;
     cursor: pointer;
     z-index: 1;
     outline: none;
+    font-family:mySpecialFont;
     }
     .form__btnCopy{
       position: absolute;
@@ -193,7 +194,7 @@ letter-spacing: 3px;
     width:275px;
     margin:40px auto;
     font-weight: 500;
-    font-family: $default-font;
+    font-family: $special-font;
     line-height: 20px;
     color: white;
     text-align: justify;
@@ -276,7 +277,7 @@ letter-spacing: 3px;
     top:-40px;
     color:white;
     font-size: 2rem;
-    font-family: $default-font;
+    font-family: $special-font;
     letter-spacing: 3px;
     text-align: center;
     margin-bottom: 10px;

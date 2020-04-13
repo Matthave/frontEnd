@@ -1,2 +1,14 @@
-$default-font: 'IM Fell DW Pica';
-$special-font: 'Nanum Gothic', sans-serif;
+@font-face{
+    font-family: myFont;
+    src:url('../fonts/Azonix.otf')
+}
+
+@font-face{
+    font-family: mySpecialFont;
+    src:url('../fonts//gilroy-light.otf')
+}
+
+$default-font: myFont;
+$special-font: mySpecialFont;
+
+

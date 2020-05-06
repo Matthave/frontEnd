@@ -2435,6 +2435,18 @@ div.blackRight--on {
   background-color: #eee;
 }
 
+.work__url::before {
+  background-image: url("../IMG/urlShorten.png");
+  background-size: cover;
+  background-position: bottom;
+}
+
+.work__game::before {
+  background-image: url("../IMG/game.png");
+  background-size: cover;
+  background-position: bottom;
+}
+
 .work__trainer {
   top: 2000px;
   left: -2000px;

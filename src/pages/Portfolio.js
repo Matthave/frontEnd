@@ -9,6 +9,8 @@ const myWorks = [
   { id: 6, title: 'To Do App - React', class: '__toDoApp', link: 'https://matthave.github.io/toDoAppReact/' },
   { id: 7, title: 'Header - Slider', class: '__headerSlider', link: 'https://matthave.github.io/slider/' },
   { id: 8, title: 'Covid-19', class: '__covid', link: 'https://matthave.github.io/covid19/' },
+  { id: 9, title: 'URL Shorten', class: '__url', link: 'https://url-shortening-api-ten.now.sh/' },
+  { id: 10, title: 'GAME', class: '__game', link: 'https://paper-rock-scissors-lizard-spock-game.now.sh/' },
 ]
 
 class Portfolio extends React.Component {

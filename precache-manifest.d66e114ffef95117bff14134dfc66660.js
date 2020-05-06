@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "cd10533f1f5c3d30b3fede123d94cced",
+    "revision": "2af07cc2e510ebb542d764ba98981073",
     "url": "/frontEnd/index.html"
   },
   {
-    "revision": "5af39918d4bf44d50477",
-    "url": "/frontEnd/static/css/main.4a2af17c.chunk.css"
+    "revision": "dce0345c0424786e7200",
+    "url": "/frontEnd/static/css/main.d6b00e15.chunk.css"
   },
   {
     "revision": "e4e0bc2c0131876ceb80",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/frontEnd/static/js/2.05f449c6.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "5af39918d4bf44d50477",
-    "url": "/frontEnd/static/js/main.b9a17031.chunk.js"
+    "revision": "dce0345c0424786e7200",
+    "url": "/frontEnd/static/js/main.d1fbf4eb.chunk.js"
   },
   {
     "revision": "9ee290165be41d8ecd07",
@@ -44,6 +44,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/frontEnd/static/media/cvOnline2.71a41f0e.png"
   },
   {
+    "revision": "5da7ec2e806bffa4bcaaf18984fba452",
+    "url": "/frontEnd/static/media/game.5da7ec2e.png"
+  },
+  {
     "revision": "c62aded729bf7146d491275e5019d7fc",
     "url": "/frontEnd/static/media/gilroy-light.c62aded7.otf"
   },
@@ -62,6 +66,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "bd2f7495da0d0a157669be4b8142e82c",
     "url": "/frontEnd/static/media/trainerSite.bd2f7495.png"
+  },
+  {
+    "revision": "5d395ab46751a4bd7e661d6b133696c6",
+    "url": "/frontEnd/static/media/urlShorten.5d395ab4.png"
   },
   {
     "revision": "97430b1f0c7da4c57893a7c0578d3bd4",

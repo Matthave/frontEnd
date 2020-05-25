@@ -1,213 +1,220 @@
-.portfolio{
-    margin-top: 75px;
-    opacity: 0;
-    transition: 2s;
-    overflow: hidden;
-    &--showIt{
-      opacity: 1;
-    }
+.portfolio {
+  margin-top: 75px;
+  opacity: 0;
+  transition: 2s;
+  overflow: hidden;
+  &--showIt {
+    opacity: 1;
+  }
 }
 
-.bars__itemPortfolio{
+.bars__itemPortfolio {
   @include barsContainer;
   background-color: #000;
 }
 
-.bars__textPortfolio{
-@include barsText;
-color: #fff;
+.bars__textPortfolio {
+  @include barsText;
+  color: #fff;
 }
-.worksContainer{
+.worksContainer {
   display: flex;
   flex-direction: column;
   max-width: 1100px;
-  margin:50px auto;
+  margin: 50px auto;
   padding: 50px 0px;
   // overflow: hidden;
-  @include mq(small){
+  @include mq(small) {
     flex-direction: row;
     flex-wrap: wrap;
   }
 }
 
-.work{
+.work {
   position: relative;
-  top:0;
-  left:0;
+  top: 0;
+  left: 0;
   transform: translateY(0);
   clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
-  width:290px;
-  height:290px;
+  width: 290px;
+  height: 290px;
   margin: 0px auto 100px;
-  background-color:#444;
+  background-color: #444;
   cursor: pointer;
   text-decoration: none;
   transition: transform 0.2s linear;
-  @include mq(small){
-    width:340px;
-    height:340px;
+  @include mq(small) {
+    width: 340px;
+    height: 340px;
   }
-  @include mq(large){
+  @include mq(large) {
     margin: 0px auto 30px;
-    &:hover{
+    &:hover {
       background: #fff;
       transform: translateY(-10px);
-   }
+    }
   }
 }
 
-.work::before{
-  content: '';
+.work::before {
+  content: "";
   position: absolute;
-  top:0.8%;
-  left:50%;
+  top: 0.8%;
+  left: 50%;
   transform: translate(-50%);
   clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
-  width:285px;
+  width: 285px;
   height: 285px;
   background-repeat: no-repeat;
   background-size: cover;
-  @include mq(small){
-    width:335px;
-    height:335px;
+  @include mq(small) {
+    width: 335px;
+    height: 335px;
   }
 }
 
-.work__trainer::before{
-  background-image: url('../IMG/trainerSite.png') ;
+.work__trainer::before {
+  background-image: url("../IMG/trainerSite.png");
 }
-.work__kyokushin::before{
-  background-image: url('../IMG/kyokushinSite.png') ;
+.work__kyokushin::before {
+  background-image: url("../IMG/kyokushinSite.png");
 }
 
-.work__christmas::before{
-  background-image: url('../IMG/christmas.png') ;
+.work__christmas::before {
+  background-image: url("../IMG/christmas.png");
   background-position: center;
 }
-.work__cvVol1::before{
-  background-image: url('../IMG/cvOnline.png') ;
+.work__cvVol1::before {
+  background-image: url("../IMG/cvOnline.png");
 }
 
-.work__cvVol2::before{
-  background-image: url('../IMG/cvOnline2.png') ;
+.work__cvVol2::before {
+  background-image: url("../IMG/cvOnline2.png");
 }
 
-.work__toDoApp::before{
-  background-image: url('../IMG/toDoApp.png') ;
+.work__toDoApp::before {
+  background-image: url("../IMG/toDoApp.png");
 }
 
-.work__headerSlider::before{
-  background-image: url('../IMG/headerSlider.png') ;
+.work__headerSlider::before {
+  background-image: url("../IMG/headerSlider.png");
 }
 
-.work__covid::before{
-  background-image: url('../IMG/virus192.png') ;
+.work__covid::before {
+  background-image: url("../IMG/virus192.png");
   background-size: 50%;
   background-position: center;
   background-color: #eee;
 }
 
-.work__url::before{
-  background-image: url('../IMG/urlShorten.png') ;
-    background-size: cover;
+.work__url::before {
+  background-image: url("../IMG/urlShorten.png");
+  background-size: cover;
   background-position: bottom;
 }
 
-.work__game::before{
-  background-image: url('../IMG/game.png') ;
-    background-size: cover;
+.work__game::before {
+  background-image: url("../IMG/game.png");
+  background-size: cover;
   background-position: bottom;
 }
 
-
-.work__trainer{
-top:2000px;
-left:-2000px;
-transition:top 1s,left 1s, transform 0.2s;
-}
-.work__kyokushin{
-top:2000px;
-left:0;
-transition:top 1s,left 1s, transform 0.2s;
+.work__timer::before {
+  background-image: url("../IMG/timer96.png");
+  background-size: 40%;
+  background-position: center;
 }
 
-.work__christmas{
-top:2000px;
-left:2000px;
-transition:top 1s,left 1s, transform 0.2s;
+.work__trainer {
+  top: 2000px;
+  left: -2000px;
+  transition: top 1s, left 1s, transform 0.2s;
 }
-.work__cvVol1{
-top:2000px;
-left:-1000px;
-transition:top 1s,left 1s, transform 0.2s;
-}
-
-.work__cvVol2{
-top:2000px;
-left:1000px;
-transition:top 1s, left 1s, transform 0.2s;
+.work__kyokushin {
+  top: 2000px;
+  left: 0;
+  transition: top 1s, left 1s, transform 0.2s;
 }
 
-.work__toDoApp{
-  top:2000px;
-  left:1000px;
-  transition:top 1s,left 1s, transform 0.2s;
+.work__christmas {
+  top: 2000px;
+  left: 2000px;
+  transition: top 1s, left 1s, transform 0.2s;
+}
+.work__cvVol1 {
+  top: 2000px;
+  left: -1000px;
+  transition: top 1s, left 1s, transform 0.2s;
 }
 
-.work__headerSlider{
-top:2000px;
-left:0;
-transition:top 1s,left 1s, transform 0.2s;
+.work__cvVol2 {
+  top: 2000px;
+  left: 1000px;
+  transition: top 1s, left 1s, transform 0.2s;
 }
 
-.work__covid{
-  top:2000px;
-  left:0;
-transition:top 1s,left 1s, transform 0.2s;
+.work__toDoApp {
+  top: 2000px;
+  left: 1000px;
+  transition: top 1s, left 1s, transform 0.2s;
 }
 
-.work--onPosition{
-  top:0;
-  left:0;
+.work__headerSlider {
+  top: 2000px;
+  left: 0;
+  transition: top 1s, left 1s, transform 0.2s;
 }
 
+.work__covid {
+  top: 2000px;
+  left: 0;
+  transition: top 1s, left 1s, transform 0.2s;
+}
 
-.work__text{
+.work--onPosition {
+  top: 0;
+  left: 0;
+}
+
+.work__text {
   position: relative;
   letter-spacing: 3px;
   text-align: center;
   font-size: 2rem;
   font-weight: 500;
   font-family: $special-font;
-  color:#fff;
+  color: #fff;
   z-index: 1000;
   text-align: center;
-  @include mq(large){
+  @include mq(large) {
     font-size: 2.5rem;
   }
 }
 
-
-.cover{
+.cover {
   clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
   position: relative;
-  top:50%;
-  left:50%;
-  transform: translate(-50%,-50%);
-  width:285px;
-  height:285px;
-  background: linear-gradient(-45deg, rgba(0,0,0,1) 40%, rgba(0,0,0,1) 100%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 285px;
+  height: 285px;
+  background: linear-gradient(
+    -45deg,
+    rgba(0, 0, 0, 1) 40%,
+    rgba(0, 0, 0, 1) 100%
+  );
   z-index: 999;
   line-height: 285px;
   transition: 0.2s linear;
-  @include mq(small){
-    width:335px;
-    height:335px;
+  @include mq(small) {
+    width: 335px;
+    height: 335px;
     line-height: 335px;
   }
-  &:hover{
-    @include mq(large){
-      opacity:0;
+  &:hover {
+    @include mq(large) {
+      opacity: 0;
     }
   }
 }

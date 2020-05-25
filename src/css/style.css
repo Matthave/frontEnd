@@ -2378,7 +2378,7 @@ div.blackRight--on {
 }
 
 .work::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0.8%;
   left: 50%;
@@ -2447,40 +2447,46 @@ div.blackRight--on {
   background-position: bottom;
 }
 
+.work__timer::before {
+  background-image: url("../IMG/timer96.png");
+  background-size: 40%;
+  background-position: center;
+}
+
 .work__trainer {
   top: 2000px;
   left: -2000px;
-  -webkit-transition: top 1s,left 1s, -webkit-transform 0.2s;
-  transition: top 1s,left 1s, -webkit-transform 0.2s;
-  transition: top 1s,left 1s, transform 0.2s;
-  transition: top 1s,left 1s, transform 0.2s,-webkit-transform 0.2s;
+  -webkit-transition: top 1s, left 1s, -webkit-transform 0.2s;
+  transition: top 1s, left 1s, -webkit-transform 0.2s;
+  transition: top 1s, left 1s, transform 0.2s;
+  transition: top 1s, left 1s, transform 0.2s, -webkit-transform 0.2s;
 }
 
 .work__kyokushin {
   top: 2000px;
   left: 0;
-  -webkit-transition: top 1s,left 1s, -webkit-transform 0.2s;
-  transition: top 1s,left 1s, -webkit-transform 0.2s;
-  transition: top 1s,left 1s, transform 0.2s;
-  transition: top 1s,left 1s, transform 0.2s,-webkit-transform 0.2s;
+  -webkit-transition: top 1s, left 1s, -webkit-transform 0.2s;
+  transition: top 1s, left 1s, -webkit-transform 0.2s;
+  transition: top 1s, left 1s, transform 0.2s;
+  transition: top 1s, left 1s, transform 0.2s, -webkit-transform 0.2s;
 }
 
 .work__christmas {
   top: 2000px;
   left: 2000px;
-  -webkit-transition: top 1s,left 1s, -webkit-transform 0.2s;
-  transition: top 1s,left 1s, -webkit-transform 0.2s;
-  transition: top 1s,left 1s, transform 0.2s;
-  transition: top 1s,left 1s, transform 0.2s,-webkit-transform 0.2s;
+  -webkit-transition: top 1s, left 1s, -webkit-transform 0.2s;
+  transition: top 1s, left 1s, -webkit-transform 0.2s;
+  transition: top 1s, left 1s, transform 0.2s;
+  transition: top 1s, left 1s, transform 0.2s, -webkit-transform 0.2s;
 }
 
 .work__cvVol1 {
   top: 2000px;
   left: -1000px;
-  -webkit-transition: top 1s,left 1s, -webkit-transform 0.2s;
-  transition: top 1s,left 1s, -webkit-transform 0.2s;
-  transition: top 1s,left 1s, transform 0.2s;
-  transition: top 1s,left 1s, transform 0.2s,-webkit-transform 0.2s;
+  -webkit-transition: top 1s, left 1s, -webkit-transform 0.2s;
+  transition: top 1s, left 1s, -webkit-transform 0.2s;
+  transition: top 1s, left 1s, transform 0.2s;
+  transition: top 1s, left 1s, transform 0.2s, -webkit-transform 0.2s;
 }
 
 .work__cvVol2 {
@@ -2495,28 +2501,28 @@ div.blackRight--on {
 .work__toDoApp {
   top: 2000px;
   left: 1000px;
-  -webkit-transition: top 1s,left 1s, -webkit-transform 0.2s;
-  transition: top 1s,left 1s, -webkit-transform 0.2s;
-  transition: top 1s,left 1s, transform 0.2s;
-  transition: top 1s,left 1s, transform 0.2s,-webkit-transform 0.2s;
+  -webkit-transition: top 1s, left 1s, -webkit-transform 0.2s;
+  transition: top 1s, left 1s, -webkit-transform 0.2s;
+  transition: top 1s, left 1s, transform 0.2s;
+  transition: top 1s, left 1s, transform 0.2s, -webkit-transform 0.2s;
 }
 
 .work__headerSlider {
   top: 2000px;
   left: 0;
-  -webkit-transition: top 1s,left 1s, -webkit-transform 0.2s;
-  transition: top 1s,left 1s, -webkit-transform 0.2s;
-  transition: top 1s,left 1s, transform 0.2s;
-  transition: top 1s,left 1s, transform 0.2s,-webkit-transform 0.2s;
+  -webkit-transition: top 1s, left 1s, -webkit-transform 0.2s;
+  transition: top 1s, left 1s, -webkit-transform 0.2s;
+  transition: top 1s, left 1s, transform 0.2s;
+  transition: top 1s, left 1s, transform 0.2s, -webkit-transform 0.2s;
 }
 
 .work__covid {
   top: 2000px;
   left: 0;
-  -webkit-transition: top 1s,left 1s, -webkit-transform 0.2s;
-  transition: top 1s,left 1s, -webkit-transform 0.2s;
-  transition: top 1s,left 1s, transform 0.2s;
-  transition: top 1s,left 1s, transform 0.2s,-webkit-transform 0.2s;
+  -webkit-transition: top 1s, left 1s, -webkit-transform 0.2s;
+  transition: top 1s, left 1s, -webkit-transform 0.2s;
+  transition: top 1s, left 1s, transform 0.2s;
+  transition: top 1s, left 1s, transform 0.2s, -webkit-transform 0.2s;
 }
 
 .work--onPosition {

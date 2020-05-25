@@ -6,12 +6,19 @@ import HomePage from '../pages/HomePage';
 import AboutM from '../pages/AboutM';
 import Portfolio from '../pages/Portfolio';
 
-import { Route, Switch, HashRouter, } from 'react-router-dom'
+import { Route, Switch, BrowserRouter, } from 'react-router-dom'
 import '../css/style.css';
 
 function App() {
   return (
-    <HashRouter
+    <BrowserRouter
+      basename="/"
+      forceRefresh={false}
+      getUserConfirmation={(message, callback) => {
+        const allowTransition = window.confirm(message);
+        callback(allowTransition);
+      }}
+      keyLength={12}
     >
       <div className="App">
         <Navigation />
@@ -23,7 +30,7 @@ function App() {
         </Switch>
         <Footer />
       </div>
-    </HashRouter>
+    </BrowserRouter>
   );
 }
 

@@ -1,36 +1,28 @@
-import React from 'react';
-import Navigation from './Navigation';
-import Footer from './Footer';
-import Contact from '../pages/Contact';
-import HomePage from '../pages/HomePage';
-import AboutM from '../pages/AboutM';
-import Portfolio from '../pages/Portfolio';
+import React from "react";
+import Navigation from "./Navigation";
+import Footer from "./Footer";
+import Contact from "../pages/Contact";
+import HomePage from "../pages/HomePage";
+import AboutM from "../pages/AboutM";
+import Portfolio from "../pages/Portfolio";
 
-import { Route, Switch, BrowserRouter, } from 'react-router-dom'
-import '../css/style.css';
+import { Route, Switch, HashRouter } from "react-router-dom";
+import "../css/style.css";
 
 function App() {
   return (
-    <BrowserRouter
-      basename="/"
-      forceRefresh={false}
-      getUserConfirmation={(message, callback) => {
-        const allowTransition = window.confirm(message);
-        callback(allowTransition);
-      }}
-      keyLength={12}
-    >
+    <HashRouter>
       <div className="App">
         <Navigation />
         <Switch>
-          <Route exact path='/' component={HomePage}></Route>
-          <Route path='/aboutYourArtist' component={AboutM}></Route>
-          <Route path='/portfolio' component={Portfolio}></Route>
-          <Route path='/contact' component={Contact}></Route>
+          <Route exact path="/" component={HomePage}></Route>
+          <Route path="/aboutYourArtist" component={AboutM}></Route>
+          <Route path="/portfolio" component={Portfolio}></Route>
+          <Route path="/contact" component={Contact}></Route>
         </Switch>
         <Footer />
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 

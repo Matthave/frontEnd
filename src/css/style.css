@@ -2412,18 +2412,6 @@ div.blackRight--on {
   background-position: center;
 }
 
-.work__cvVol1::before {
-  background-image: url("../IMG/cvOnline.png");
-}
-
-.work__cvVol2::before {
-  background-image: url("../IMG/cvOnline2.png");
-}
-
-.work__toDoApp::before {
-  background-image: url("../IMG/toDoApp.png");
-}
-
 .work__headerSlider::before {
   background-image: url("../IMG/headerSlider.png");
 }
@@ -2449,8 +2437,15 @@ div.blackRight--on {
 
 .work__timer::before {
   background-image: url("../IMG/timer96.png");
-  background-size: 40%;
+  background-size: 35%;
   background-position: center;
+}
+
+.work__trello::before {
+  background-image: url("../IMG/trelloIcon.png");
+  background-size: 35%;
+  background-position: center;
+  background-color: #fff;
 }
 
 .work__trainer {
@@ -2480,36 +2475,9 @@ div.blackRight--on {
   transition: top 1s, left 1s, transform 0.2s, -webkit-transform 0.2s;
 }
 
-.work__cvVol1 {
-  top: 2000px;
-  left: -1000px;
-  -webkit-transition: top 1s, left 1s, -webkit-transform 0.2s;
-  transition: top 1s, left 1s, -webkit-transform 0.2s;
-  transition: top 1s, left 1s, transform 0.2s;
-  transition: top 1s, left 1s, transform 0.2s, -webkit-transform 0.2s;
-}
-
-.work__cvVol2 {
-  top: 2000px;
-  left: 1000px;
-  -webkit-transition: top 1s, left 1s, -webkit-transform 0.2s;
-  transition: top 1s, left 1s, -webkit-transform 0.2s;
-  transition: top 1s, left 1s, transform 0.2s;
-  transition: top 1s, left 1s, transform 0.2s, -webkit-transform 0.2s;
-}
-
-.work__toDoApp {
-  top: 2000px;
-  left: 1000px;
-  -webkit-transition: top 1s, left 1s, -webkit-transform 0.2s;
-  transition: top 1s, left 1s, -webkit-transform 0.2s;
-  transition: top 1s, left 1s, transform 0.2s;
-  transition: top 1s, left 1s, transform 0.2s, -webkit-transform 0.2s;
-}
-
 .work__headerSlider {
   top: 2000px;
-  left: 0;
+  left: -2000px;
   -webkit-transition: top 1s, left 1s, -webkit-transform 0.2s;
   transition: top 1s, left 1s, -webkit-transform 0.2s;
   transition: top 1s, left 1s, transform 0.2s;
@@ -2519,6 +2487,42 @@ div.blackRight--on {
 .work__covid {
   top: 2000px;
   left: 0;
+  -webkit-transition: top 1s, left 1s, -webkit-transform 0.2s;
+  transition: top 1s, left 1s, -webkit-transform 0.2s;
+  transition: top 1s, left 1s, transform 0.2s;
+  transition: top 1s, left 1s, transform 0.2s, -webkit-transform 0.2s;
+}
+
+.work__url {
+  top: 2000px;
+  left: 2000px;
+  -webkit-transition: top 1s, left 1s, -webkit-transform 0.2s;
+  transition: top 1s, left 1s, -webkit-transform 0.2s;
+  transition: top 1s, left 1s, transform 0.2s;
+  transition: top 1s, left 1s, transform 0.2s, -webkit-transform 0.2s;
+}
+
+.work__game {
+  top: 2000px;
+  left: -2000px;
+  -webkit-transition: top 1s, left 1s, -webkit-transform 0.2s;
+  transition: top 1s, left 1s, -webkit-transform 0.2s;
+  transition: top 1s, left 1s, transform 0.2s;
+  transition: top 1s, left 1s, transform 0.2s, -webkit-transform 0.2s;
+}
+
+.work__timer {
+  top: 2000px;
+  left: 0;
+  -webkit-transition: top 1s, left 1s, -webkit-transform 0.2s;
+  transition: top 1s, left 1s, -webkit-transform 0.2s;
+  transition: top 1s, left 1s, transform 0.2s;
+  transition: top 1s, left 1s, transform 0.2s, -webkit-transform 0.2s;
+}
+
+.work__trello {
+  top: 2000px;
+  left: 2000px;
   -webkit-transition: top 1s, left 1s, -webkit-transform 0.2s;
   transition: top 1s, left 1s, -webkit-transform 0.2s;
   transition: top 1s, left 1s, transform 0.2s;

@@ -21,51 +21,39 @@ const myWorks = [
   },
   {
     id: 4,
-    title: "My CvOnline vol.1",
-    class: "__cvVol1",
-    link: "https://matthave.github.io/cvOnline/",
-  },
-  {
-    id: 5,
-    title: "My CvOnline vol.2",
-    class: "__cvVol2",
-    link: "https://matthave.github.io/lookAtThisAwesomeCv/",
-  },
-  {
-    id: 6,
-    title: "To Do App - React",
-    class: "__toDoApp",
-    link: "https://matthave.github.io/toDoAppReact/",
-  },
-  {
-    id: 7,
     title: "Header - Slider",
     class: "__headerSlider",
     link: "https://matthave.github.io/slider/",
   },
   {
-    id: 8,
+    id: 5,
     title: "Covid-19",
     class: "__covid",
     link: "https://matthave.github.io/covid19/",
   },
   {
-    id: 9,
+    id: 6,
     title: "URL Shorten",
     class: "__url",
     link: "https://url-shortening-api-ten.now.sh/",
   },
   {
-    id: 10,
+    id: 7,
     title: "GAME",
     class: "__game",
     link: "https://paper-rock-scissors-lizard-spock-game.now.sh/",
   },
   {
-    id: 11,
+    id: 8,
     title: "TIMER",
     class: "__timer",
     link: "https://matthave.github.io/Timer/",
+  },
+  {
+    id: 9,
+    title: "Trello Clone",
+    class: "__trello",
+    link: "https://matthave.github.io/NewTodoApp",
   },
 ];
 
@@ -76,6 +64,7 @@ class Portfolio extends React.Component {
   };
 
   componentDidMount() {
+    myWorks.reverse();
     setTimeout(() => {
       this.setState({
         showPortfolio: true,
